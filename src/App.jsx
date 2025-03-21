@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { store } from './store';
 import Navbar from './components/layout/Navbar';
 import Home from './pages/Home';
+import Admission from './components/navlinks/admission';
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/academics" element={<div>Academics Page</div>} />
-              <Route path="/admissions" element={<div>Admissions Page</div>} />
+              <Route path="/admissions" element={<Admission/>} />
               <Route path="/events" element={<div>Events Page</div>} />
               <Route path="/gallery" element={<div>Gallery Page</div>} />
               <Route path="/contact" element={<div>Contact Page</div>} />
