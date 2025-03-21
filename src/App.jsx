@@ -5,6 +5,7 @@ import { store } from './store';
 import Navbar from './components/layout/Navbar';
 import Home from './pages/Home';
 import Admission from './components/navlinks/admission';
+import Footer from "./components/Core/Footer.jsx";
 
 function App() {
   return (
@@ -22,6 +23,7 @@ function App() {
               <Route path="/contact" element={<div>Contact Page</div>} />
             </Routes>
           </div>
+          <Footer/>
         </div>
       </Router>
     </Provider>
