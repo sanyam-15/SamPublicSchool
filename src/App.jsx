@@ -5,6 +5,7 @@ import { store } from './store';
 import Navbar from './components/layout/Navbar';
 import Home from './pages/Home';
 import Admission from './components/navlinks/admission';
+import Footer from "./components/Core/Footer.jsx";
 import ContactPage from './components/navlinks/contact';  
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
               <Route path="/contact" element={<ContactPage/>} />
             </Routes>
           </div>
+          <Footer/>
         </div>
       </Router>
     </Provider>

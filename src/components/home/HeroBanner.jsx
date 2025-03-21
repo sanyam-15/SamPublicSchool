@@ -43,44 +43,6 @@ const HeroBanner = () => {
           </div>
         </motion.div>
       </div>
-
-      {/* Feature Cards */}
-      <div className="absolute  bottom-0 left-0 right-0 ">
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg"
-          >
-            <GraduationCap className="text-primary-500 w-10 h-10 mb-4" />
-            <h3 className="text-lg font-semibold mb-2">Academic Excellence</h3>
-            <p className="text-gray-600 dark:text-gray-300">Comprehensive curriculum fostering holistic development</p>
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-            className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg"
-          >
-            <Calendar className="text-primary-500 w-10 h-10 mb-4" />
-            <h3 className="text-lg font-semibold mb-2">Enriching Activities</h3>
-            <p className="text-gray-600 dark:text-gray-300">Diverse range of extracurricular programs</p>
-          </motion.div>
-
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg"
-          >
-            <Award className="text-primary-500 w-10 h-10 mb-4" />
-            <h3 className="text-lg font-semibold mb-2">Proven Track Record</h3>
-            <p className="text-gray-600 dark:text-gray-300">Consistent academic achievements and accolades</p>
-          </motion.div>
-        </div>
-      </div>
     </div>
   );
 };
