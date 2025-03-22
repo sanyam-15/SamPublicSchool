@@ -27,8 +27,19 @@ const Navbar = () => {
       ],
     },
     { name: 'Admissions', path: '/admissions' },
-    { name: 'Events', path: '/events' },
-    { name: 'Gallery', path: '/gallery' },
+    { name: 'Achievements', path: '/achievements',
+      dropdown: [
+        { name: 'Academics', path: '/achievements/academics' },
+        { name: 'Sports', path: '/achievements/sports' },
+        { name: 'Class 8th Toppers', path: '/achievements/class-8th-toppers' },
+      ],
+     },
+    { name: 'Gallery', path: '/gallery',
+      dropdown: [
+        { name: 'Image Gallery', path: '/gallery/images' },
+        { name: 'Video Gallery', path: '/gallery/videos' },
+      ],
+     },
     { name: 'Contact', path: '/contact' },
   ];
 

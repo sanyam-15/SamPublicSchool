@@ -6,7 +6,8 @@ import Navbar from './components/layout/Navbar';
 import Home from './pages/Home';
 import Admission from './components/navlinks/admission';
 import Footer from "./components/Core/Footer.jsx";
-import ContactPage from './components/navlinks/contact';  
+import ContactPage from './components/navlinks/contact'; 
+import Gallery from './components/navlinks/gallery'; 
 
 function App() {
   return (
@@ -20,7 +21,7 @@ function App() {
               <Route path="/academics" element={<div>Academics Page</div>} />
               <Route path="/admissions" element={<Admission/>} />
               <Route path="/events" element={<div>Events Page</div>} />
-              <Route path="/gallery" element={<div>Gallery Page</div>} />
+              <Route path="/gallery/images" element={<Gallery/>} />
               <Route path="/contact" element={<ContactPage/>} />
             </Routes>
           </div>

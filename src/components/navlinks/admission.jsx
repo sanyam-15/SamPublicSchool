@@ -5,7 +5,7 @@ const Admission = () => {
         <div className="bg-white text-gray-900 text-centre">
             {/* First Background Image Section */}
             <div className="bg-cover bg-center  bg-no-repeat bg-black/60 bg-blend-overlay min-h-[60vh] flex items-end p-8 text-white"
-                style={{ backgroundImage: "url('https://img.freepik.com/premium-photo/happy-children-with-hands-up-standing-near-school-outdoors_650366-3271.jpg')" }}>
+                style={{ backgroundImage: "url('https://cdn.pixabay.com/photo/2020/01/22/09/39/listening-4784915_1280.jpg')" }}>
                 <div className="max-w-7xl mx-auto">
                     <h1 className="text-4xl font-bold">Apply To Kingster</h1>
                     <p className="text-lg mt-2">Your journey starts here!</p>
@@ -79,3 +79,4 @@ const Admission = () => {
 };
 
 export default Admission;
+ 

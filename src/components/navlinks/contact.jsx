@@ -4,10 +4,22 @@ import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 const ContactPage = () => {
   return (
     <div className="bg-white font-sans">
-      {/* Header Section */}
-      <header className="bg-red-700 text-white text-center py-16">
-        <h1 className="text-4xl font-bold">Contact Us</h1>
-        <p className="text-lg">Get In Touch</p>
+      {/* Header Section with Background Image */}
+      <header 
+        className="relative text-white text-center flex items-center justify-center"
+        style={{
+          height: "70vh",
+          backgroundImage: "url('https://cdn.pixabay.com/photo/2024/08/19/11/27/school-8980534_1280.jpg')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundRepeat: "no-repeat",
+        }}
+      >
+        <div className="absolute inset-0 bg-red-700 opacity-75"></div>
+        <div className="relative z-10 text-center">
+          <h1 className="text-4xl font-bold">Contact Us</h1>
+          <p className="text-lg">Get In Touch</p>
+        </div>
       </header>
 
       {/* Contact Information */}
