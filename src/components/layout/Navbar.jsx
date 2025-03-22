@@ -45,15 +45,15 @@ const Navbar = () => {
               link.dropdown ? (
                 <div
                   key={link.name}
-                  className="relative leading-4"
+                  className="relative h-16 flex items-center"
                   onMouseEnter={() => setActiveDropdown(link.name)}
                   onMouseLeave={() => setActiveDropdown(null)}
                 >
-                  <span className="cursor-default hover:text-blue-600 transition-colors duration-200">
+                  <span className="cursor-pointer cursor- hover:text-blue-600 transition-colors duration-200">
                     {link.name}
                   </span>
                   {activeDropdown === link.name && (
-                    <div className="absolute left-0 mt-2 w-64 bg-white text-gray-800 shadow-lg rounded-lg">
+                    <div className="absolute left-0 top-[64px]  w-64 bg-white text-gray-800 shadow-lg">
                       {link.dropdown.map((item) => (
                         <Link
                           key={item.name}
