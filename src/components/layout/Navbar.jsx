@@ -21,7 +21,6 @@ const Navbar = () => {
       name: "About Us", path: "/about", dropdown: [
         { name: "About DPS Patna", path: "/about/dps-patna" },
         { name: "Infrastructure", path: "/about/infrastructure" },
-        { name: "Academic Programme", path: "/about/academic-programme" },
         { name: "Faculty", path: "/about/faculty" },
         { name: "Co-Curricular Programme", path: "/about/co-curricular" },
         { name: "Assessments", path: "/about/assessments" },
@@ -74,7 +73,9 @@ const Navbar = () => {
   
 
   return (
-    <div className="w-full">
+    <div className="w-full"
+    style={{marginBottom: `${isScrolled ? "64px": "0"}`}}
+    >
 
       {/* Scrollable Top Section - Full on Large Screens, Minimal on Small Screens */}
       <div className="bg-gray-100 py-2 px-4 hidden md:block">
@@ -128,7 +129,9 @@ const Navbar = () => {
       </div>
 
       {/* Fixed Navbar */}
-      <nav className={`w-full z-50 transition-all duration-300 ${isScrolled ? "fixed top-0 left-0 bg-white shadow-lg" : "relative"}`}>
+      <nav className={`w-full z-50 transition-all duration-300 ${isScrolled ? "fixed top-0 left-0 bg-white shadow-lg translate-y-[0%]" : "relative"}`}
+      style={{transition: "transform 0.4s ease-in-out"}}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="hidden md:flex justify-center h-16 items-center space-x-8">
             {navLinks.map((link) =>

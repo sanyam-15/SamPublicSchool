@@ -71,7 +71,9 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className="bg-[#202020] text-[#838383] mt-10 text-sm py-6">
+      <div className="bg-[#202020] text-[#838383] mt-10 text-sm py-6"
+      style={{marginBottom: "50px"}}
+      >
         <div className="w-[85vw] flex flex-col justify-between items-center m-auto md:flex-row">
           <p className="text-center md:text-left">
             Copyright All Rights Reserved 2025, Developer401

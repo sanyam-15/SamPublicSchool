@@ -32,7 +32,7 @@ const KeyMetrics = () => {
 
   return (
     <div className="py-16 bg-gray-50 dark:bg-gray-800">
-      <div className="max-w-7xl mx-auto px-4">
+      <div className="w-[85vw] mx-auto">
         <h2 className="text-3xl font-bold text-center mb-12 dark:text-white">School Statistics</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {metrics.map((metric, index) => (
