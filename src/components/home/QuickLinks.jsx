@@ -41,7 +41,7 @@ const QuickLinks = () => {
               to={item.link}
               className="bg-white dark:bg-gray-700 rounded-lg p-6 shadow-md hover:shadow-lg transition-shadow group"
             >
-              <item.icon className="w-8 h-8 text-primary-500 mb-4 group-hover:scale-110 transition-transform" />
+              <item.icon className="w-8 h-8 text-red-500 mb-4 group-hover:scale-110 transition-transform" />
               <h3 className="text-xl font-semibold mb-2 dark:text-white">{item.title}</h3>
               <p className="text-gray-600 dark:text-gray-300">{item.description}</p>
             </Link>

@@ -52,7 +52,7 @@ export default function NewsUpdates() {
             <h3 className="text-sm md:text-lg font-bold text-gray-800">{news.title}</h3>
             <p className="text-xs md:text-sm text-gray-700">{news.content}</p>
             <button
-              className="text-blue-600 hover:underline text-xs md:text-sm font-medium"
+              className="text-red-600 hover:underline text-xs md:text-sm font-medium"
               onClick={() => {
                 setSelectedNews(news);
                 setIsModalOpen(true);

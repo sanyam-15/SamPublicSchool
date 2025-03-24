@@ -24,7 +24,7 @@ export default function StatsSection() {
         
         {stats.map((stat, index) => (
           <div key={index} className="flex flex-col items-center text-white">
-            <div className="w-20 h-20 flex items-center justify-center bg-blue-600 rounded-full text-white">
+            <div className="w-20 h-20 flex items-center justify-center bg-red-600 rounded-full text-white">
               {stat.icon}
             </div>
             <h2 className="text-4xl font-bold mt-4">

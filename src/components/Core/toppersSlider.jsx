@@ -43,7 +43,7 @@ export default function ToppersSlider() {
                 <div className="p-4">
                   <h3 className="text-sm md:text-lg font-semibold">{topper.name}</h3>
                   <p className="text-gray-600 text-xs md:text-sm">VIIIth</p>
-                  <p className="text-blue-500 font-bold text-sm md:text-base">{topper.percentage}</p>
+                  <p className="text-red-500 font-bold text-sm md:text-base">{topper.percentage}</p>
                 </div>
               </div>
             </div>

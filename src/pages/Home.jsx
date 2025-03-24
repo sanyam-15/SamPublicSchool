@@ -11,6 +11,7 @@ import ToppersSlider from "../components/Core/toppersSlider";
 import PhotoGallery from "../components/Core/photoGallery";
 import StatsSection from "../components/Core/counters";
 import SchoolIntroSection from "../components/Core/SchoolIntroSection";
+import FacilitiesSection from "../components/home/facilitiesSection";
 
 const Home = () => {
   return (
@@ -19,7 +20,7 @@ const Home = () => {
       <div className="relative">
         {/* Space for the feature cards that overlap from HeroBanner */}
         {/* Feature Cards */}
-        <div className="absolute top-0 left-0 right-0" style={{ transform: "translateY(-50%)" }}>
+        <div className="z-10 absolute top-0 left-0 right-0" style={{ transform: "translateY(-50%)" }}>
           <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -27,7 +28,7 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="bg-blue-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg z-50"
             >
-              <GraduationCap className="text-primary-500 w-10 h-10 mb-4" />
+              <GraduationCap className="text-red-500 w-10 h-10 mb-4" />
               <h3 className="text-lg font-semibold mb-2">Academic Excellence</h3>
               <p className="text-gray-600 dark:text-gray-300">
                 Comprehensive curriculum fostering holistic development
@@ -40,7 +41,7 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg"
             >
-              <Calendar className="text-primary-500 w-10 h-10 mb-4" />
+              <Calendar className="text-red-500 w-10 h-10 mb-4" />
               <h3 className="text-lg font-semibold mb-2">Enriching Activities</h3>
               <p className="text-gray-600 dark:text-gray-300">
                 Diverse range of extracurricular programs
@@ -53,7 +54,7 @@ const Home = () => {
               transition={{ duration: 0.8, delay: 0.6 }}
               className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg"
             >
-              <Award className="text-primary-500 w-10 h-10 mb-4" />
+              <Award className="text-red-500 w-10 h-10 mb-4" />
               <h3 className="text-lg font-semibold mb-2">Proven Track Record</h3>
               <p className="text-gray-600 dark:text-gray-300">
                 Consistent academic achievements and accolades
@@ -62,7 +63,7 @@ const Home = () => {
           </div>
         </div>
         <div className="pt-32">
-          <AnnouncementTicker />
+          {/* <AnnouncementTicker /> */}
         </div>
         <SchoolIntroSection />
         <QuickLinks />
@@ -73,7 +74,8 @@ const Home = () => {
         </div>
         <StatsSection />
         <PhotoGallery />
-        <KeyMetrics />
+        {/* <KeyMetrics /> */}
+        <FacilitiesSection/>
       </div>
     </div>
   );
