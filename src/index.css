@@ -1,3 +1,7 @@
+@import 'swiper/css';
+@import 'swiper/css/pagination';
+
+/* Now add Tailwind imports */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
