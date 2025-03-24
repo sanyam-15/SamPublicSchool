@@ -15,8 +15,8 @@ const images = [
 
 const PhotoGallery = () => {
   return (
-    <div className="bg-red-100 py-10 px-4 text-center">
-      <h2 className="text-3xl font-bold text-orange-500 flex items-center justify-center gap-2">
+    <div className=" py-10 px-4 text-center">
+      <h2 className="text-3xl font-bold text-red-500 flex items-center justify-center gap-2">
         <span className="text-4xl">📸</span> PHOTO GALLERY
       </h2>
 
@@ -47,7 +47,7 @@ const PhotoGallery = () => {
         </Swiper>
       </div>
 
-      <button onClick={() => (window.location.href = "/gallery/images")} className="mt-6 px-6 py-2 text-orange-500 border border-orange-500 rounded-full text-lg hover:bg-orange-500 hover:text-white transition">
+      <button onClick={() => (window.location.href = "/gallery/images")} className="mt-6 px-6 py-2 text-red-500 border border-red-500 rounded-full text-lg hover:bg-red-500 hover:text-white transition">
         VIEW ALL
       </button>
     </div>

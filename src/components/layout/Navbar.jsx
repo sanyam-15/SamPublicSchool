@@ -97,7 +97,7 @@ const Navbar = () => {
               className="h-12"
             />
             <div>
-              <h1 className="text-lg font-bold text-green-700">Sam Public School, Tundla</h1>
+              <h1 className="text-lg font-bold text-red-700">Sam Public School, Tundla</h1>
               <p className="text-xs text-black hidden md:block">
                 Under the aegis of Delhi Public School Society, New Delhi
               </p>

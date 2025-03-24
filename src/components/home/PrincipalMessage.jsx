@@ -18,7 +18,7 @@ const PrincipalMessage = () => {
                 alt="School Principal"
                 className="rounded-lg shadow-lg"
               />
-              <div className="absolute -bottom-6 -right-6 bg-primary-500 text-white py-4 px-6 rounded-lg shadow-lg">
+              <div className="absolute -bottom-6 -right-6 bg-red-500 text-white py-4 px-6 rounded-lg shadow-lg">
                 <p className="font-semibold">Dr. Sarah Johnson</p>
                 <p className="text-sm">Principal</p>
               </div>
@@ -45,11 +45,11 @@ const PrincipalMessage = () => {
               </p>
             </div>
             <div className="pt-4">
-              <img
+              {/* <img
                 src="https://i.imgur.com/1234567.png"
                 alt="Principal's Signature"
                 className="h-12"
-              />
+              /> */}
               <p className="text-sm text-gray-500 dark:text-gray-400">Dr. Sarah Johnson</p>
               <p className="text-sm text-gray-500 dark:text-gray-400">Principal, Modern School</p>
             </div>
