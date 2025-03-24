@@ -20,7 +20,7 @@ const PhotoGallery = () => {
         <span className="text-4xl">📸</span> PHOTO GALLERY
       </h2>
 
-      <div className="max-w-6xl mx-auto mt-6">
+      <div className="w-[85vw] mx-auto mt-6">
         <Swiper
           slidesPerView={1.5}  // Default: Small screens
           spaceBetween={20}    // Space between images
