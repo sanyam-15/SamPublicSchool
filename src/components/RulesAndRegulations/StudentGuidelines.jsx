@@ -1,42 +1,97 @@
-import { useState } from "react";
-import { ChevronDown, ChevronUp } from "lucide-react";
+import { motion } from "framer-motion";
 
-const guidelines = [
-  { title: "PUNCTUALITY", content: "Punctuality is the politeness of kings and queens, the duty of gentlemen and ladies and the necessity of business people.\n\nEvery student is expected to be in the School 5 minutes before the Assembly Bell. If students are late for the Assembly they will receive 3 warning notices, after which they are liable to be sent home at the parent's own risk.\n\nThe Attendance Roll will be called out at the beginning of each Session. Those who are not in class will be marked absent. Irregular attendance, unjustified or unexplained absence for more than a week, habitual idleness, disobedience or objectionable moral influence, justify dismissal. Students are responsible to the school authorities for their conduct both in and out of the school and Catholics, for the performance of their religious duties as well." },
-  { title: "SILENCE", content: "There is a time for speaking and time for being still. Special care must be taken by teachers and students to preserve an ATMOSPHERE OF SILENCE AND SERIOUS WORK during class hours." },
-  { title: "ORDER", content: "A place for everything and everything in its place. Running, playing, shouting inside the school building is never allowed. When moving along corridors from one class to another the rule is always: keep left and respect classes at work moving with as little noise as possible.\n\nStudents from one class may not visit their friends in other classrooms during class hours or free periods. Silence must be observed in the corridors and on the stairs during class hours. There should be no loud talking at the change of periods." },
-  { title: "COURTESY", content: "Beauty without Courtesy is like a grove without flowers.\n\nStudents shall always greet their teachers, elders, and friends in a pleasant and audible tone whenever they meet them in school or outside.\n\nThey shall maintain a good posture whenever they sit, stand, or walk. They shall be polite in speaking to one another, always avoiding the use of slang." },
-  { title: "SCHOOL CLEANLINESS", content: "Cleanliness is next to Godliness.\n\nAll must consider it their responsibility to keep the School Premises clean.\n\nEvery child must be particularly careful to avoid throwing waste-paper, fruit-peels, etc. out of the windows or on the school grounds. Use should be made of the waste paper baskets and bins provided for this purpose." },
-  { title: "CARE OF SCHOOL PROPERTY", content: "Be as careful of the property of others as you would be of your own.\n\nChildren should take special care of School Property i.e. furniture, apparatus, etc. Any damage done to School property must be made good." },
-  { title: "BEHAVIOUR OUTSIDE SCHOOL", content: "Behaviour is a mirror in which everyone shows his image.\n\nStudents are answerable to the School Authorities for their conduct both in School and outside. They ought always to conduct themselves in a manner worthy of the dignity of a human being. Misbehavior justifies dismissal. Students are not permitted to patronize roadside vendors or eat on the road." }
-];
-
-export default function StudentGuidelines() {
-  const [openIndex, setOpenIndex] = useState(null);
-
-  const toggleSection = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
-  };
-
+export default function RulesAndRegulations() {
   return (
-    <div className=" relative min-h-screen bg-cover bg-center" style={{ backgroundImage: "url('https://picsum.photos/200/300')" }}>
-      <div className="max-w-2xl mx-auto mt-10 p-4 bg-white bg-opacity-90 rounded-xl shadow-lg">
-        <h2 className="text-2xl font-bold text-center mb-4">Guidelines for the Students</h2>
-        <div className="border border-gray-200 rounded-lg">
-          {guidelines.map((item, index) => (
-            <div key={index} className="border-b last:border-none">
-              <button
-                onClick={() => toggleSection(index)}
-                className="w-full flex justify-between items-center p-4 text-left bg-gray-100 hover:bg-gray-200"
-              >
-                <span className="font-semibold">{item.title}</span>
-                {openIndex === index ? <ChevronUp /> : <ChevronDown />}
-              </button>
-              {openIndex === index && (
-                <div className="p-4 text-gray-700 bg-white whitespace-pre-line">{item.content}</div>
-              )}
-            </div>
-          ))}
+    <div className="bg-gray-100">
+      {/* Hero Section */}
+      <motion.div
+        className="bg-cover bg-center bg-no-repeat bg-black/60 bg-blend-overlay min-h-[60vh] flex flex-col items-center justify-center text-white text-center p-8"
+        style={{
+          backgroundImage: `url('https://cdn.pixabay.com/photo/2023/08/31/15/37/ai-generated-8225400_1280.png')`, // Replace with correct path
+        }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <motion.h1
+          className="text-5xl font-extrabold bg-blue-600 px-6 py-3 rounded-lg shadow-lg uppercase tracking-wide"
+          initial={{ scale: 0.8 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          Guidelines 
+        </motion.h1>
+        <p className="text-lg mt-2 text-gray-200">
+          Follow the rules to ensure a safe and productive learning environment
+        </p>
+      </motion.div>
+
+      {/* Rules Section */}
+      <div 
+        className="relative min-h-screen bg-cover bg-center  p-6" 
+      >
+        <div className="absolute inset-0 bg-black opacity-40"></div> {/* Overlay for readability */}
+        <div className="relative max-w-4xl mx-auto bg-white bg-opacity-90 rounded-xl shadow-lg p-6">
+          <h2 className="text-3xl font-bold text-center mb-6 text-gray-900">Rules and Regulations</h2>
+          <div className="space-y-4 text-gray-800">
+            <h3 className="text-xl font-semibold">General Rules</h3>
+            <ol className="list-decimal pl-6 space-y-2">
+              <li>Parents must ensure their children attend school regularly. Coming late is not permitted.</li>
+              <li>School hours are from 8:45 a.m. to 1:45 p.m. Latecomers will not be allowed.</li>
+              <li>School policies are decided by the management, and adherence is expected.</li>
+              <li>The school is not responsible for lost items.</li>
+              <li>Students recovering from infectious diseases need a doctor’s certificate.</li>
+              <li>Absences must be recorded in the school diary and signed by parents.</li>
+              <li>Prolonged absence without intimation will result in name removal from rolls.</li>
+              <li>Attendance of 75% is mandatory.</li>
+              <li>Parents must attend all PTMs and orientation programs.</li>
+              <li>Interaction with students or teachers during school hours requires prior permission.</li>
+              <li>The school is responsible for the safety of students only if they use the school bus.</li>
+              <li>Respect for school property is mandatory.</li>
+              <li>Students must carry their school identity card daily.</li>
+            </ol>
+
+            <h3 className="text-xl font-semibold">Admission Procedure</h3>
+            <ol className="list-decimal pl-6 space-y-2">
+              <li>Admissions depend on seat availability and require a Transfer Certificate.</li>
+              <li>Entrance tests may be required.</li>
+              <li>The management’s decision on admissions is final.</li>
+              <li>The school reserves the right to change admission policies.</li>
+            </ol>
+
+            <h3 className="text-xl font-semibold">Withdrawal Procedure</h3>
+            <ol className="list-decimal pl-6 space-y-2">
+              <li>A month's written notice is required for withdrawal.</li>
+              <li>School leaving certificates are issued free; duplicates cost Rs. 200/-.</li>
+              <li>Caution money is refundable only at the time of withdrawal.</li>
+              <li>No transfer certificate will be issued until dues are cleared.</li>
+            </ol>
+
+            <h3 className="text-xl font-semibold">Fee Rules</h3>
+            <ol className="list-decimal pl-6 space-y-2">
+              <li>Fees must be paid by the 10th of each month.</li>
+              <li>Late payment incurs a Rs. 50/- fine per day.</li>
+              <li>Annual charges apply if a student withdraws after March 31.</li>
+              <li>Transport fees apply for 10 months, regardless of absences.</li>
+              <li>Fee clearance slips are required before exams.</li>
+            </ol>
+
+            <h3 className="text-xl font-semibold">School Uniform</h3>
+            <ol className="list-decimal pl-6 space-y-2">
+              <li>Neatly laundered uniform and polished shoes are mandatory.</li>
+              <li>Winter uniform includes a maroon pullover.</li>
+              <li>Fancy watches and jewelry are not allowed.</li>
+            </ol>
+
+            <h3 className="text-xl font-semibold">Note for Parents</h3>
+            <ol className="list-decimal pl-6 space-y-2">
+              <li>Communication between parents and teachers is essential.</li>
+              <li>Parents should encourage independence and acknowledge achievements.</li>
+              <li>Regular checking of the school diary is advised.</li>
+              <li>Address or contact changes must be reported to the class teacher.</li>
+              <li>Parents must carry the Guardian Card when picking up their children.</li>
+            </ol>
+          </div>
         </div>
       </div>
     </div>
