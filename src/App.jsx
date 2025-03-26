@@ -11,6 +11,8 @@ import Gallery from './components/navlinks/gallery';
 import NotFoundPage from './pages/NotFoundPage.jsx';
 import Announcement from './components/Core/anouncement.jsx';
 import Faculty from "./components/About Us/Faculty.jsx";
+import Infrastructure from './components/About Us/Infrastructure.jsx';
+import About from './components/About Us/About.jsx';
 
 function App() {
   return (
@@ -28,6 +30,8 @@ function App() {
               <Route path="/contact" element={<ContactPage/>} />
               <Route path="/online-fee" element={<NotFoundPage/>} />
               <Route path="/about/faculty" element={<Faculty/>} />
+              <Route path="/about/infrastructure" element={<Infrastructure/>} />
+              <Route path="/about/dps-patna" element={<About/>} />
             </Routes>
           </div>
           <Footer/>
