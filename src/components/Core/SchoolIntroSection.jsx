@@ -2,7 +2,7 @@ import React from "react";
 
 const SchoolIntroSection = () => {
   return (
-    <section className="flex flex-col md:flex-row items-center bg-gray-100 py-12 px-6 md:px-16 rounded-lg shadow-lg">
+    <section className="flex flex-col md:flex-row items-center bg-gray-100 py-12 px-6 md:px-16 rounded-lg shadow-lg ">
       {/* Left: Image */}
       <div className="w-full md:w-1/2">
         <img
