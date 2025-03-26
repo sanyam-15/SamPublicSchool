@@ -1,124 +1,86 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
-import { Card, CardContent } from "../ui/card";
 import { Button } from "../ui/button";
+import { ChevronLeft, ChevronRight, X } from "lucide-react";
 
-const galleryData = [
-  {
-    title: "Principal's Day",
-    date: "24-Jan-2025",
-    images: Array(12).fill(
-      "https://cdn.pixabay.com/photo/2021/11/12/18/18/abandoned-school-6789778_1280.jpg"
-    ),
-    count: 20,
-  },
-  {
-    title: "Annual Prize Distribution & House Gathering 2025",
-    date: "Feb 2025",
-    images: Array(12).fill(
-      "https://cdn.pixabay.com/photo/2021/11/12/18/18/abandoned-school-6789778_1280.jpg"
-    ),
-    count: 10,
-  },
-];
+const images = Array(36).fill("https://cdn.pixabay.com/photo/2024/06/29/20/51/ai-generated-8862067_1280.jpg");
+
+const itemsPerPage = 12;
 
 export default function Gallery() {
-  const [selectedGallery, setSelectedGallery] = useState(null);
-  const [popupImage, setPopupImage] = useState(null);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [modalImage, setModalImage] = useState(null);
+  const totalPages = Math.ceil(images.length / itemsPerPage);
+
+  const handlePrev = () => setCurrentPage((prev) => Math.max(prev - 1, 1));
+  const handleNext = () => setCurrentPage((prev) => Math.min(prev + 1, totalPages));
+  const handleImageClick = (src) => setModalImage(src);
+  const closeModal = () => setModalImage(null);
+
+  const displayedImages = images.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
 
   return (
-    <div className="p-8 bg-gray-100 min-h-screen">
-      <h1 className="text-3xl font-bold text-center mb-6">Photo Gallery</h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {galleryData.map((gallery, index) => (
-          <motion.div
+    <div className="flex flex-col items-center bg-gray-100 pb-10">
+      {/* Banner */}
+      <div
+        className="w-full h-[50vh] bg-cover bg-center flex items-center justify-center text-white text-5xl font-extrabold shadow-md"
+        style={{ backgroundImage: 'url(https://cdn.pixabay.com/photo/2024/03/29/17/43/ai-generated-8663299_1280.png)' }}
+      >
+        Gallery
+      </div>
+
+      {/* Gallery Title */}
+      <h1 className="text-2xl font-bold my-6 text-gray-800">Image Gallery</h1>
+
+      {/* Image Grid */}
+      <div className="grid grid-cols-3 md:grid-cols-4 gap-6 px-4">
+        {displayedImages.map((src, index) => (
+          <div
             key={index}
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="cursor-pointer relative"
-            onClick={() => setSelectedGallery(index)}
+            className="relative transition-transform transform hover:scale-105 hover:shadow-lg cursor-pointer rounded-lg overflow-hidden"
+            onClick={() => handleImageClick(src)}
           >
-            <Card className="overflow-hidden rounded-2xl shadow-lg relative">
-              <img
-                src={gallery.images[0]}
-                alt={gallery.title}
-                className="w-full h-48 object-cover brightness-75"
-              />
-              <CardContent className="absolute bottom-0 left-0 p-4 text-white">
-                <h2 className="text-xl font-semibold">{gallery.title}</h2>
-                <p className="text-sm">{gallery.date}</p>
-              </CardContent>
-              <span className="absolute top-2 right-2 bg-blue-600 text-white text-xs font-bold py-1 px-2 rounded-full">
-                {gallery.count}
-              </span>
-            </Card>
-          </motion.div>
+            <img src={src} alt="Gallery" className="w-64 h-44 object-cover rounded-lg shadow-md" />
+          </div>
         ))}
       </div>
 
-      {/* Modal for Viewing Gallery */}
-      {selectedGallery !== null && (
-        <div className="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="bg-white p-6 rounded-lg shadow-xl max-w-xl w-full relative"
+      {/* Pagination Controls */}
+      <div className="flex items-center space-x-2 mt-6">
+        <Button onClick={handlePrev} disabled={currentPage === 1} size="sm" variant="outline">
+          <ChevronLeft />
+        </Button>
+        {[...Array(totalPages)].map((_, index) => (
+          <Button
+            key={index}
+            onClick={() => setCurrentPage(index + 1)}
+            size="sm"
+            className={`px-3 py-1 ${currentPage === index + 1 ? "bg-blue-600 text-white" : "bg-gray-200 text-gray-800 hover:bg-gray-300"}`}
           >
-            {/* Close Button */}
+            {index + 1}
+          </Button>
+        ))}
+        <Button onClick={handleNext} disabled={currentPage === totalPages} size="sm" variant="outline">
+          <ChevronRight />
+        </Button>
+      </div>
+
+      {/* Modal for Enlarged Image */}
+      {modalImage && (
+        <div className="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center z-50">
+          <div className="relative p-4 flex justify-center items-center">
+            {/* Close Button (Visible & Well Positioned) */}
             <button
-              onClick={() => setSelectedGallery(null)}
-              className="absolute top-2 right-2 bg-red-500 text-white px-3 py-1 rounded-full text-lg font-bold"
+              onClick={closeModal}
+              className="absolute top-4 right-4 bg-white text-black rounded-full p-3 shadow-lg hover:bg-gray-300 transition-all z-50"
             >
-              ✕
+              <X size={24} />
             </button>
-
-            <h2 className="text-2xl font-bold mb-4">
-              {galleryData[selectedGallery].title}
-            </h2>
-
-            {/* Scrollable Images */}
-            <div className="grid grid-cols-2 gap-2 overflow-y-auto max-h-96 p-2">
-              {galleryData[selectedGallery].images.map((image, i) => (
-                <motion.img
-                  key={i}
-                  src={image}
-                  alt={`Gallery Image ${i + 1}`}
-                  className="w-60 h-60 object-cover rounded-lg cursor-pointer"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => setPopupImage(image)}
-                />
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      )}
-
-      {/* Image Popup with Proper Centering */}
-      {popupImage && (
-        <div className="fixed top-20 inset-0 bg-black bg-opacity-75 flex items-center justify-center p-4">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            className="bg-white p-4 rounded-lg shadow-lg max-w-full w-auto relative flex flex-col items-center"
-          >
-            {/* Close Button */}
-            <button
-              onClick={() => setPopupImage(null)}
-              className="absolute top-2 right-2 bg-red-500 text-white px-3 py-1 rounded-full text-lg font-bold"
-            >
-              ✕
-            </button>
-
-            {/* Image properly centered inside white background */}
-            <div className="flex items-center justify-center">
-              <img
-                src={popupImage}
-                alt="Selected"
-                className="w-auto h-auto max-w-[90vw] max-h-[80vh] rounded-lg"
-              />
-            </div>
-          </motion.div>
+            <img
+              src={modalImage}
+              alt="Enlarged"
+              className="max-w-[80vw] max-h-[80vh] object-contain rounded-lg shadow-xl"
+            />
+          </div>
         </div>
       )}
     </div>

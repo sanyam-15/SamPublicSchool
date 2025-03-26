@@ -21,6 +21,8 @@ import DeveloperInfo from "./pages/DeveloperInfo.jsx";
 import AdmissionForm from "./components/Core/AdmissionForm.jsx";
 import FeeStructurePage from "./pages/FeeStructure.jsx";
 import AdmissionPolicyPage from './pages/AdmissionPolicy.jsx';
+import SchoolProspectus from './components/About Us/schoolProspectus.jsx';
+import VideoGallery from './pages/videoGAllery.jsx';
 
 
 function App() {
@@ -48,6 +50,8 @@ function App() {
               <Route path="/admissions/admission-form" element={<AdmissionForm/>} />
               <Route path="/admissions/fee-structure" element={<FeeStructurePage/>} />
               <Route path="/admissions/admission-policy" element={<AdmissionPolicyPage/>} />
+              <Route path="/about/school-prospectus" element={<SchoolProspectus/>} />
+              <Route path="/gallery/videos" element={<VideoGallery/>} />
 
               <Route path="/rules/guidelines-for-students" element={<StudentGuidelines/>} />
             </Routes>
