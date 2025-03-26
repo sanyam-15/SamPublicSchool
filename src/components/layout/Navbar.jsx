@@ -24,6 +24,11 @@ const Navbar = () => {
         { name: "Faculty", path: "/about/faculty" },
         { name: "Principle Message", path: "/about/co-curricular" },
         { name: "Transport", path: "/about/transport" },
+
+
+        { name: "Mandatory Information", path: "/about/mandatory-info" },
+        { name: "School Prospectus", path: "/about/school-prospectus" },
+
       ]
     },
     { 
