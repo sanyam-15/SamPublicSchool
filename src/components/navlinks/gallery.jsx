@@ -39,7 +39,7 @@ export default function Gallery() {
             className="relative transition-transform transform hover:scale-105 hover:shadow-lg cursor-pointer rounded-lg overflow-hidden"
             onClick={() => handleImageClick(src)}
           >
-            <img src={src} alt="Gallery" className="w-64 h-44 object-cover rounded-lg shadow-md" />
+            <img src={src} alt="Gallery" className="w-80 h-44 object-cover rounded-lg shadow-md" />
           </div>
         ))}
       </div>

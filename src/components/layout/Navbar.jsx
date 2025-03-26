@@ -24,9 +24,6 @@ const Navbar = () => {
         { name: "Faculty", path: "/about/faculty" },
         { name: "Principle Message", path: "/about/co-curricular" },
         { name: "Transport", path: "/about/transport" },
-
-
-        { name: "Mandatory Information", path: "/about/mandatory-info" },
         { name: "School Prospectus", path: "/about/school-prospectus" },
 
       ]
@@ -37,20 +34,15 @@ const Navbar = () => {
         { name: "Admission Policy", path: "/admissions/admission-policy" },
         { name: "Admission Form", path: "/admissions/admission-form" },
         { name: "Fee Structure", path: "/admissions/fee-structure" },
-        // { name: "School Prospectus", path: "/admissions/prospectus" },
       ]
     },
     { 
       name: "Rules and Regulations", path: "/rules", dropdown: [
         { name: "Guidelines for Students", path: "/rules/guidelines-for-students" },
-        { name: "Good Student", path: "/rules/good-student" },
-        { name: "Library Rules", path: "/rules/library-rules" },
-        { name: "Fee Structure (2024-25)", path: "/rules/fee-structure" },
         { name: "Fee Rules", path: "/rules/fee-rules" },
         { name: "Admission & Withdrawal", path: "/rules/admission-withdrawal" },
         { name: "Syllabus", path: "/rules/syllabus" },
         { name: "Examination & Promotion", path: "/rules/examination-promotion" },
-        { name: "Vehicles", path: "/rules/vehicles" },
         { name: "Recommendations to Parents", path: "/rules/recommendations-parents" },
       ]
     },
