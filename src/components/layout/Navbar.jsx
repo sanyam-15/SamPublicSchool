@@ -22,11 +22,13 @@ const Navbar = () => {
         { name: "About Sam", path: "/about/dps-patna" },
         { name: "Infrastructure", path: "/about/infrastructure" },
         { name: "Faculty", path: "/about/faculty" },
-        { name: "Co-Curricular Programme", path: "/about/co-curricular" },
-        { name: "Assessments", path: "/about/assessments" },
+        { name: "Principle Message", path: "/about/co-curricular" },
         { name: "Transport", path: "/about/transport" },
+
+
         { name: "Mandatory Information", path: "/about/mandatory-info" },
         { name: "School Prospectus", path: "/about/school-prospectus" },
+
       ]
     },
     { 
