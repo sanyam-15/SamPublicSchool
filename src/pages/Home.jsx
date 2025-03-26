@@ -12,6 +12,8 @@ import PhotoGallery from "../components/Core/photoGallery";
 import StatsSection from "../components/Core/counters";
 import SchoolIntroSection from "../components/Core/SchoolIntroSection";
 import FacilitiesSection from "../components/home/facilitiesSection";
+import WhyChooseTemplate from "../components/home/whyChooseTemplate";
+import WhatsAppButton from "../components/Core/whatsapp";
 
 const Home = () => {
   return (
@@ -68,12 +70,14 @@ const Home = () => {
         <SchoolIntroSection />
         <QuickLinks />
         <PrincipalMessage />
+        <WhyChooseTemplate/>
         <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
           <ToppersSlider />
           <NewsUpdates />
         </div>
         <StatsSection />
         <PhotoGallery />
+        <WhatsAppButton/>
         {/* <KeyMetrics /> */}
         <FacilitiesSection/>
       </div>

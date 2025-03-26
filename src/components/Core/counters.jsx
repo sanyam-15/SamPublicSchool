@@ -12,8 +12,8 @@ const stats = [
 export default function StatsSection() {
   return (
     <div
-      className="relative w-full py-16 bg-cover bg-center"
-      style={{ backgroundImage: "url('https://cdn.pixabay.com/photo/2017/03/27/13/03/book-2178586_1280.jpg')" }}
+      className="relative w-full bg-fixed py-16 bg-cover bg-center w-[85%] mx-auto rounded-lg shadow-lg text-white"
+      style={{ backgroundImage: "url('https://img.freepik.com/free-photo/book-day-with-group-younf-childre_23-2148445696.jpg')" }}
     >
       <div className="absolute inset-0 bg-black bg-opacity-50"></div>
       

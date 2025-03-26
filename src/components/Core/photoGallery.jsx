@@ -6,11 +6,11 @@ import "swiper/css/autoplay";
 import { FreeMode, Autoplay } from "swiper/modules";
 
 const images = [
-  "https://static.toiimg.com/thumb/msid-115556678,width-400,resizemode-4/115556678.jpg",
-  "https://static.toiimg.com/thumb/msid-115556678,width-400,resizemode-4/115556678.jpg",
-  "https://static.toiimg.com/thumb/msid-115556678,width-400,resizemode-4/115556678.jpg",
-  "https://static.toiimg.com/thumb/msid-115556678,width-400,resizemode-4/115556678.jpg",
-  "https://static.toiimg.com/thumb/msid-115556678,width-400,resizemode-4/115556678.jpg"
+  "https://cdn.pixabay.com/photo/2020/09/01/20/01/schoolgirl-5536448_1280.jpg",
+  "https://cdn.pixabay.com/photo/2020/09/01/20/01/schoolgirl-5536448_1280.jpg",
+  "https://cdn.pixabay.com/photo/2020/09/01/20/01/schoolgirl-5536448_1280.jpg",
+  "https://cdn.pixabay.com/photo/2020/09/01/20/01/schoolgirl-5536448_1280.jpg",
+  "https://cdn.pixabay.com/photo/2020/09/01/20/01/schoolgirl-5536448_1280.jpg"
 ];
 
 const PhotoGallery = () => {

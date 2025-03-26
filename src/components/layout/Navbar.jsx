@@ -31,12 +31,10 @@ const Navbar = () => {
     { 
       name: "Admissions", path: "/admissions", dropdown: [
         { name: "Admission Procedure", path: "/admissions/procedure" },
-        { name: "Age Criteria", path: "/admissions/age-criteria" },
-        { name: "School Rules", path: "/admissions/school-rules" },
-        { name: "Academic Plan", path: "/admissions/academic-plan" },
-        { name: "School Uniform", path: "/admissions/school-uniform" },
-        { name: "Fee Schedule", path: "/admissions/fee-schedule" },
-        { name: "School Prospectus", path: "/admissions/prospectus" },
+        { name: "Admission Policy", path: "/admissions/admission-policy" },
+        { name: "Admission Form", path: "/admissions/admission-form" },
+        { name: "Fee Structure", path: "/admissions/fee-structure" },
+        // { name: "School Prospectus", path: "/admissions/prospectus" },
       ]
     },
     { 

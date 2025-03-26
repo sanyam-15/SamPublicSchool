@@ -76,7 +76,7 @@ const Footer = () => {
       >
         <div className="w-[85vw] flex flex-col justify-between items-center m-auto md:flex-row">
           <p className="text-center md:text-left">
-            Copyright All Rights Reserved 2025, Developer401
+            Copyright All Rights Reserved 2025, <a href="/developer-info">Developer 401</a>
           </p>
           <div className="flex space-x-4 text-red-500 text-xl mt-4 md:mt-0">
             <Link to="https://www.facebook.com/"><FaFacebook className="cursor-pointer" color={socialMediaIconColor} /></Link>

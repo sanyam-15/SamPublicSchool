@@ -38,7 +38,7 @@ export default function NewsUpdates() {
   };
 
   return (
-    <div className="relative w-full max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl h-[350px] overflow-hidden border rounded-lg bg-red-50 p-4 shadow-lg mx-auto">
+    <div className="relative w-full max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl h-[350px] overflow-hidden border rounded-lg bg-white-50 p-4 shadow-lg mx-auto">
       <h2 className="text-lg md:text-xl font-bold text-gray-800 mb-3">📢 News Updates</h2>
       <div
         className="h-[300px] overflow-y-scroll scrollbar-hide"
