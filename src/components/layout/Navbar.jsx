@@ -19,7 +19,7 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { 
       name: "About Us", path: "/about", dropdown: [
-        { name: "About DPS Patna", path: "/about/dps-patna" },
+        { name: "About Sam", path: "/about/dps-patna" },
         { name: "Infrastructure", path: "/about/infrastructure" },
         { name: "Faculty", path: "/about/faculty" },
         { name: "Co-Curricular Programme", path: "/about/co-curricular" },

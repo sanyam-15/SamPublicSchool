@@ -11,12 +11,17 @@ import Gallery from './components/navlinks/gallery';
 import NotFoundPage from './pages/NotFoundPage.jsx';
 import Announcement from './components/Core/anouncement.jsx';
 import Faculty from "./components/About Us/Faculty.jsx";
+
+import Infrastructure from './components/About Us/Infrastructure.jsx';
+import About from './components/About Us/About.jsx';
+
 import StudentGuidelines from "./components/RulesAndRegulations/StudentGuidelines.jsx";
 import RulesFeeRules from "./components/RulesAndRegulations/RulesFeeRules.jsx";
 import DeveloperInfo from "./pages/DeveloperInfo.jsx";
 import AdmissionForm from "./components/Core/AdmissionForm.jsx";
 import FeeStructurePage from "./pages/FeeStructure.jsx";
 import AdmissionPolicyPage from './pages/AdmissionPolicy.jsx';
+
 
 function App() {
   return (
@@ -34,6 +39,10 @@ function App() {
               <Route path="/contact" element={<ContactPage/>} />
               <Route path="/online-fee" element={<NotFoundPage/>} />
               <Route path="/about/faculty" element={<Faculty/>} />
+
+              <Route path="/about/infrastructure" element={<Infrastructure/>} />
+              <Route path="/about/dps-patna" element={<About/>} />
+
               <Route path="/rules/fee-rules" element={<RulesFeeRules/>} />
               <Route path="/developer-info" element={<DeveloperInfo/>} />
               <Route path="/admissions/admission-form" element={<AdmissionForm/>} />
