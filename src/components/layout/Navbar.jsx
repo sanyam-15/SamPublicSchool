@@ -39,11 +39,8 @@ const Navbar = () => {
     { 
       name: "Rules and Regulations", path: "/rules", dropdown: [
         { name: "Guidelines for Students", path: "/rules/guidelines-for-students" },
-        { name: "Fee Rules", path: "/rules/fee-rules" },
-        { name: "Admission & Withdrawal", path: "/rules/admission-withdrawal" },
         { name: "Syllabus", path: "/rules/syllabus" },
         { name: "Examination & Promotion", path: "/rules/examination-promotion" },
-        { name: "Recommendations to Parents", path: "/rules/recommendations-parents" },
       ]
     },
     { 
