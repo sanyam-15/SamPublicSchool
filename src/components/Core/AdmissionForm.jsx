@@ -9,10 +9,6 @@ const AdmissionPage = () => {
 
   return (
     <div className="bg-gray-100">
-<<<<<<< HEAD
-=======
-
->>>>>>> 9e58b73dbe687e55cfab25ce8f67b093e39cafce
       {/* Hero Section */}
       <HeroSection moto={"Admissions Open for 2025-26"} section={"Admissions"} />
 
@@ -57,10 +53,6 @@ const AdmissionPage = () => {
     </motion.p>
   </div>
 </motion.div>
-<<<<<<< HEAD
-=======
-
->>>>>>> 9e58b73dbe687e55cfab25ce8f67b093e39cafce
 
       {/* PDF Viewer */}
       <motion.div
