@@ -1,83 +1,245 @@
 import React, { useState, useEffect, useRef } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import { FaChevronLeft, FaChevronRight, FaBullhorn } from "react-icons/fa";
+
+// Color Constants
+const COLORS = {
+  primary: '#1A365D',     // Navy Blue
+  secondary: '#8B0000',   // Crimson
+  accent: '#D4AF37',      // Gold
+  lightBg: '#F8F9FA',     // Light Gray
+  darkText: '#2D3748',    // Dark Gray
+  lightText: '#718096'    // Gray
+};
 
 const newsData = [
-  { id: 1, date: "17 Mar 25", title: "For new session", content: "Dear Parents, we would like to inform you that the school will remain closed for Term Break..." },
-  { id: 2, date: "10 Mar 25", title: "Holi Wishes", content: "Wishing all students and parents a very happy and colorful Holi! May this festival bring joy..." },
-  { id: 3, date: "5 Mar 25", title: "Annual Sports Meet", content: "Our Annual Sports Meet was a grand success! Thank you to all students and parents for..." },
-  { id: 4, date: "1 Mar 25", title: "New Library Opening", content: "Exciting news! Our new school library is now open with over 5000 books across different genres..." },
-  { id: 5, date: "25 Feb 25", title: "Exam Schedule Released", content: "The final term exam schedule is now available on the school website. Please check for details..." },
+  { 
+    id: 1, 
+    date: "17 Mar 2024", 
+    title: "New Session Announcement", 
+    content: "The new academic session will commence on 2nd April 2024. Please ensure all documents are submitted by 15th March.",
+    category: "Admissions"
+  },
+  { 
+    id: 2, 
+    date: "10 Mar 2024", 
+    title: "Holi Celebration", 
+    content: "Wishing all students a happy Holi! School will remain closed on 25th March for celebrations.",
+    category: "Events"
+  },
+  { 
+    id: 3, 
+    date: "5 Mar 2024", 
+    title: "Annual Sports Meet", 
+    content: "Our Annual Sports Meet was a grand success with over 500 participants! Congratulations to all winners.",
+    category: "Achievements"
+  },
+  { 
+    id: 4, 
+    date: "1 Mar 2024", 
+    title: "Library Expansion", 
+    content: "Our new school library wing is now open with over 5000 books across different genres.",
+    category: "Facilities"
+  },
 ];
 
 export default function NewsUpdates() {
-  const [selectedNews, setSelectedNews] = useState(null);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const scrollRef = useRef(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const [direction, setDirection] = useState(1);
+  const [isHovered, setIsHovered] = useState(false);
   const intervalRef = useRef(null);
 
+  // Auto-rotation effect
   useEffect(() => {
-    startScrolling();
-    return () => clearInterval(intervalRef.current);
-  }, []);
-
-  const startScrolling = () => {
-    intervalRef.current = setInterval(() => {
-      if (scrollRef.current) {
-        const { scrollTop, scrollHeight, clientHeight } = scrollRef.current;
-        if (scrollTop + clientHeight >= scrollHeight) {
-          scrollRef.current.scrollTop = 0;
-        } else {
-          scrollRef.current.scrollTop += 2;
+    const startAutoScroll = () => {
+      intervalRef.current = setInterval(() => {
+        if (!isHovered) {
+          setDirection(1);
+          setCurrentIndex(prev => (prev + 1) % newsData.length);
         }
-      }
-    }, 30);
+      }, 5000);
+    };
+
+    startAutoScroll();
+    return () => clearInterval(intervalRef.current);
+  }, [isHovered]);
+
+  const handleNext = () => {
+    setDirection(1);
+    setCurrentIndex(prev => (prev + 1) % newsData.length);
+    resetInterval();
   };
 
-  const stopScrolling = () => {
+  const handlePrev = () => {
+    setDirection(-1);
+    setCurrentIndex(prev => (prev - 1 + newsData.length) % newsData.length);
+    resetInterval();
+  };
+
+  const resetInterval = () => {
     clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
+      if (!isHovered) {
+        setDirection(1);
+        setCurrentIndex(prev => (prev + 1) % newsData.length);
+      }
+    }, 5000);
+  };
+
+  const variants = {
+    enter: (direction) => ({
+      x: direction > 0 ? 100 : -100,
+      opacity: 0,
+      scale: 0.95
+    }),
+    center: {
+      x: 0,
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0.5 }
+    },
+    exit: (direction) => ({
+      x: direction < 0 ? 100 : -100,
+      opacity: 0,
+      scale: 0.95,
+      transition: { duration: 0.5 }
+    })
   };
 
   return (
-    <div className="relative w-full max-w-lg md:max-w-xl lg:max-w-2xl xl:max-w-3xl h-[350px] overflow-hidden border rounded-lg bg-white-50 p-4 shadow-lg mx-auto">
-      <h2 className="text-lg md:text-xl font-bold text-gray-800 mb-3">📢 News Updates</h2>
-      <div
-        className="h-[300px] overflow-y-scroll scrollbar-hide"
-        ref={scrollRef}
-        onMouseEnter={stopScrolling}
-        onMouseLeave={startScrolling}
+    <div 
+      className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-200 h-full transition-all duration-300 hover:shadow-xl"
+      style={{ backgroundColor: COLORS.lightBg }}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {/* Header */}
+      <div 
+        className="p-5"
+        style={{ backgroundColor: COLORS.primary }}
       >
-        {newsData.map((news) => (
-          <motion.div key={news.id} className="py-3 border-b">
-            <div className="text-xs md:text-sm text-gray-500 font-medium">{news.date}</div>
-            <h3 className="text-sm md:text-lg font-bold text-gray-800">{news.title}</h3>
-            <p className="text-xs md:text-sm text-gray-700">{news.content}</p>
-            <button
-              className="text-red-600 hover:underline text-xs md:text-sm font-medium"
-              onClick={() => {
-                setSelectedNews(news);
-                setIsModalOpen(true);
-              }}
-            >
-              View More
-            </button>
-          </motion.div>
-        ))}
+        <h2 className="text-2xl font-bold text-white flex items-center">
+          <FaBullhorn className="mr-3" style={{ color: COLORS.accent }} />
+          NEWS & UPDATES
+        </h2>
       </div>
-
-      {isModalOpen && selectedNews && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 p-4">
-          <div className="bg-white p-5 rounded-lg shadow-lg w-full max-w-sm md:max-w-md">
-            <h2 className="text-lg md:text-xl font-bold">{selectedNews.title}</h2>
-            <p className="mt-2 text-sm md:text-base text-gray-700">{selectedNews.content}</p>
-            <button
-              className="mt-4 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 w-full"
-              onClick={() => setIsModalOpen(false)}
+      
+      {/* News content */}
+      <div className="relative h-[350px] md:h-[400px] overflow-hidden">
+        <AnimatePresence custom={direction} initial={false}>
+          <motion.div
+            key={currentIndex}
+            custom={direction}
+            variants={variants}
+            initial="enter"
+            animate="center"
+            exit="exit"
+            className="absolute inset-0 p-6 flex flex-col"
+          >
+            {/* Date and Category */}
+            <div className="flex justify-between items-start mb-5">
+              <div 
+                className="rounded-lg p-3 text-center shadow-sm"
+                style={{ backgroundColor: COLORS.lightBg }}
+              >
+                <div 
+                  className="text-sm font-bold"
+                  style={{ color: COLORS.primary }}
+                >
+                  {newsData[currentIndex].date.split(' ')[0]}
+                </div>
+                <div 
+                  className="text-xs"
+                  style={{ color: COLORS.lightText }}
+                >
+                  {newsData[currentIndex].date.split(' ')[1]}
+                </div>
+                <div 
+                  className="text-xs"
+                  style={{ color: COLORS.lightText }}
+                >
+                  {newsData[currentIndex].date.split(' ')[2]}
+                </div>
+              </div>
+              
+              <span 
+                className="text-xs font-semibold px-3 py-1 rounded-full"
+                style={{ 
+                  backgroundColor: `${COLORS.accent}20`,
+                  color: COLORS.primary
+                }}
+              >
+                {newsData[currentIndex].category}
+              </span>
+            </div>
+            
+            {/* News Title */}
+            <h3 
+              className="text-xl md:text-2xl font-bold mb-4"
+              style={{ color: COLORS.darkText }}
             >
-              Close
-            </button>
-          </div>
-        </div>
-      )}
+              {newsData[currentIndex].title}
+            </h3>
+            
+            {/* News Content */}
+            <p 
+              className="mb-6 flex-g-1"
+              style={{ color: COLORS.lightText }}
+            >
+              {newsData[currentIndex].content}
+            </p>
+            
+            {/* Navigation Controls */}
+            <div className="mt-auto flex justify-between items-center">
+              {/* Indicators */}
+              <div className="flex space-x-2">
+                {newsData.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => {
+                      setDirection(index > currentIndex ? 1 : -1);
+                      setCurrentIndex(index);
+                      resetInterval();
+                    }}
+                    className={`h-2 rounded-full transition-all ${index === currentIndex ? 'w-6' : 'w-3'}`}
+                    style={{
+                      backgroundColor: index === currentIndex ? COLORS.primary : `${COLORS.primary}30`
+                    }}
+                    aria-label={`View ${newsData[index].title}`}
+                  />
+                ))}
+              </div>
+              
+              {/* Arrows */}
+              <div className="flex space-x-3">
+                <button 
+                  onClick={handlePrev}
+                  className="p-2 rounded-full shadow-md hover:scale-110 transition-all"
+                  style={{
+                    backgroundColor: COLORS.lightBg,
+                    color: COLORS.primary,
+                    border: `1px solid ${COLORS.primary}`
+                  }}
+                  aria-label="Previous news"
+                >
+                  <FaChevronLeft />
+                </button>
+                <button 
+                  onClick={handleNext}
+                  className="p-2 rounded-full shadow-md hover:scale-110 transition-all"
+                  style={{
+                    backgroundColor: COLORS.accent,
+                    color: COLORS.primary
+                  }}
+                  aria-label="Next news"
+                >
+                  <FaChevronRight />
+                </button>
+              </div>
+            </div>
+          </motion.div>
+        </AnimatePresence>
+      </div>
     </div>
   );
 }

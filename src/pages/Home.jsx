@@ -1,9 +1,7 @@
 import React, { useEffect } from "react";
 import HeroBanner from "../components/home/HeroBanner";
-import AnnouncementTicker from "../components/home/AnnouncementTicker";
 import QuickLinks from "../components/home/QuickLinks";
 import PrincipalMessage from "../components/home/PrincipalMessage";
-import KeyMetrics from "../components/home/KeyMetrics";
 import { GraduationCap, Calendar, Award } from 'lucide-react';
 import { motion } from 'framer-motion';
 import NewsUpdates from "../components/Core/NewsUpdates";
@@ -20,70 +18,86 @@ const Home = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="min-h-screen">
-      <HeroBanner />
+    <div className="min-h-screen bg-gray-50">
+      {/* Hero Section with Overlapping Cards */}
       <div className="relative">
-        {/* Space for the feature cards that overlap from HeroBanner */}
+        <HeroBanner />
+        
         {/* Feature Cards */}
-        <div className="z-10 absolute top-0 left-0 right-0" style={{ transform: "translateY(-50%)" }}>
+        <div className="z-10 absolute -bottom-12 left-0 right-0">
           <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-6">
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="bg-blue-100 dark:bg-gray-800 p-6 rounded-lg shadow-lg z-50"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              viewport={{ once: true, margin: "-50px" }}
+              className="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow"
             >
-              <GraduationCap className="text-red-500 w-10 h-10 mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Academic Excellence</h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Comprehensive curriculum fostering holistic development
+              <div className="w-16 h-16 flex items-center justify-center bg-red-100 rounded-full mb-4">
+                <GraduationCap className="text-red-600 w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Academic Excellence</h3>
+              <p className="text-gray-600">
+                Comprehensive curriculum fostering holistic development and critical thinking skills
               </p>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4 }}
+              viewport={{ once: true, margin: "-50px" }}
+              className="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow"
             >
-              <Calendar className="text-red-500 w-10 h-10 mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Enriching Activities</h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Diverse range of extracurricular programs
+              <div className="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-4">
+                <Calendar className="text-blue-600 w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Enriching Activities</h3>
+              <p className="text-gray-600">
+                Diverse range of extracurricular programs for all-round development
               </p>
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-lg"
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.6 }}
+              viewport={{ once: true, margin: "-50px" }}
+              className="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow"
             >
-              <Award className="text-red-500 w-10 h-10 mb-4" />
-              <h3 className="text-lg font-semibold mb-2">Proven Track Record</h3>
-              <p className="text-gray-600 dark:text-gray-300">
-                Consistent academic achievements and accolades
+              <div className="w-16 h-16 flex items-center justify-center bg-purple-100 rounded-full mb-4">
+                <Award className="text-purple-600 w-8 h-8" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">Proven Track Record</h3>
+              <p className="text-gray-600">
+                Consistent academic achievements and national-level accolades
               </p>
             </motion.div>
           </div>
         </div>
-        <div className="pt-32">
-          {/* <AnnouncementTicker /> */}
-        </div>
-        <SchoolIntroSection />
-        <QuickLinks />
-        <PrincipalMessage />
-        <WhyChooseTemplate/>
-        <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-          <ToppersSlider />
-          <NewsUpdates />
-        </div>
-        <StatsSection />
-        <PhotoGallery />
-        <WhatsAppButton/>
-        {/* <KeyMetrics /> */}
-        <FacilitiesSection/>
       </div>
+
+      {/* Main Content */}
+      <div className="pt-32 pb-20">
+        <SchoolIntroSection />
+        
+        <div className="max-w-7xl mx-auto px-4">
+          <QuickLinks />
+          <PrincipalMessage />
+          <WhyChooseTemplate />
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 my-16">
+            <ToppersSlider />
+            <NewsUpdates />
+          </div>
+          
+          <StatsSection />
+          <PhotoGallery />
+          <FacilitiesSection />
+        </div>
+      </div>
+
+      <WhatsAppButton />
     </div>
   );
 };
