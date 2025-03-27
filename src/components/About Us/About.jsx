@@ -1,11 +1,15 @@
 import { motion } from "framer-motion";
 import HeroSection from "./HeroSection";
+import { useEffect } from "react";
 
 export default function AboutDPS() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="relative bg-gray-100">
       {/* Hero Section */}
-      <HeroSection moto={"About Sam Public School"} description={"Excellence in education, shaping leaders for a better future."} />
+      <HeroSection moto={"About Sam Public School"} description={"Excellence in education, shaping leaders for a better future."} section={"About Us"} />
       
       {/* Content Section */}
       <div className="max-w-6xl mx-auto px-6 md:px-12 py-16">

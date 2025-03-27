@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useEffect } from "react";
 import InfrastructureComponent from "./InfrastructureComponent";
 import HeroSection from "./HeroSection";
 
 function Infrastructure() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
       <div>
-        <HeroSection moto={"Our Facilities"} description={"Best ever"} />
+        <HeroSection moto={"Our Facilities"} description={"Best ever"} section={"About Us"} />
       </div>
 
       <InfrastructureComponent

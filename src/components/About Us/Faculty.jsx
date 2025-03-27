@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HeroSection from "./HeroSection";
 import InfrastructureComponent from "./InfrastructureComponent";
 
 function Faculty() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div>
-      <HeroSection moto={"Our Teachers"} />
+      <HeroSection moto={"Our Teachers"} section={"About Us"} />
       <InfrastructureComponent
         image={"/Images/Library.jpg"}
         name={"Dr.Himadri Nayak"}

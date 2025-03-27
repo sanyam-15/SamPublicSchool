@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const ContactPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="bg-white font-sans">
       {/* Header Section with Background Image */}

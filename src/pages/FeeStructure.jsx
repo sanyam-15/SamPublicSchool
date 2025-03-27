@@ -1,8 +1,13 @@
 import { motion } from "framer-motion";
+import HeroSection from "../components/About Us/HeroSection";
 
 const FeeStructurePage = () => {
   return (
     <div className="bg-gray-100">
+<<<<<<< HEAD
+      {/* Hero Section */}
+      <HeroSection moto={"Fee Structure"} section={"Admissions"} />
+=======
       {/* First Background Image Section */}
       <motion.div
         className="bg-cover bg-center bg-no-repeat bg-black/60 bg-blend-overlay min-h-[50vh] flex flex-col items-center justify-center text-white text-center px-4 py-6 md:py-12"
@@ -32,6 +37,7 @@ const FeeStructurePage = () => {
           </motion.p>
         </div>
       </motion.div>
+>>>>>>> c60d7c9079d204e32728bbc5b3977a0a6d40fd3f
 
       {/* Fee Structure Content */}
       <div className="container mx-auto py-6 px-4 md:py-12 md:px-6">

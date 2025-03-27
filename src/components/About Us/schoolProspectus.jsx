@@ -1,11 +1,15 @@
 import { motion } from "framer-motion";
 import HeroSection from "./HeroSection.jsx";
+import { useEffect } from "react";
 
 const SchoolProspectus = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="bg-gray-100">
  {/* Hero Section */}
-    <HeroSection moto={"Explore Our Vision"} description={"Sam Public School - Prospectus 2025-26"} />
+    <HeroSection moto={"Explore Our Vision"} description={"Sam Public School - Prospectus 2025-26"} section={"About Us"} />
 
        {/* Heading Section */}
        <motion.div

@@ -1,8 +1,26 @@
 import { motion } from "framer-motion";
+import HeroSection from "../About Us/HeroSection";
 
 const AdmissionPage = () => {
   return (
     <div className="bg-gray-100">
+<<<<<<< HEAD
+      {/* Hero Section */}
+      <HeroSection moto={"Admissions Open for 2025-26"} section={"Admissions"} />
+
+      {/* Admission Form Heading */}
+      <motion.div
+        className="text-center mt-12"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+      >
+        <h2 className="text-3xl font-bold text-blue-700">Admission Form</h2>
+        <p className="text-gray-600 mt-2">
+          Download and fill out the form to apply for admission.
+        </p>
+      </motion.div>
+=======
 {/* First Background Image Section */}
 <motion.div
   className="bg-cover bg-center bg-no-repeat bg-black/60 bg-blend-overlay min-h-[40vh] md:min-h-[60vh] flex flex-col items-center justify-center text-white text-center px-4 md:px-8 py-6 md:py-12"
@@ -32,6 +50,7 @@ const AdmissionPage = () => {
     </motion.p>
   </div>
 </motion.div>
+>>>>>>> c60d7c9079d204e32728bbc5b3977a0a6d40fd3f
 
       {/* PDF Viewer */}
       <motion.div
