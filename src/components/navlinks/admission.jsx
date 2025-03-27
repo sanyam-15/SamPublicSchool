@@ -1,10 +1,22 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { motion } from "framer-motion";
 import HeroSection from "../About Us/HeroSection";
 
 const Admission = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="bg-white text-gray-900 text-center">
+<<<<<<< HEAD
+      {/* First Background Image Section */}
+      <HeroSection
+        moto={"Apply to Sam"}
+        description={"Your Journey Starts here"}
+        section={"Admissions"}
+      />
+=======
 
       {/* First Background Image Section */}
       <HeroSection moto={"Apply to Sam"} description={"Your Journey Starts here"} section={"Admissions"} />
@@ -40,6 +52,7 @@ const Admission = () => {
 </motion.div>
 
 
+>>>>>>> 9e58b73dbe687e55cfab25ce8f67b093e39cafce
 
       {/* Details Section */}
       <div className="p-8 max-w-7xl mx-auto">

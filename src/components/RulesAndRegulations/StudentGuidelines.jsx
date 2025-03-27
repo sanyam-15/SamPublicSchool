@@ -1,7 +1,11 @@
 import { motion } from "framer-motion";
 import HeroSection from "../About Us/HeroSection";
+import { useEffect } from "react";
 
 export default function RulesAndRegulations() {
+  useEffect(() => {
+    window.scrollTo(0,0);
+  }, []);
   return (
     <div className="bg-gray-100">
       {/* Hero Section */}

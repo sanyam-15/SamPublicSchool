@@ -1,9 +1,19 @@
 import { motion } from "framer-motion";
 import HeroSection from "../components/About Us/HeroSection";
+import { useEffect } from "react";
 
 const FeeStructurePage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   return (
     <div className="bg-gray-100">
+<<<<<<< HEAD
+      {/* Hero Section */}
+      <HeroSection moto={"Fee Structure"} section={"Admissions"} />
+=======
 
       {/* Hero Section */}
       <HeroSection moto={"Fee Structure"} section={"Admissions"} />
@@ -38,6 +48,7 @@ const FeeStructurePage = () => {
         </div>
       </motion.div>
 
+>>>>>>> 9e58b73dbe687e55cfab25ce8f67b093e39cafce
 
       {/* Fee Structure Content */}
       <div className="container mx-auto py-6 px-4 md:py-12 md:px-6">
@@ -54,7 +65,11 @@ const FeeStructurePage = () => {
         {[
           {
             title: "School Fees (Charged Quarterly)",
-            columns: ["Particulars", "Total School Fee", "Quarterly School Fee"],
+            columns: [
+              "Particulars",
+              "Total School Fee",
+              "Quarterly School Fee",
+            ],
             data: [
               ["School Fee (upto IX)", "₹ 86,000", "₹ 21,500"],
               ["School Fee (X - XII WB)", "₹ 88,000", "₹ 22,000"],
@@ -64,7 +79,11 @@ const FeeStructurePage = () => {
           },
           {
             title: "Annual Fees (Charged in 4 Quarters)",
-            columns: ["Particulars", "Total Annual Fee", "Quarterly Annual Fee"],
+            columns: [
+              "Particulars",
+              "Total Annual Fee",
+              "Quarterly Annual Fee",
+            ],
             data: [
               ["Annual Fee (upto IX)", "₹ 7,650", "₹ 1,910"],
               ["Annual Fee (X - XII)", "₹ 10,800", "₹ 2,700"],
@@ -100,7 +119,9 @@ const FeeStructurePage = () => {
                 <thead>
                   <tr className="bg-blue-600 text-white">
                     {section.columns.map((col, i) => (
-                      <th key={i} className="p-2 md:p-3 border">{col}</th>
+                      <th key={i} className="p-2 md:p-3 border">
+                        {col}
+                      </th>
                     ))}
                   </tr>
                 </thead>
@@ -114,7 +135,9 @@ const FeeStructurePage = () => {
                       transition={{ duration: 0.5, delay: i * 0.2 }}
                     >
                       {row.map((cell, j) => (
-                        <td key={j} className="p-2 md:p-3 border">{cell}</td>
+                        <td key={j} className="p-2 md:p-3 border">
+                          {cell}
+                        </td>
                       ))}
                     </motion.tr>
                   ))}

@@ -1,10 +1,18 @@
 import { motion } from "framer-motion";
 import HeroSection from "../About Us/HeroSection";
+import { useEffect } from "react";
 
 const AdmissionPage = () => {
+   useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
   return (
     <div className="bg-gray-100">
+<<<<<<< HEAD
+=======
 
+>>>>>>> 9e58b73dbe687e55cfab25ce8f67b093e39cafce
       {/* Hero Section */}
       <HeroSection moto={"Admissions Open for 2025-26"} section={"Admissions"} />
 
@@ -20,7 +28,6 @@ const AdmissionPage = () => {
           Download and fill out the form to apply for admission.
         </p>
       </motion.div>
-=======
 {/* First Background Image Section */}
 <motion.div
   className="bg-cover bg-center bg-no-repeat bg-black/60 bg-blend-overlay min-h-[40vh] md:min-h-[60vh] flex flex-col items-center justify-center text-white text-center px-4 md:px-8 py-6 md:py-12"
@@ -50,7 +57,10 @@ const AdmissionPage = () => {
     </motion.p>
   </div>
 </motion.div>
+<<<<<<< HEAD
+=======
 
+>>>>>>> 9e58b73dbe687e55cfab25ce8f67b093e39cafce
 
       {/* PDF Viewer */}
       <motion.div

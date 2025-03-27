@@ -5,9 +5,17 @@ import HeroSection from "../components/About Us/HeroSection";
 const AdmissionPolicyPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [])
+  }, []);
   return (
     <div>
+<<<<<<< HEAD
+      {/* Hero Section */}
+      <HeroSection
+        moto={"Admissions Policy"}
+        description={"Rules for admissions"}
+        section={"Admissions"}
+      />
+=======
 
       {/* Hero Section */}
       <HeroSection moto={"Admissions Policy"} description={"Rules for admissions"} section={"Admissions"} />
@@ -42,6 +50,7 @@ const AdmissionPolicyPage = () => {
   </div>
 </motion.div>
 
+>>>>>>> 9e58b73dbe687e55cfab25ce8f67b093e39cafce
 
       {/* Admission Policy Content */}
       <div className="container mx-auto py-12 px-6">
