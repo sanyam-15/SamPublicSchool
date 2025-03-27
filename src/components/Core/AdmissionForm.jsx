@@ -4,7 +4,7 @@ import HeroSection from "../About Us/HeroSection";
 const AdmissionPage = () => {
   return (
     <div className="bg-gray-100">
-<<<<<<< HEAD
+
       {/* Hero Section */}
       <HeroSection moto={"Admissions Open for 2025-26"} section={"Admissions"} />
 
@@ -50,7 +50,7 @@ const AdmissionPage = () => {
     </motion.p>
   </div>
 </motion.div>
->>>>>>> c60d7c9079d204e32728bbc5b3977a0a6d40fd3f
+
 
       {/* PDF Viewer */}
       <motion.div

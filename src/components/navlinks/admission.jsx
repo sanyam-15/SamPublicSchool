@@ -5,10 +5,10 @@ import HeroSection from "../About Us/HeroSection";
 const Admission = () => {
   return (
     <div className="bg-white text-gray-900 text-center">
-<<<<<<< HEAD
+
       {/* First Background Image Section */}
       <HeroSection moto={"Apply to Sam"} description={"Your Journey Starts here"} section={"Admissions"} />
-=======
+
      {/* First Background Image Section */}
 <motion.div
   className="bg-cover bg-center bg-no-repeat bg-black/60 bg-blend-overlay min-h-[40vh] md:min-h-[60vh] flex flex-col items-center justify-center text-white text-center px-4 md:px-8 py-6 md:py-12"
@@ -39,7 +39,7 @@ const Admission = () => {
   </div>
 </motion.div>
 
->>>>>>> c60d7c9079d204e32728bbc5b3977a0a6d40fd3f
+
 
       {/* Details Section */}
       <div className="p-8 max-w-7xl mx-auto">

@@ -6,13 +6,13 @@ import "./Footer.css";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
-  let socialMediaIconColor = "#c50227";
+  let socialMediaIconColor = "#D4AF37"; // Changed to gold
   return (
-    <footer className="text-[#8d8d8d] pt-10 bg-[#181818]">
-      <div className="w-[85vw] flex flex-col justify-between m-auto">
+    <footer className="text-gray-300 pt-10 bg-navy-900">
+      <div className="max-w-7xl mx-auto px-4 flex flex-col justify-between m-auto ">
         <div className="lg:flex justify-between md:grid-cols-1 md:place-items-start leading-[1.7]">
           <div className="text-center md:text-left mb-4">
-            <h2 className="text-white text-xl font-bold flex flex-col md:flex-row items-center justify-center md:justify-start">
+            <h2 className="text-gold-500 text-xl font-bold flex flex-col md:flex-row items-center justify-center md:justify-start">
               <img
                 src={schoolLogo}
                 alt="Logo"
@@ -23,54 +23,54 @@ const Footer = () => {
             <p className="mt-4">Box 35300</p>
             <p>1810 Campus Way NE</p>
             <p>Bothell, WA 98011-8246</p>
-            <p className="mt-4 font-semibold text-white">+1-2534-4456-345</p>
+            <p className="mt-4 font-semibold text-gold-400">+1-2534-4456-345</p>
             <a
-              className="text-red-500"
-              href="mailto:chiknichudail131@gmail.com"
+              className="text-gold-500 hover:text-gold-300 transition-colors"
+              href="mailto:info@sampublicschool.com"
             >
-              chiknichudail131@gmail.com
+              info@sampublicschool.com
             </a>
-            <hr className="border-[#c50227] my-4 w-full" />
+            <hr className="border-gold-500 my-4 w-full" />
           </div>
 
           <div className="mb-4">
-            <h3 className="text-white text-lg font-bold border-b-2 border-[#c50227] lg:w-[15vw] md:w-[40vw] sm:w-fit w-fit mx-auto md:mx-0 pb-1">
+            <h3 className="text-gold-400 text-lg font-bold border-b-2 border-gold-500 lg:w-[15vw] md:w-[40vw] sm:w-fit w-fit mx-auto md:mx-0 pb-1">
               Our Campus
             </h3>
             <ul className="mt-4 space-y-2 text-center md:text-left">
-              <li className="footerHoverEffect">Academic</li>
-              <li className="footerHoverEffect">Planning & Administration</li>
-              <li className="footerHoverEffect">Campus Safety</li>
-              <li className="footerHoverEffect">Office of the Chancellor</li>
-              <li className="footerHoverEffect">Facility Services</li>
-              <li className="footerHoverEffect">Human Resources</li>
+              <li className="footerHoverEffect hover:text-gold-300">Academic</li>
+              <li className="footerHoverEffect hover:text-gold-300">Planning & Administration</li>
+              <li className="footerHoverEffect hover:text-gold-300">Campus Safety</li>
+              <li className="footerHoverEffect hover:text-gold-300">Office of the Chancellor</li>
+              <li className="footerHoverEffect hover:text-gold-300">Facility Services</li>
+              <li className="footerHoverEffect hover:text-gold-300">Human Resources</li>
             </ul>
           </div>
 
           <div className="mb-4">
-            <h3 className="text-white text-lg font-bold border-b-2 border-[#c50227] lg:w-[15vw] md:w-[40vw] sm:w-fit w-fit mx-auto md:mx-0 pb-1">
+            <h3 className="text-gold-400 text-lg font-bold border-b-2 border-gold-500 lg:w-[15vw] md:w-[40vw] sm:w-fit w-fit mx-auto md:mx-0 pb-1">
               Campus Life
             </h3>
             <ul className="mt-4 space-y-2 text-center md:text-left">
-              <li className="footerHoverEffect">Accessibility</li>
-              <li className="footerHoverEffect">Financial Aid</li>
-              <li className="footerHoverEffect">Food Services</li>
-              <li className="footerHoverEffect">Housing</li>
-              <li className="footerHoverEffect">Information Technologies</li>
-              <li className="footerHoverEffect">Student Life</li>
+              <li className="footerHoverEffect hover:text-gold-300">Accessibility</li>
+              <li className="footerHoverEffect hover:text-gold-300">Financial Aid</li>
+              <li className="footerHoverEffect hover:text-gold-300">Food Services</li>
+              <li className="footerHoverEffect hover:text-gold-300">Housing</li>
+              <li className="footerHoverEffect hover:text-gold-300">Information Technologies</li>
+              <li className="footerHoverEffect hover:text-gold-300">Student Life</li>
             </ul>
           </div>
 
           <div className="mb-4">
-            <h3 className="text-white text-lg font-bold border-b-2 border-[#c50227] lg:w-[15vw] md:w-[40vw] sm:w-fit w-fit mx-auto md:mx-0 pb-1">
+            <h3 className="text-gold-400 text-lg font-bold border-b-2 border-gold-500 lg:w-[15vw] md:w-[40vw] sm:w-fit w-fit mx-auto md:mx-0 pb-1">
               Contact Us
             </h3>
             <div className="mt-4 space-y-2 text-center md:text-left">
-              <h2>+91 9023079999</h2>
-              <h2>admissions@akshara.edu.in</h2>
-              <h2>www.akshara.edu.in</h2>
+              <h2 className="text-gold-300">+91 9023079999</h2>
+              <h2 className="text-gold-300">admissions@sampublicschool.com</h2>
+              <h2 className="text-gold-300">www.sampublicschool.com</h2>
               <Link to={"/contact"}>
-                <button className="mt-4 px-4 py-2 rounded-md text-white bg-[#c50227]">
+                <button className="mt-4 px-4 py-2 rounded-md text-white bg-gradient-to-r from-gold-600 to-gold-700 hover:from-gold-700 hover:to-gold-800 transition-colors">
                   Quick Enquiry
                 </button>
               </Link>
@@ -79,36 +79,44 @@ const Footer = () => {
         </div>
       </div>
       <div
-        className="bg-[#202020] text-[#838383] mt-10 text-sm py-6"
-        style={{ marginBottom: "50px" }}
+        className="bg-navy-800 text-gray-400 mt-10 text-sm py-6"
       >
-        <div className="w-[85vw] flex flex-col justify-between items-center m-auto md:flex-row">
+        <div className="mb-[50px] w-[80vw] flex flex-col justify-between items-center m-auto md:flex-row">
           <p className="text-center md:text-left">
             &copy; Copyright All Rights Reserved {new Date().getFullYear()} |
-            Developed and maintained <a href="/developer-info">Developer 401</a>
+            Developed and maintained <a href="/developer-info" className="text-gold-400 hover:text-gold-300">Developer 401</a>
           </p>
-          <div className="flex space-x-4 text-red-500 text-xl mt-4 md:mt-0">
+          <div className="flex space-x-4 text-xl mt-4 md:mt-0">
             <Link to="https://www.facebook.com/">
               <FaFacebook
-                className="cursor-pointer"
+                className="cursor-pointer hover:text-gold-400 transition-colors"
                 color={socialMediaIconColor}
               />
             </Link>
-            <Link to="https://www.linkedin.com/in/abhay-keshari-234966280/">
+            <Link to="https://www.linkedin.com/">
               <IoLogoLinkedin
-                className="cursor-pointer"
+                className="cursor-pointer hover:text-gold-400 transition-colors"
                 color={socialMediaIconColor}
               />
             </Link>
-            <FaSkype className="cursor-pointer" color={socialMediaIconColor} />
-            <FaXTwitter
-              className="cursor-pointer"
-              color={socialMediaIconColor}
-            />
-            <FaInstagram
-              className="cursor-pointer"
-              color={socialMediaIconColor}
-            />
+            <Link to="https://www.skype.com/">
+              <FaSkype 
+                className="cursor-pointer hover:text-gold-400 transition-colors" 
+                color={socialMediaIconColor} 
+              />
+            </Link>
+            <Link to="https://twitter.com/">
+              <FaXTwitter
+                className="cursor-pointer hover:text-gold-400 transition-colors"
+                color={socialMediaIconColor}
+              />
+            </Link>
+            <Link to="https://www.instagram.com/">
+              <FaInstagram
+                className="cursor-pointer hover:text-gold-400 transition-colors"
+                color={socialMediaIconColor}
+              />
+            </Link>
           </div>
         </div>
       </div>
