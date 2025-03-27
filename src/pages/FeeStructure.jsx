@@ -1,27 +1,11 @@
 import { motion } from "framer-motion";
+import HeroSection from "../components/About Us/HeroSection";
 
 const FeeStructurePage = () => {
   return (
     <div className="bg-gray-100">
       {/* Hero Section */}
-      <motion.div
-        className="bg-cover bg-center bg-no-repeat bg-black/60 bg-blend-overlay min-h-[60vh] flex flex-col items-center justify-center text-white text-center p-8"
-        style={{
-          backgroundImage: `url('/your-uploaded-image-path.jpg')`, // Update with correct path
-        }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <motion.h1
-          className="text-5xl font-bold bg-blue-600 px-6 py-3 rounded-lg shadow-lg"
-          initial={{ scale: 0.8 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          Fee Structure 2024-25
-        </motion.h1>
-      </motion.div>
+      <HeroSection moto={"Fee Structure"} section={"Admissions"} />
 
       {/* Fee Structure Content */}
       <div className="container mx-auto py-12 px-6">

@@ -22,7 +22,7 @@ const Navbar = () => {
         { name: "About Sam", path: "/about/dps-patna" },
         { name: "Infrastructure", path: "/about/infrastructure" },
         { name: "Faculty", path: "/about/faculty" },
-        { name: "Principle Message", path: "/about/co-curricular" },
+        { name: "Principal Message", path: "/about/principal-message" },
         { name: "Transport", path: "/about/transport" },
         { name: "School Prospectus", path: "/about/school-prospectus" },
 

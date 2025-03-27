@@ -1,38 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
+import HeroSection from "../About Us/HeroSection";
 
 const Admission = () => {
   return (
     <div className="bg-white text-gray-900 text-center">
       {/* First Background Image Section */}
-      <motion.div
-        className="bg-cover bg-center bg-no-repeat bg-black/60 bg-blend-overlay min-h-[60vh] flex flex-col items-center justify-center text-white text-center p-8"
-        style={{
-          backgroundImage: `url('https://cdn.pixabay.com/photo/2020/01/22/09/39/listening-4784915_1280.jpg')`,
-        }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <div className="max-w-7xl mx-auto">
-          <motion.h1
-            className="text-5xl font-extrabold bg-blue-600 px-6 py-3 rounded-lg shadow-lg uppercase tracking-wide"
-            initial={{ y: -20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            Apply To Kingster
-          </motion.h1>
-          <motion.p
-            className="text-lg mt-2 text-gray-200"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-          >
-            Your journey starts here!
-          </motion.p>
-        </div>
-      </motion.div>
+      <HeroSection moto={"Apply to Sam"} description={"Your Journey Starts here"} section={"Admissions"} />
 
       {/* Details Section */}
       <div className="p-8 max-w-7xl mx-auto">

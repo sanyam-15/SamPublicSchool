@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import HeroBanner from "../components/home/HeroBanner";
 import AnnouncementTicker from "../components/home/AnnouncementTicker";
 import QuickLinks from "../components/home/QuickLinks";
@@ -16,6 +16,9 @@ import WhyChooseTemplate from "../components/home/whyChooseTemplate";
 import WhatsAppButton from "../components/Core/whatsapp";
 
 const Home = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="min-h-screen">
       <HeroBanner />

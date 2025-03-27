@@ -22,11 +22,12 @@ import AdmissionPolicyPage from "./pages/AdmissionPolicy.jsx";
 import SchoolProspectus from "./components/About Us/schoolProspectus.jsx";
 import VideoGallery from "./pages/videoGAllery.jsx";
 import ComingSoon from "./pages/ComingSoonPage.jsx";
+import Principal from "./components/About Us/Principal.jsx";
 
 function AppContent() {
   const location = useLocation().pathname;
 
-  if (location === "/rules/syllabus" || location === "/rules/examination-promotion" ) {
+  if (location === "/rules/syllabus" || location === "/rules/examination-promotion" || location === "/about/transport") {
     return <ComingSoon />;
   }
 
@@ -51,6 +52,7 @@ function AppContent() {
           <Route path="/admissions/fee-structure" element={<FeeStructurePage />} />
           <Route path="/admissions/admission-policy" element={<AdmissionPolicyPage />} />
           <Route path="/about/school-prospectus" element={<SchoolProspectus />} />
+          <Route path="/about/principal-message" element={<Principal />} />
           <Route path="/gallery/videos" element={<VideoGallery />} />
           <Route path="/rules/guidelines-for-students" element={<StudentGuidelines />} />
         </Routes>

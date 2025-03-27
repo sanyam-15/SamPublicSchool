@@ -1,32 +1,15 @@
 import { motion } from "framer-motion";
+import { useEffect } from "react";
+import HeroSection from "../components/About Us/HeroSection";
 
 const AdmissionPolicyPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [])
   return (
     <div>
       {/* Hero Section */}
-      <div
-        className="relative bg-cover bg-center bg-no-repeat bg-black/60 bg-blend-overlay min-h-[60vh] flex flex-col items-center justify-center text-white text-center p-8"
-        style={{
-          backgroundImage: `url('/your-uploaded-image-path.jpg')`, // Replace with correct image path
-        }}
-      >
-        <motion.h1
-          className="text-5xl font-bold bg-blue-600 px-6 py-3 rounded-lg shadow-lg"
-          initial={{ y: -50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-        >
-          Admission Policy
-        </motion.h1>
-        <motion.p
-          className="text-lg mt-2"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1.2, delay: 0.5 }}
-        >
-          Your gateway to academic excellence.
-        </motion.p>
-      </div>
+      <HeroSection moto={"Admissions Policy"} description={"Rules for admissions"} section={"Admissions"} />
 
       {/* Admission Policy Content */}
       <div className="container mx-auto py-12 px-6">

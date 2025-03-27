@@ -1,30 +1,11 @@
 import { motion } from "framer-motion";
+import HeroSection from "../About Us/HeroSection";
 
 const AdmissionPage = () => {
   return (
     <div className="bg-gray-100">
       {/* Hero Section */}
-      <motion.div
-        className="bg-cover bg-center bg-no-repeat bg-black/60 bg-blend-overlay min-h-[60vh] flex flex-col items-center justify-center text-white text-center p-8"
-        style={{
-          backgroundImage: `url('https://cdn.pixabay.com/photo/2020/01/22/09/39/listening-4784915_1280.jpg')`,
-        }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <motion.h1
-          className="text-5xl font-extrabold bg-blue-600 px-6 py-3 rounded-lg shadow-lg uppercase tracking-wide"
-          initial={{ scale: 0.8 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 0.5 }}
-        >
-          Admissions Open 2024-25
-        </motion.h1>
-        <p className="text-lg mt-2 text-gray-200">
-          Enroll now and shape your future with us!
-        </p>
-      </motion.div>
+      <HeroSection moto={"Admissions Open for 2025-26"} section={"Admissions"} />
 
       {/* Admission Form Heading */}
       <motion.div

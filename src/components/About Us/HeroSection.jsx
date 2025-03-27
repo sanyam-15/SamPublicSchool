@@ -1,7 +1,6 @@
 import React from "react";
-import { useLocation } from "react-router";
 
-function HeroSection({ moto, description }) {
+function HeroSection({ moto, description, section, image }) {
   return (
     <div>
       <div
@@ -20,7 +19,7 @@ function HeroSection({ moto, description }) {
         </div>
       </div>
       <div className="m-auto w-[85vw] mt-4 flex gap-2">
-        <p style={{fontSize: "15px"}}>Home</p> &nbsp; <p style={{fontSize: "15px"}}>{`>`}</p> &nbsp; <p className="text-[#c50227]" style={{fontSize: "15px"}}>About Us</p>
+        <p style={{fontSize: "15px"}}>Home</p> &nbsp; <p style={{fontSize: "15px"}}>{`>`}</p> &nbsp; <p className="text-[#c50227]" style={{fontSize: "15px"}}>{section}</p>
       </div>
     </div>
   );
