@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Button } from "../ui/button";
+import { useEffect, useState } from "react";
+// import { Button } from "../ui/button";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import HeroSection from "../About Us/HeroSection";
 
@@ -25,6 +25,9 @@ export default function Gallery() {
     currentPage * itemsPerPage
   );
   
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }), [];
 
   return (
     <div>
@@ -52,38 +55,34 @@ export default function Gallery() {
         </div>
 
         {/* Pagination Controls */}
-        <div className="flex items-center space-x-2 mt-6">
-          <Button
-          className="rounded-full"
+        <div className="flex items-center space-x-2 mt-6 gap-2">
+          <button
+          className="rounded-full bg-blue-900 text-white p-2"
             onClick={handlePrev}
             disabled={currentPage === 1}
-            size="sm"
-            variant="outline"
           >
             <ChevronLeft className="rounded-full" />
-          </Button>
+          </button>
           {[...Array(totalPages)].map((_, index) => (
-            <Button
+            <button
               key={index}
               onClick={() => setCurrentPage(index + 1)}
-              size="sm"
               className={`px-3 py-1 ${
                 currentPage === index + 1
-                  ? "bg-blue-600 text-white"
-                  : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                  ? "bg-blue-700 text-white rounded-full"
+                  : "bg-gray-400 text-gray-800 hover:bg-gray-300 rounded-full"
               }`}
             >
               {index + 1}
-            </Button>
+            </button>
           ))}
-          <Button
+          <button
+           className="rounded-full bg-blue-900 text-white p-2"
             onClick={handleNext}
             disabled={currentPage === totalPages}
-            size="sm"
-            variant="outline"
           >
             <ChevronRight />
-          </Button>
+          </button>
         </div>
 
         {/* Modal for Enlarged Image */}

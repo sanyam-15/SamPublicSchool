@@ -1,43 +1,17 @@
 import { motion } from "framer-motion";
 import HeroSection from "../components/About Us/HeroSection";
+import { useEffect } from "react";
 
 const FeeStructurePage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+
   return (
     <div className="bg-gray-100">
-<<<<<<< HEAD
       {/* Hero Section */}
       <HeroSection moto={"Fee Structure"} section={"Admissions"} />
-=======
-      {/* First Background Image Section */}
-      <motion.div
-        className="bg-cover bg-center bg-no-repeat bg-black/60 bg-blend-overlay min-h-[50vh] flex flex-col items-center justify-center text-white text-center px-4 py-6 md:py-12"
-        style={{
-          backgroundImage: `url('https://cdn.pixabay.com/photo/2020/01/22/09/39/listening-4784915_1280.jpg')`,
-        }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-      >
-        <div className="max-w-7xl mx-auto px-4">
-          <motion.h1
-            className="text-xl md:text-3xl font-bold bg-blue-600 px-4 py-2 rounded-lg shadow-lg uppercase tracking-wide"
-            initial={{ y: -20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            Fee Structure 2025-26
-          </motion.h1>
-          <motion.p
-            className="text-sm md:text-lg mt-2 text-gray-200"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.5 }}
-          >
-            Your journey starts here!
-          </motion.p>
-        </div>
-      </motion.div>
->>>>>>> c60d7c9079d204e32728bbc5b3977a0a6d40fd3f
 
       {/* Fee Structure Content */}
       <div className="container mx-auto py-6 px-4 md:py-12 md:px-6">
@@ -54,7 +28,11 @@ const FeeStructurePage = () => {
         {[
           {
             title: "School Fees (Charged Quarterly)",
-            columns: ["Particulars", "Total School Fee", "Quarterly School Fee"],
+            columns: [
+              "Particulars",
+              "Total School Fee",
+              "Quarterly School Fee",
+            ],
             data: [
               ["School Fee (upto IX)", "₹ 86,000", "₹ 21,500"],
               ["School Fee (X - XII WB)", "₹ 88,000", "₹ 22,000"],
@@ -64,7 +42,11 @@ const FeeStructurePage = () => {
           },
           {
             title: "Annual Fees (Charged in 4 Quarters)",
-            columns: ["Particulars", "Total Annual Fee", "Quarterly Annual Fee"],
+            columns: [
+              "Particulars",
+              "Total Annual Fee",
+              "Quarterly Annual Fee",
+            ],
             data: [
               ["Annual Fee (upto IX)", "₹ 7,650", "₹ 1,910"],
               ["Annual Fee (X - XII)", "₹ 10,800", "₹ 2,700"],
@@ -100,7 +82,9 @@ const FeeStructurePage = () => {
                 <thead>
                   <tr className="bg-blue-600 text-white">
                     {section.columns.map((col, i) => (
-                      <th key={i} className="p-2 md:p-3 border">{col}</th>
+                      <th key={i} className="p-2 md:p-3 border">
+                        {col}
+                      </th>
                     ))}
                   </tr>
                 </thead>
@@ -114,7 +98,9 @@ const FeeStructurePage = () => {
                       transition={{ duration: 0.5, delay: i * 0.2 }}
                     >
                       {row.map((cell, j) => (
-                        <td key={j} className="p-2 md:p-3 border">{cell}</td>
+                        <td key={j} className="p-2 md:p-3 border">
+                          {cell}
+                        </td>
                       ))}
                     </motion.tr>
                   ))}
