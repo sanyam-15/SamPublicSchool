@@ -1,11 +1,45 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
+// Color Constants
+const COLORS = {
+  primary: '#1A365D',     // Navy Blue
+  secondary: '#8B0000',   // Crimson
+  accent: '#D4AF37',      // Gold
+  lightBg: '#F8F9FA',     // Light Gray
+  darkText: '#2D3748',    // Dark Gray
+  lightText: '#718096'    // Gray
+};
+
 const toppers = [
-  { name: "DEEPIKA", percentage: "95.25%", image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS0mWG7dhFwx2mIZUzIIuEn20DY7Z7C4EtVbw&s" },
-  { name: "SOUMYA YADAV", percentage: "94.5%", image: "https://i.pinimg.com/236x/b1/67/93/b1679368da6d49cc8568c0b0ecfb7b71.jpg" },
-  { name: "RAVI KUMAR", percentage: "93.8%", image: "https://e1.pngegg.com/pngimages/947/974/png-clipart-shraddha-kapoor-woman-in-white-floral-top-smiling.png" },
-  { name: "ANJALI SHARMA", percentage: "92.6%", image: "https://images.pexels.com/photos/206551/pexels-photo-206551.jpeg?cs=srgb&dl=pexels-pixabay-206551.jpg&fm=jpg" },
+  { 
+    name: "DEEPIKA", 
+    percentage: "95.25%", 
+    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+    class: "VIIIth",
+    achievement: "Academic Excellence Award" 
+  },
+  { 
+    name: "SOUMYA YADAV", 
+    percentage: "94.5%", 
+    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+    class: "VIIIth",
+    achievement: "Science Olympiad Gold Medalist" 
+  },
+  { 
+    name: "RAVI KUMAR", 
+    percentage: "93.8%", 
+    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+    class: "VIIIth",
+    achievement: "Mathematics Champion" 
+  },
+  { 
+    name: "ANJALI SHARMA", 
+    percentage: "92.6%", 
+    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
+    class: "VIIIth",
+    achievement: "Literary Award Winner" 
+  },
 ];
 
 export default function ToppersSlider() {
@@ -13,42 +47,109 @@ export default function ToppersSlider() {
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setIndex((prevIndex) => (prevIndex + 2) % toppers.length);
+      setIndex((prevIndex) => (prevIndex + 1) % toppers.length);
     }, 3000);
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="overflow-hidden flex flex-col justify-center items-center bg-white py-4">
-      <h2 className="text-2xl font-bold mb-4">TOPPERS 8TH</h2>
-      <div className="w-full max-w-md md:max-w-lg lg:max-w-xl border-2 border-gray-300 rounded-lg p-4 shadow-lg bg-gray-50 overflow-hidden">
+    <div 
+      className="bg-white rounded-xl shadow-xl overflow-hidden border border-gray-200 transition-all hover:shadow-2xl"
+      style={{ backgroundColor: COLORS.lightBg }}
+    >
+      {/* Header */}
+      <div 
+        className="p-5"
+        style={{ backgroundColor: COLORS.primary }}
+      >
+        <h2 className="text-xl md:text-2xl font-bold text-white text-center">
+          OUR <span style={{ color: COLORS.accent }}>TOP</span> ACHIEVERS
+        </h2>
+      </div>
+      
+      {/* Topper Card */}
+      <div className="p-6">
         <motion.div
           key={index}
-          className="flex w-full flex-wrap justify-center"
-          initial={{ opacity: 0, x: 100 }}
-          animate={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: -100 }}
-          transition={{ duration: 0.8 }}
+          className="flex justify-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.5 }}
         >
-          {toppers.slice(index, index + 2).map((topper, idx) => (
-            <div key={idx} className="w-1/2 px-2 md:w-1/2 lg:w-1/2">
-              <div className="bg-white shadow-md rounded-lg overflow-hidden text-center border border-gray-300">
-                <div className="w-full h-32 md:h-40 overflow-hidden">
-                  <img
-                    src={topper.image}
-                    alt={topper.name}
-                    className="w-full h-full object-cover"
-                  />
+          <div className="w-full max-w-xs">
+            <div className="bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 transition-all hover:shadow-xl">
+              <div className="relative h-48 md:h-56 w-full overflow-hidden">
+                <img
+                  src={toppers[index].image}
+                  alt={toppers[index].name}
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                />
+                <div 
+                  className="absolute bottom-0 left-0 right-0 p-4"
+                  style={{ 
+                    background: `linear-gradient(to top, ${COLORS.primary}CC, transparent)`
+                  }}
+                >
+                  <h3 
+                    className="text-lg md:text-xl font-bold text-white"
+                    style={{ textShadow: '0 2px 4px rgba(0,0,0,0.5)' }}
+                  >
+                    {toppers[index].name}
+                  </h3>
+                  <p 
+                    className="text-sm text-white/90"
+                    style={{ textShadow: '0 1px 2px rgba(0,0,0,0.5)' }}
+                  >
+                    {toppers[index].achievement}
+                  </p>
                 </div>
-                <div className="p-4">
-                  <h3 className="text-sm md:text-lg font-semibold">{topper.name}</h3>
-                  <p className="text-gray-600 text-xs md:text-sm">VIIIth</p>
-                  <p className="text-red-500 font-bold text-sm md:text-base">{topper.percentage}</p>
+              </div>
+              <div className="p-4 text-center">
+                <div className="flex justify-between items-center mb-3">
+                  <span 
+                    className="text-sm"
+                    style={{ color: COLORS.lightText }}
+                  >
+                    Class {toppers[index].class}
+                  </span>
+                  <span 
+                    className="font-bold text-lg"
+                    style={{ color: COLORS.accent }}
+                  >
+                    {toppers[index].percentage}
+                  </span>
+                </div>
+                <div className="mt-2">
+                  <span 
+                    className="inline-block text-xs px-3 py-1 rounded-full font-medium"
+                    style={{ 
+                      backgroundColor: `${COLORS.accent}20`,
+                      color: COLORS.primary
+                    }}
+                  >
+                    🏆 {toppers[index].achievement}
+                  </span>
                 </div>
               </div>
             </div>
-          ))}
+          </div>
         </motion.div>
+        
+        {/* Indicators */}
+        <div className="flex justify-center mt-6 space-x-2">
+          {toppers.map((_, i) => (
+            <button
+              key={i}
+              onClick={() => setIndex(i)}
+              className={`h-2 rounded-full transition-all duration-300 ${i === index ? 'w-6' : 'w-3'}`}
+              style={{
+                backgroundColor: i === index ? COLORS.primary : `${COLORS.primary}30`
+              }}
+              aria-label={`View ${toppers[i].name}'s profile`}
+            />
+          ))}
+        </div>
       </div>
     </div>
   );
