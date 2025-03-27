@@ -16,7 +16,7 @@ const ContactPage = () => {
         }}
       >
         <div className="absolute inset-0 bg-red-700 opacity-75"></div>
-        <div className="relative z-10 text-center">
+        <div className="relative z-5 text-center">
           <h1 className="text-4xl font-bold">Contact Us</h1>
           <p className="text-lg">Get In Touch</p>
         </div>

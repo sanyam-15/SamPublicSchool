@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -13,14 +13,20 @@ const images = [
 ];
 
 const HeroBanner = () => {
+  const swiperRef = useRef(null);
+
   return (
     <div className="relative h-[600px] w-full overflow-hidden">
       {/* Background Image Swiper */}
       <Swiper
+        ref={swiperRef}
         modules={[Navigation, Autoplay]}
-        navigation={{ clickable: true }}  // Ensure navigation is clickable
         autoplay={{ delay: 3000 }}
         loop={true}
+        navigation={{
+          nextEl: '.swiper-button-next-custom',
+          prevEl: '.swiper-button-prev-custom',
+        }}
         className="absolute inset-0 w-full h-full"
       >
         {images.map((img, index) => (
@@ -35,29 +41,13 @@ const HeroBanner = () => {
         ))}
       </Swiper>
 
-      {/* Custom Navigation Buttons - Red Arrows */}
-      <style>
-        {`
-          .swiper-button-next, .swiper-button-prev {
-            color: white !important;
-            background: rgba(239, 68, 68, 0.8) !important; /* Red background */
-            width: 50px !important;
-            height: 50px !important;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            transition: background 0.3s ease-in-out;
-          }
-          .swiper-button-next:hover, .swiper-button-prev:hover {
-            background: rgba(220, 38, 38, 0.9) !important; /* Darker red on hover */
-          }
-          .swiper-button-next::after, .swiper-button-prev::after {
-            font-size: 20px !important;
-            font-weight: bold;
-          }
-        `}
-      </style>
+      {/* Custom Navigation Buttons */}
+      <button className="swiper-button-prev-custom absolute left-4 top-1/2 transform -translate-y-1/2 bg-red-500 hover:bg-red-600 text-white w-14 h-14 rounded-full flex items-center justify-center z-50 shadow-lg border border-white">
+        ◀
+      </button>
+      <button className="swiper-button-next-custom absolute right-4 top-1/2 transform -translate-y-1/2 bg-red-500 hover:bg-red-600 text-white w-14 h-14 rounded-full flex items-center justify-center z-50 shadow-lg border border-white">
+        ▶
+      </button>
 
       {/* Hero Content */}
       <div className="relative z-10 flex items-center justify-center h-full text-center text-white px-4">

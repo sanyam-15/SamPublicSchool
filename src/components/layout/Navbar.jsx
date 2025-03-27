@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X ,ChevronDown} from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -123,17 +123,24 @@ const Navbar = () => {
       style={{transition: "transform 0.4s ease-in-out"}}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="hidden md:flex justify-center h-16 items-center space-x-8">
+          <div className="hidden md:flex justify-center h-16 items-center space-x-8 ">
             {navLinks.map((link) =>
               link.dropdown ? (
                 <div key={link.name} className="relative h-16 flex items-center"
                   onMouseEnter={() => setActiveDropdown(link.name)}
                   onMouseLeave={() => setActiveDropdown(null)}>
-                  <span className="cursor-pointer hover:text-green-600 transition-colors duration-200">
-                    {link.name}
-                  </span>
+              <span className="cursor-pointer hover:text-red-600 flex items-center gap-1 transition-colors duration-200">
+  {link.name}
+  <ChevronDown
+    size={16}
+    className={`transition-transform duration-300 ${
+      activeDropdown === link.name ? "rotate-180" : "rotate-0"
+    }`}
+  />
+</span>
+
                   {activeDropdown === link.name && (
-                    <div className="absolute left-0 top-[64px] w-64 bg-white text-black shadow-lg border border-gray-300">
+                    <div className="absolute left-0 top-[64px] w-64 bg-white text-black shadow-lg border border-gray-300 ">
                       {link.dropdown.map((item) => (
                         <Link key={item.name} to={item.path} className="block px-4 py-2 hover:bg-gray-200 transition-colors duration-200"
                           onClick={() => setIsMenuOpen(false)}>
@@ -144,9 +151,17 @@ const Navbar = () => {
                   )}
                 </div>
               ) : (
-                <Link key={link.name} to={link.path} className="text-black font-semibold hover:text-green-600 transition duration-200">
-                  {link.name}
-                </Link>
+                <Link 
+  key={link.name} 
+  to={link.path} 
+  className={`relative text-black font-semibold transition duration-200 hover:text-red-600 
+              after:content-[''] after:absolute after:left-0 after:bottom-[-20px] 
+              after:h-[5px] after:bg-red-600 after:transition-all after:duration-300 
+              ${location.pathname === link.path ? 'after:w-full' : 'after:w-0'} 
+              hover:after:w-full cursor-pointer`}
+>
+  {link.name}
+</Link>
               )
             )}
           </div>
