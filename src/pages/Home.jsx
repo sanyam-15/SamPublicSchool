@@ -18,7 +18,7 @@ const Home = () => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-navy-900">
       {/* Hero Section with Overlapping Cards */}
       <div className="relative">
         <HeroBanner />
@@ -31,13 +31,13 @@ const Home = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true, margin: "-50px" }}
-              className="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow"
+              className="bg-white dark:bg-navy-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow"
             >
-              <div className="w-16 h-16 flex items-center justify-center bg-red-100 rounded-full mb-4">
-                <GraduationCap className="text-red-600 w-8 h-8" />
+              <div className="w-16 h-16 flex items-center justify-center bg-gold-100 dark:bg-gold-900/20 rounded-full mb-4">
+                <GraduationCap className="text-gold-600 dark:text-gold-400 w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Academic Excellence</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-gold-100 mb-3">Academic Excellence</h3>
+              <p className="text-gray-600 dark:text-gray-300">
                 Comprehensive curriculum fostering holistic development and critical thinking skills
               </p>
             </motion.div>
@@ -47,13 +47,13 @@ const Home = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true, margin: "-50px" }}
-              className="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow"
+              className="bg-white dark:bg-navy-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow"
             >
-              <div className="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-4">
-                <Calendar className="text-blue-600 w-8 h-8" />
+              <div className="w-16 h-16 flex items-center justify-center bg-blue-100 dark:bg-navy-700 rounded-full mb-4">
+                <Calendar className="text-blue-600 dark:text-gold-400 w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Enriching Activities</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-gold-100 mb-3">Enriching Activities</h3>
+              <p className="text-gray-600 dark:text-gray-300">
                 Diverse range of extracurricular programs for all-round development
               </p>
             </motion.div>
@@ -63,13 +63,13 @@ const Home = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.6 }}
               viewport={{ once: true, margin: "-50px" }}
-              className="bg-white p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow"
+              className="bg-white dark:bg-navy-800 p-8 rounded-xl shadow-xl hover:shadow-2xl transition-shadow"
             >
-              <div className="w-16 h-16 flex items-center justify-center bg-purple-100 rounded-full mb-4">
-                <Award className="text-purple-600 w-8 h-8" />
+              <div className="w-16 h-16 flex items-center justify-center bg-purple-100 dark:bg-navy-700 rounded-full mb-4">
+                <Award className="text-purple-600 dark:text-gold-400 w-8 h-8" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Proven Track Record</h3>
-              <p className="text-gray-600">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-gold-100 mb-3">Proven Track Record</h3>
+              <p className="text-gray-600 dark:text-gray-300">
                 Consistent academic achievements and national-level accolades
               </p>
             </motion.div>
