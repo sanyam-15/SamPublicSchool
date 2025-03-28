@@ -10,10 +10,10 @@ const FeeStructurePage = () => {
 
   return (
     <div className="bg-gray-100">
-<<<<<<< HEAD
+
       {/* Hero Section */}
       <HeroSection moto={"Fee Structure"} section={"Admissions"} />
-=======
+
 
       {/* Hero Section */}
       <HeroSection moto={"Fee Structure"} section={"Admissions"} />
@@ -48,7 +48,7 @@ const FeeStructurePage = () => {
         </div>
       </motion.div>
 
->>>>>>> 9e58b73dbe687e55cfab25ce8f67b093e39cafce
+
 
       {/* Fee Structure Content */}
       <div className="container mx-auto py-6 px-4 md:py-12 md:px-6">

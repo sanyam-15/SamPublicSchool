@@ -12,6 +12,8 @@ import SchoolIntroSection from "../components/Core/SchoolIntroSection";
 import FacilitiesSection from "../components/home/facilitiesSection";
 import WhyChooseTemplate from "../components/home/whyChooseTemplate";
 import WhatsAppButton from "../components/Core/whatsapp";
+import Announcement from "../components/Core/anouncement";
+import AnnouncementTicker from "../components/home/AnnouncementTicker";
 
 const Home = () => {
   useEffect(() => {
@@ -79,6 +81,7 @@ const Home = () => {
 
       {/* Main Content */}
       <div className="pt-32 pb-20">
+        <AnnouncementTicker />    
         <SchoolIntroSection />
         
         <div className="max-w-7xl mx-auto px-4">
