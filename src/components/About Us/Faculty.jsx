@@ -7,7 +7,7 @@ function Faculty() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div>
+    <div className="bg-gray-50 dark:bg-navy-900">
       <HeroSection moto={"Our Teachers"} section={"About Us"} />
       <InfrastructureComponent
         image={"/Images/Library.jpg"}

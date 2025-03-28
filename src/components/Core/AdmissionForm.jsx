@@ -3,71 +3,95 @@ import HeroSection from "../About Us/HeroSection";
 import { useEffect } from "react";
 
 const AdmissionPage = () => {
-   useEffect(() => {
-      window.scrollTo(0, 0);
-    }, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
-    <div className="bg-gray-100">
+
+    <div className="bg-gray-50 dark:bg-navy-900">
       {/* Hero Section */}
-      <HeroSection moto={"Admissions Open for 2025-26"} section={"Admissions"} />
+      <HeroSection 
+        moto={"Admissions Open for 2025-26"} 
+        description={"Begin your journey with Sam Public School"} 
+        section={"Admissions"} 
+      />
 
       {/* Admission Form Heading */}
       <motion.div
-        className="text-center mt-12"
+        className="text-center mt-12 px-4"
         initial={{ opacity: 0, y: -20 }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
+        transition={{ duration: 0.8 }}
       >
-        <h2 className="text-3xl font-bold text-blue-700">Admission Form</h2>
-        <p className="text-gray-600 mt-2">
-          Download and fill out the form to apply for admission.
+        <h2 className="text-3xl md:text-4xl font-bold text-navy-900 dark:text-gold-400">
+          Admission Form
+        </h2>
+        <p className="text-lg text-gray-600 dark:text-gray-300 mt-4 max-w-2xl mx-auto">
+          Download and complete the form to begin your admission process
         </p>
       </motion.div>
-{/* First Background Image Section */}
-<motion.div
-  className="bg-cover bg-center bg-no-repeat bg-black/60 bg-blend-overlay min-h-[40vh] md:min-h-[60vh] flex flex-col items-center justify-center text-white text-center px-4 md:px-8 py-6 md:py-12"
-  style={{
-    backgroundImage: `url('https://cdn.pixabay.com/photo/2020/01/22/09/39/listening-4784915_1280.jpg')`,
-  }}
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ duration: 1 }}
->
-  <div className="max-w-7xl mx-auto">
-    <motion.h1
-      className="text-xl md:text-3xl font-bold bg-blue-600 px-4 py-2 rounded-lg shadow-lg uppercase tracking-wide"
-      initial={{ y: -20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
-      ADMISSIONS OPEN 2025-26
-    </motion.h1>
-    <motion.p
-      className="text-sm md:text-lg mt-2 text-gray-200"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.5 }}
-    >
-      Enroll now and shape your future with us!
-    </motion.p>
-  </div>
-</motion.div>
 
-      {/* PDF Viewer */}
+
+      {/* PDF Viewer Section */}
       <motion.div
-        className="flex justify-center items-center py-12"
+        className="flex justify-center items-center py-12 px-4"
+        initial={{ opacity: 0, scale: 0.98 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+      >
+        <div className="w-full max-w-5xl bg-white dark:bg-navy-800 shadow-xl rounded-xl overflow-hidden border border-gray-200 dark:border-navy-700">
+          <div className="bg-navy-700 dark:bg-navy-900 py-3 px-4 flex items-center">
+            <div className="flex space-x-2">
+              <div className="w-3 h-3 rounded-full bg-red-500"></div>
+              <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+              <div className="w-3 h-3 rounded-full bg-green-500"></div>
+            </div>
+            <p className="text-white dark:text-gold-200 text-sm ml-4">
+              Sam_Public_School_Admission_Form_2025-26.pdf
+            </p>
+          </div>
+          <iframe
+            src="/FullStackDeveloperInternTask.pdf"
+            width="100%"
+            height="600px"
+            className="border-0"
+            title="Admission Form 2025-26"
+          />
+        </div>
+      </motion.div>
+
+
+      {/* Download Button Section */}
+      <motion.div
+        className="flex flex-col items-center pb-16 px-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 1.5 }}
+        transition={{ delay: 0.4 }}
       >
-        <iframe
-          src="/FullStackDeveloperInternTask.pdf"
-          width="80%"
-          height="600px"
-          className="shadow-lg rounded-xl border"
-          title="Admission Form"
-        />
+        <a
+          href="/FullStackDeveloperInternTask.pdf"
+          download="Sam_Public_School_Admission_Form_2025-26.pdf"
+          className="px-8 py-3 bg-gold-600 hover:bg-gold-700 text-white font-medium rounded-lg shadow-md transition-colors duration-300 flex items-center mb-4"
+        >
+          <svg
+            className="w-5 h-5 mr-2"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"
+            />
+          </svg>
+          Download Admission Form
+        </a>
+        <p className="text-gray-600 dark:text-gray-400 text-sm mt-2">
+          Deadline: May 31, 2025
+        </p>
       </motion.div>
     </div>
   );

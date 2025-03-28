@@ -8,88 +8,64 @@ const Admission = () => {
   }, []);
 
   return (
-    <div className="bg-white text-gray-900 text-center">
-      {/* First Background Image Section */}
-      <HeroSection
-        moto={"Apply to Sam"}
-        description={"Your Journey Starts here"}
-        section={"Admissions"}
+    <div className="bg-gray-50 dark:bg-navy-900 text-gray-900 dark:text-gray-100">
+      {/* Hero Section */}
+      <HeroSection 
+        moto={"Apply to Sam Public School"} 
+        description={"Begin your educational journey with us"} 
+        section={"Admissions"} 
       />
-
-      {/* First Background Image Section */}
-      <HeroSection moto={"Apply to Sam"} description={"Your Journey Starts here"} section={"Admissions"} />
-
-     {/* First Background Image Section */}
-<motion.div
-  className="bg-cover bg-center bg-no-repeat bg-black/60 bg-blend-overlay min-h-[40vh] md:min-h-[60vh] flex flex-col items-center justify-center text-white text-center px-4 md:px-8 py-6 md:py-12"
-  style={{
-    backgroundImage: `url('https://cdn.pixabay.com/photo/2020/01/22/09/39/listening-4784915_1280.jpg')`,
-  }}
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ duration: 1 }}
->
-  <div className="max-w-7xl mx-auto">
-    <motion.h1
-      className="text-xl md:text-3xl font-bold bg-blue-600 px-4 py-2 rounded-lg shadow-lg uppercase tracking-wide"
-      initial={{ y: -20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5 }}
-    >
-      Apply To Kingster
-    </motion.h1>
-    <motion.p
-      className="text-sm md:text-lg mt-2 text-gray-200"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 0.5 }}
-    >
-      Your journey starts here!
-    </motion.p>
-  </div>
-</motion.div>
 
       {/* Details Section */}
       <div className="p-8 max-w-7xl mx-auto">
         <motion.h2
-          className="text-3xl font-semibold mb-4"
+          className="text-3xl font-semibold mb-6 text-center text-navy-900 dark:text-gold-400"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          Details About How To Apply
+          Admission Process
         </motion.h2>
         <motion.p
-          className="text-gray-600 mb-6"
+          className="text-lg text-gray-600 dark:text-gray-300 mb-8 text-center max-w-4xl mx-auto"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          If you would like to study in the heart of the city, our institution
-          offers a comprehensive application process. We focus on identifying
-          talent and fostering growth through dedicated programs and mentorship.
+          At Sam Public School, we offer a streamlined application process focused on identifying
+          and nurturing young talent through our dedicated programs and mentorship.
         </motion.p>
 
         {/* Services Section */}
-        <div className="grid md:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {[
-            "Education Services",
-            "International Hubs",
-            "Bachelor's and Master's",
-            "University Life",
+            { 
+              title: "Academic Programs", 
+              description: "Comprehensive curriculum from KG to 12th grade with special focus on STEM" 
+            },
+            { 
+              title: "Extracurricular", 
+              description: "Sports, arts, and clubs for holistic development" 
+            },
+            { 
+              title: "Faculty Excellence", 
+              description: "Highly qualified and experienced teaching staff" 
+            },
+            { 
+              title: "Facilities", 
+              description: "State-of-the-art labs, library, and sports infrastructure" 
+            },
           ].map((item, index) => (
             <motion.div
               key={index}
-              className="p-4 bg-blue-100 rounded-lg shadow-md"
+              className="p-6 bg-white dark:bg-navy-800 rounded-lg shadow-md border border-gray-100 dark:border-navy-700"
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
+              whileHover={{ y: -5, boxShadow: "0 10px 25px rgba(0,0,0,0.1)" }}
             >
-              <h3 className="text-xl font-bold mb-2">{item}</h3>
-              <p className="text-gray-600">
-                Kingster University was established by John Smith to serve the
-                public benefit.
-              </p>
+              <h3 className="text-xl font-bold mb-3 text-navy-800 dark:text-gold-300">{item.title}</h3>
+              <p className="text-gray-600 dark:text-gray-300">{item.description}</p>
             </motion.div>
           ))}
         </div>
@@ -97,70 +73,89 @@ const Admission = () => {
 
       {/* Third Background Image Section */}
       <motion.div
-        className="bg-cover bg-center bg-fixed bg-no-repeat bg-black/60 bg-blend-overlay min-h-[60vh]"
+        className="relative bg-cover bg-center bg-fixed bg-no-repeat min-h-[60vh]"
         style={{
-          backgroundImage:
-            "url('https://img.freepik.com/premium-photo/group-happy-school-students-smiling-camera_488220-26194.jpg')",
+          backgroundImage: "url('https://img.freepik.com/premium-photo/group-happy-school-students-smiling-camera_488220-26194.jpg')",
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
-      ></motion.div>
+      >
+        <div className="absolute inset-0 bg-navy-900/60"></div>
+      </motion.div>
 
       {/* Application Process */}
-      <div className="bg-blue-50 py-12">
+      <div className="bg-gray-100 dark:bg-navy-800 py-16">
         <div className="max-w-7xl mx-auto px-8">
           <motion.h2
-            className="text-3xl font-semibold text-center mb-8"
+            className="text-3xl font-semibold text-center mb-12 text-navy-900 dark:text-gold-400"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
           >
-            The Application Process
+            Our Admission Process
           </motion.h2>
-          <div className="grid md:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                title: "Start Online Submission",
-                desc: "A wonderful serenity has taken possession of my soul.",
+                title: "Online Application",
+                desc: "Begin by completing our online application form with student details.",
               },
               {
-                title: "Submit The Form",
-                desc: "Complete the application form and provide the required documents.",
+                title: "Document Submission",
+                desc: "Submit required documents including birth certificate and previous school records.",
               },
               {
-                title: "Review The Submission",
-                desc: "Our team will carefully review your application details.",
+                title: "Entrance Assessment",
+                desc: "Students may be required to complete an age-appropriate assessment.",
               },
               {
-                title: "Gather Necessary Documents",
-                desc: "Ensure you submit valid identification and certificates.",
+                title: "Parent Interview",
+                desc: "Meet with our admissions team to discuss your child's educational needs.",
               },
               {
-                title: "Interviewing Process",
-                desc: "Selected students will proceed to an interview round.",
+                title: "Admission Decision",
+                desc: "Receive notification of acceptance within 7-10 business days.",
               },
               {
-                title: "Final Decision",
-                desc: "Final selections will be communicated to successful candidates.",
+                title: "Enrollment Completion",
+                desc: "Finalize enrollment by submitting fees and completing registration.",
               },
             ].map((step, index) => (
               <motion.div
                 key={index}
-                className="bg-white p-6 rounded-lg shadow-md"
+                className="bg-white dark:bg-navy-700 p-6 rounded-lg shadow-md border border-gray-200 dark:border-navy-600"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                whileHover={{ scale: 1.05 }}
+                transition={{ duration: 0.5, delay: index * 0.15 }}
+                whileHover={{ scale: 1.03 }}
               >
-                <div className="text-[45px] text-[#c50227] mb-2">
-                  {index + 1}
+                <div className="text-3xl font-bold text-gold-600 dark:text-gold-400 mb-3">
+                  0{index + 1}
                 </div>
-                <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-                <p className="text-gray-600">{step.desc}</p>
+                <h3 className="text-xl font-bold mb-3 text-navy-800 dark:text-white">{step.title}</h3>
+                <p className="text-gray-600 dark:text-gray-300">{step.desc}</p>
               </motion.div>
             ))}
           </div>
+
+          {/* Call to Action */}
+          <motion.div
+            className="mt-16 text-center"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.8 }}
+          >
+            <a
+              href="/apply-now"
+              className="inline-block px-8 py-3 bg-gold-600 hover:bg-gold-700 text-white font-medium rounded-lg shadow-md transition-colors"
+            >
+              Begin Your Application
+            </a>
+            <p className="mt-4 text-gray-600 dark:text-gray-300">
+              Application deadline: May 31, 2025
+            </p>
+          </motion.div>
         </div>
       </div>
     </div>
