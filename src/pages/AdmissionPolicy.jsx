@@ -14,13 +14,6 @@ const AdmissionPolicyPage = () => {
         description={"Rules for admissions"}
         section={"Admissions"}
       />
-
-      {/* Hero Section */}
-      <HeroSection moto={"Admissions Policy"} description={"Rules for admissions"} section={"Admissions"} />
-
-
-
-
       {/* Admission Policy Content */}
       <div className="container mx-auto py-12 px-6">
         <motion.div

@@ -4,7 +4,6 @@ import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import HeroSection from "../About Us/HeroSection";
 
 const images = Array(36).fill("https://picsum.photos/800");
-
 const itemsPerPage = 24;
 
 export default function Gallery() {
@@ -40,68 +39,35 @@ export default function Gallery() {
       />
 
       <div className="flex flex-col items-center py-10 px-4 max-w-7xl mx-auto">
-        {/* Image Grid */}
-{isLoading ? (
-  <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 w-full">
-    {[...Array(itemsPerPage)].map((_, index) => (
-      <div 
-        key={index} 
-        className="bg-gray-200 dark:bg-navy-700 rounded-lg aspect-square animate-pulse"
-      />
-    ))}
-  </div>
-) : (
-  <div className="grid grid-cols-3 md:grid-cols-6 gap-2 px-4">
-    {displayedImages.map((src, index) => (
-      <div
-        key={index}
-        className="relative transition-transform transform hover:scale-105 hover:shadow-lg cursor-pointer overflow-hidden"
-        onClick={() => handleImageClick(src)}
-      >
-        <img
-          src={src}
-          alt="Gallery"
-          className="w-44 h-44 object-cover shadow-md"
-          loading="lazy"
-        />
-      </div>
-    ))}
-  </div>
-)}
-
+        {/* Image Grid with Animation */}
+        <motion.div 
+          className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 w-full"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5 }}
+        >
+          {displayedImages.map((src, index) => (
+            <motion.div
+              key={index}
+              className="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow"
+              whileHover={{ scale: 1.03 }}
+              onClick={() => handleImageClick(src)}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.3, delay: index * 0.02 }}
+            >
+              <img
+                src={src}
+                alt={`Gallery ${index + 1}`}
+                className="w-full h-full object-cover aspect-square"
+                loading="lazy"
               />
-            ))}
-          </div>
-        ) : (
-          <motion.div 
-            className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 w-full"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.5 }}
-          >
-            {displayedImages.map((src, index) => (
-              <motion.div
-                key={index}
-                className="relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow"
-                whileHover={{ scale: 1.03 }}
-                onClick={() => handleImageClick(src)}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.3, delay: index * 0.02 }}
-              >
-                <img
-                  src={src}
-                  alt={`Gallery ${index + 1}`}
-                  className="w-full h-full object-cover aspect-square"
-                  loading="lazy"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy-900/40 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-end p-4">
-                  <p className="text-white font-medium">Event {index + 1}</p>
-                </div>
-              </motion.div>
-            ))}
-          </motion.div>
-        )}
+              <div className="absolute inset-0 bg-gradient-to-t from-navy-900/40 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-end p-4">
+                <p className="text-white font-medium">Event {index + 1}</p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
 
         {/* Pagination Controls */}
         <motion.div 
