@@ -49,6 +49,7 @@ export default function Gallery() {
                 src={src}
                 alt="Gallery"
                 className="w-44 h-44 object-cover shadow-md"
+                loading="lazy"
               />
             </div>
           ))}

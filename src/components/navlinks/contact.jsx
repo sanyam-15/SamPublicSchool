@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import HeroSection from "../About Us/HeroSection";
 
 const ContactPage = () => {
   useEffect(() => {
@@ -7,26 +8,10 @@ const ContactPage = () => {
   }, []);
   return (
     <div className="bg-white font-sans">
-      {/* Header Section with Background Image */}
-      <header 
-        className="relative text-white text-center flex items-center justify-center"
-        style={{
-          height: "70vh",
-          backgroundImage: "url('https://cdn.pixabay.com/photo/2024/08/19/11/27/school-8980534_1280.jpg')",
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
-        <div className="absolute inset-0 bg-red-700 opacity-75"></div>
-        <div className="relative z-5 text-center">
-          <h1 className="text-4xl font-bold">Contact Us</h1>
-          <p className="text-lg">Get In Touch</p>
-        </div>
-      </header>
+      <HeroSection moto={"Contact Us"} description={"Build connection with me"} section={"Contact"} />
 
       {/* Contact Information */}
-      <section className="bg-black text-white py-8 grid grid-cols-1 md:grid-cols-3 text-center">
+      <section className="bg-[#F9FAFB] text-black py-8 grid grid-cols-1 md:grid-cols-3 text-center">
         <div>
           <FaPhone className="text-3xl mx-auto mb-2" />
           <p>Phone</p>
