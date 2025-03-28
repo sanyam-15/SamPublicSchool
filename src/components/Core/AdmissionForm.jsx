@@ -8,6 +8,7 @@ const AdmissionPage = () => {
   }, []);
 
   return (
+
     <div className="bg-gray-50 dark:bg-navy-900">
       {/* Hero Section */}
       <HeroSection 
@@ -30,6 +31,7 @@ const AdmissionPage = () => {
           Download and complete the form to begin your admission process
         </p>
       </motion.div>
+
 
       {/* PDF Viewer Section */}
       <motion.div
@@ -58,6 +60,7 @@ const AdmissionPage = () => {
           />
         </div>
       </motion.div>
+
 
       {/* Download Button Section */}
       <motion.div

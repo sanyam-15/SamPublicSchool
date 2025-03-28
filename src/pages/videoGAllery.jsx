@@ -12,9 +12,27 @@ const videos = [
   "https://www.w3schools.com/html/movie.mp4",
 
   "https://www.w3schools.com/html/movie.mp4",
+  "https://www.w3schools.com/html/movie.mp4",
+  "https://www.w3schools.com/html/movie.mp4",
+  "https://www.w3schools.com/html/movie.mp4",
+  "https://www.w3schools.com/html/movie.mp4",
+  "https://www.w3schools.com/html/movie.mp4",
+  "https://www.w3schools.com/html/movie.mp4",
+  "https://www.w3schools.com/html/movie.mp4",
+  "https://www.w3schools.com/html/movie.mp4",
+  "https://www.w3schools.com/html/movie.mp4",
+  "https://www.w3schools.com/html/movie.mp4",
+  "https://www.w3schools.com/html/movie.mp4",
+  "https://www.w3schools.com/html/movie.mp4",
+  "https://www.w3schools.com/html/movie.mp4",
+  "https://www.w3schools.com/html/movie.mp4",
+  "https://www.w3schools.com/html/movie.mp4",
+  "https://www.w3schools.com/html/movie.mp4",
+  "https://www.w3schools.com/html/movie.mp4",
+  "https://www.w3schools.com/html/movie.mp4",
 ];
 
-const itemsPerPage = 3;
+const itemsPerPage = 12;
 
 export default function VideoGallery() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -66,61 +84,62 @@ export default function VideoGallery() {
   return (
     <div>
       <HeroSection moto={"Video Gallery"} section={"Gallery"} />
-      <div className="flex flex-col items-center bg-gray-100 pb-10">
-        {/* Gallery Title */}
-        <h1 className="text-2xl font-bold my-6 text-gray-800">Video Gallery</h1>
+      <div className="flex flex-col items-center bg-[#F9FAFB] pb-10 mt-4">
 
         {/* Video Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 px-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 px-4">
           {displayedVideos.map((src, index) => (
             <div
               key={index}
-              className="relative transition-transform transform hover:scale-105 hover:shadow-lg cursor-pointer rounded-lg overflow-hidden"
+              className="relative transition-transform transform hover:scale-105 hover:shadow-lg cursor-pointer overflow-hidden"
               onClick={() => handleVideoClick(index)}
             >
               <video
                 ref={(el) => (videoRefs.current[index] = el)}
                 src={src}
-                className="w-140 h-88 object-cover rounded-lg shadow-md"
+                className="w-88h-88 object-cover shadow-md"
                 controls
-                onPlay={() => handleVideoPlay(index)} // Ensure only one plays at a time
+                muted
+                onPlay={() => handleVideoPlay(index)}
               />
             </div>
           ))}
         </div>
 
         {/* Pagination Controls */}
-        <div className="flex items-center space-x-2 mt-6">
-          <Button
+        <div className="flex items-center space-x-2 mt-6 gap-2">
+          <button
+          className="rounded-full bg-blue-900 text-white p-2"
             onClick={handlePrev}
             disabled={currentPage === 1}
             size="sm"
             variant="outline"
           >
             <ChevronLeft />
-          </Button>
+          </button>
           {[...Array(totalPages)].map((_, index) => (
-            <Button
+            <button
               key={index}
               onClick={() => setCurrentPage(index + 1)}
               size="sm"
               className={`px-3 py-1 ${
                 currentPage === index + 1
-                  ? "bg-blue-600 text-white"
-                  : "bg-gray-200 text-gray-800 hover:bg-gray-300"
+                  ? "bg-blue-600 text-white rounded-full"
+                  : "bg-gray-200 text-gray-800 hover:bg-gray-300 rounded-full"
               }`}
             >
               {index + 1}
-            </Button>
+            </button>
           ))}
-          <Button
+          <button
+          className="rounded-full bg-blue-900 text-white p-2"
             onClick={handleNext}
             disabled={currentPage === totalPages}
             size="sm"
             variant="outline"
           >
             <ChevronRight />
-          </Button>
+          </button>
         </div>
 
         {/* Modal for Enlarged Video */}
@@ -135,7 +154,7 @@ export default function VideoGallery() {
                 <X size={30} />
               </button>
               <video
-                ref={modalVideoRef} // Assign ref to modal video
+                ref={modalVideoRef}
                 src={modalVideo}
                 className="w-full h-full object-contain rounded-lg shadow-xl"
                 controls

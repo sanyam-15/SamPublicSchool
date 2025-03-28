@@ -41,12 +41,34 @@ export default function Gallery() {
 
       <div className="flex flex-col items-center py-10 px-4 max-w-7xl mx-auto">
         {/* Image Grid */}
-        {isLoading ? (
-          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 w-full">
-            {[...Array(itemsPerPage)].map((_, index) => (
-              <div 
-                key={index} 
-                className="bg-gray-200 dark:bg-navy-700 rounded-lg aspect-square animate-pulse"
+{isLoading ? (
+  <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 w-full">
+    {[...Array(itemsPerPage)].map((_, index) => (
+      <div 
+        key={index} 
+        className="bg-gray-200 dark:bg-navy-700 rounded-lg aspect-square animate-pulse"
+      />
+    ))}
+  </div>
+) : (
+  <div className="grid grid-cols-3 md:grid-cols-6 gap-2 px-4">
+    {displayedImages.map((src, index) => (
+      <div
+        key={index}
+        className="relative transition-transform transform hover:scale-105 hover:shadow-lg cursor-pointer overflow-hidden"
+        onClick={() => handleImageClick(src)}
+      >
+        <img
+          src={src}
+          alt="Gallery"
+          className="w-44 h-44 object-cover shadow-md"
+          loading="lazy"
+        />
+      </div>
+    ))}
+  </div>
+)}
+
               />
             ))}
           </div>

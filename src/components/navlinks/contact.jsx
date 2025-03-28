@@ -1,4 +1,6 @@
 import React, { useEffect } from "react";
+
+import HeroSection from "../About Us/HeroSection";
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaClock, FaFacebook, FaTwitter, FaInstagram } from "react-icons/fa";
 import { motion } from "framer-motion";
 
