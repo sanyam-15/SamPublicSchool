@@ -23,17 +23,23 @@ import SchoolProspectus from "./components/About Us/schoolProspectus.jsx";
 import VideoGallery from "./pages/videoGAllery.jsx";
 import ComingSoon from "./pages/ComingSoonPage.jsx";
 import Principal from "./components/About Us/Principal.jsx";
+import FixedButton from "./components/Developer/Button.jsx";
+import Academic from "./components/Achievements/Academic.jsx";
+import Sports from "./components/Achievements/Sports.jsx";
+import Class8thTopper from "./components/Achievements/Class8thTopper.jsx";
+import Syllabus from "./components/RulesAndRegulations/Syllabus.jsx";
 
 function AppContent() {
   const location = useLocation().pathname;
 
-  if (location === "/rules/syllabus" || location === "/rules/examination-promotion" || location === "/about/transport") {
+  if (location === "/rules/examination-promotion" || location === "/about/transport") {
     return <ComingSoon />;
   }
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Navbar />
+      <FixedButton  />
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
@@ -55,6 +61,10 @@ function AppContent() {
           <Route path="/about/principal-message" element={<Principal />} />
           <Route path="/gallery/videos" element={<VideoGallery />} />
           <Route path="/rules/guidelines-for-students" element={<StudentGuidelines />} />
+          <Route path="/achievements/academics" element={<Academic />} />
+          <Route path="/achievements/sports" element={<Sports />} />
+          <Route path="/achievements/class-8th-toppers" element={<Class8thTopper />} />
+          <Route path="/rules/syllabus" element={<Syllabus />} />
         </Routes>
       </div>
       <Footer />

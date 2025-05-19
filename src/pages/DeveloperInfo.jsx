@@ -5,7 +5,7 @@ const developers = [
   {
     name: "Abhay Keshri",
     role: "Full Stack Developer",
-    image: "https://media.licdn.com/dms/image/v2/D4D03AQG9qO-j-OUQSw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1699386259667?e=1748476800&v=beta&t=3R-_W1EBKHvP3TTwV09c8YmhwXpiMP-FKs0gaze2yFc",
+    image: "https://media.licdn.com/dms/image/v2/D5603AQEH8gZ635a7MQ/profile-displayphoto-shrink_400_400/B56ZXrcUJlHEAg-/0/1743411824068?e=1749081600&v=beta&t=c0CycHKGclZRebNzTY2uUu_1j3ZbrIFW56m_aiRurbY",
     bio: "Passionate MERN stack developer with expertise in front-end and back-end technologies.",
     linkedin: "https://linkedin.com/in/abhaykeshri",
     github: "https://github.com/abhaykeshri",
