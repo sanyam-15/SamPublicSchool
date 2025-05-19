@@ -19,7 +19,7 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { 
       name: "About Us", path: "/about", dropdown: [
-        { name: "About Sam", path: "/about/dps-patna" },
+        { name: "About Greenland", path: "/about/dps-patna" },
         { name: "Infrastructure", path: "/about/infrastructure" },
         { name: "Faculty", path: "/about/faculty" },
         { name: "Principal Message", path: "/about/principal-message" },
@@ -82,9 +82,9 @@ const Navbar = () => {
               className="h-12"
             />
             <div>
-              <h1 className="text-lg font-bold text-navy-900">Sam Public School, Tundla</h1>
+              <h1 className="text-lg font-bold text-navy-900">Greenland Public School, Tundla</h1>
               <p className="text-xs text-gray-600 hidden md:block">
-                Under the aegis of Delhi Public School Society, New Delhi
+                Under the aegis of Greenland Public School Society, Patna
               </p>
               <p className="text-xs text-gray-600 hidden md:block">
                 Affiliated to Central Board of Secondary Education, New Delhi
@@ -96,15 +96,17 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-6">
             <div className="text-sm text-gray-800">
               <p className="flex items-center gap-1">
-                <span className="text-gold-600">📞</span> +91 7088744411
+                <span className="text-gold-600">📞</span> +91 8789628764
               </p>
               <p className="flex items-center gap-1">
-                <span className="text-gold-600">📧</span> enquiry@sampublicschool.com
+                <span className="text-gold-600">📧</span> greenlandpublicschool09@gmail.com
               </p>
             </div>
-            <button className="text-white px-4 py-2 rounded-md hover:bg-gold-700 transition-colors bg-gold-600 shadow-md">
+            <Link to={"admissions/procedure"}>
+              <button className="text-white px-4 py-2 rounded-md hover:bg-gold-700 transition-colors bg-gold-600 shadow-md">
               ONLINE REGISTRATION
-            </button>
+              </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}

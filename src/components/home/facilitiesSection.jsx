@@ -193,7 +193,7 @@ const FacilitiesSection = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => (window.location.href = "/facilities")}
+            onClick={() => (window.location.href = "/about/infrastructure")}
             className="px-8 py-3 rounded-lg text-lg font-medium shadow-lg hover:shadow-xl transition-all"
             style={{ 
               backgroundColor: COLORS.accent,

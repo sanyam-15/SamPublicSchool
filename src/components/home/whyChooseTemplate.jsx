@@ -64,7 +64,7 @@ const WhyChooseTemplate = () => {
                 className="text-3xl md:text-4xl font-extrabold mb-6"
                 style={{ color: COLORS.lightBg }}
               >
-                Why Choose <span style={{ color: COLORS.accent }}>Manava Bharati?</span>
+                Why Choose <span style={{ color: COLORS.accent }}>Greenland Public School?</span>
               </motion.h2>
               
               <motion.p
@@ -75,7 +75,7 @@ const WhyChooseTemplate = () => {
                 className="text-lg mb-8 leading-relaxed"
                 style={{ color: `${COLORS.lightBg}CC` }}
               >
-                Manava Bharati International School is renowned for its commitment to excellence in education, blending rich traditions with modern advancements. Our world-class facilities and holistic approach ensure students excel academically and personally.
+                Greenland Public School is renowned for its commitment to excellence in education, blending rich traditions with modern advancements. Our world-class facilities and holistic approach ensure students excel academically and personally.
               </motion.p>
               
               <ul className="space-y-4">
@@ -158,6 +158,7 @@ const WhyChooseTemplate = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
+                    onClick={() => (window.location.href = "/not-found")}
                     className="w-full font-semibold py-3 px-6 rounded-lg shadow-md transition-all"
                     style={{ 
                       backgroundColor: COLORS.accent,

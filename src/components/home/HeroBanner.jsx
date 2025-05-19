@@ -86,7 +86,7 @@ const HeroBanner = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight"
           >
-            <span className="text-gold-400">Sam</span> Public <span className="text-navy-300">School</span>
+            <span className="text-gold-400">Greenland</span> Public <span className="text-navy-300">School</span>
           </motion.h1>
           
           <motion.p

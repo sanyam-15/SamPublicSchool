@@ -55,6 +55,7 @@ function AppContent() {
           <Route path="/about/principal-message" element={<Principal />} />
           <Route path="/gallery/videos" element={<VideoGallery />} />
           <Route path="/rules/guidelines-for-students" element={<StudentGuidelines />} />
+          <Route path="/not-found" element={<NotFoundPage />} />
         </Routes>
       </div>
       <Footer />

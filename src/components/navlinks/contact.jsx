@@ -27,7 +27,7 @@ const ContactPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gold-400">Contact Sam Public School</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gold-400">Contact Greenland Public School</h1>
           <p className="text-xl text-gold-100 max-w-2xl mx-auto">
             We're here to answer your questions and welcome your feedback
           </p>
@@ -40,12 +40,12 @@ const ContactPage = () => {
           {[
             { icon: <FaPhone className="text-3xl mx-auto mb-4 text-gold-500" />, 
               title: "Phone", 
-              content: "+91 98765 43210",
+              content: "+91 8789628764",
               sub: "Mon-Fri, 8:30AM-4:30PM" 
             },
             { icon: <FaEnvelope className="text-3xl mx-auto mb-4 text-gold-500" />, 
               title: "Email", 
-              content: "info@sampublicschool.edu",
+              content: "greenlandpublicschool09@gmail.com",
               sub: "Response within 24 hours" 
             },
             { icon: <FaMapMarkerAlt className="text-3xl mx-auto mb-4 text-gold-500" />, 

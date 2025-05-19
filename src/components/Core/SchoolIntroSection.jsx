@@ -149,6 +149,7 @@ const SchoolIntroSection = () => {
                 <motion.button 
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
+                  onClick={() => (window.location.href = "/about/dps-patna")}
                   className="font-semibold px-8 py-3 rounded-lg transition-all duration-300 shadow-lg hover:shadow-xl"
                   style={{ 
                     backgroundColor: COLORS.accent,
@@ -163,6 +164,7 @@ const SchoolIntroSection = () => {
                     backgroundColor: `${COLORS.primary}90`
                   }}
                   whileTap={{ scale: 0.95 }}
+                  onClick={() => (window.location.href = "/about/dps-patna")}
                   className="border-2 font-semibold px-8 py-3 rounded-lg transition-all duration-300"
                   style={{ 
                     borderColor: COLORS.accent,

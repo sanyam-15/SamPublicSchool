@@ -148,7 +148,7 @@ const PhotoGallery = () => {
               backgroundColor: COLORS.secondary
             }}
             whileTap={{ scale: 0.95 }}
-            onClick={() => (window.location.href = "/gallery")}
+            onClick={() => (window.location.href = "/gallery/images")}
             className="px-8 py-3 rounded-lg text-lg font-medium shadow-lg hover:shadow-xl transition-all"
             style={{ 
               backgroundColor: COLORS.accent,

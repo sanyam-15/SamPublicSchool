@@ -72,7 +72,7 @@ const Footer = () => {
                 alt="Logo"
                 className="w-20 h-20 mb-2 md:mb-0 md:mr-2"
               />
-              <span>Sam Public School</span>
+              <span>Greenland Public School</span>
             </h2>
             <p className="mt-4">Box 35300</p>
             <p>1810 Campus Way NE</p>
@@ -146,7 +146,7 @@ const Footer = () => {
               Contact Us
             </h3>
             <div className="mt-4 space-y-2 text-center md:text-left">
-              <h2 className="text-gold-300">+91 9023079999</h2>
+              <h2 className="text-gold-300">+91 8789628764</h2>
               <h2 className="text-gold-300">admissions@sam.com</h2>
               <h2 className="text-gold-300">www.sampchool.com</h2>
               <Link to={"/contact"}>

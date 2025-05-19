@@ -77,7 +77,7 @@ const PrincipalMessage = () => {
               className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 text-white py-2 px-4 md:py-4 md:px-6 rounded-lg shadow-lg"
               style={{ backgroundColor: COLORS.primary }}
             >
-              <p className="font-bold text-sm md:text-lg">Dr. Sarah Johnson</p>
+              <p className="font-bold text-sm md:text-lg">Mr. Dimpu Kumar</p>
               <p 
                 className="text-xs md:text-sm"
                 style={{ color: COLORS.accent }}
@@ -117,7 +117,7 @@ const PrincipalMessage = () => {
                     >"Welcome</span> to <span 
                       className="font-semibold"
                       style={{ color: COLORS.primary }}
-                    >Manava Bharati</span>, where we nurture future leaders, innovators, and responsible citizens."
+                    >Greenland Public School</span>, where we nurture future leaders, innovators, and responsible citizens."
                   </p>
                 </motion.div>
                 
@@ -181,13 +181,13 @@ const PrincipalMessage = () => {
                     className="text-sm md:text-base font-medium"
                     style={{ color: COLORS.primary }}
                   >
-                    Dr. Sarah Johnson
+                    Mr. Dimpu Kumar
                   </p>
                   <p 
                     className="text-xs md:text-sm"
                     style={{ color: COLORS.lightText }}
                   >
-                    Principal, Manava Bharati
+                    Principal, Greenland Public School
                   </p>
                 </div>
               </div>

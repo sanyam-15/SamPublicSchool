@@ -71,7 +71,7 @@ const Announcement = () => {
             </motion.div>
           </div>
           <motion.a
-            href="/admissions"
+            href="/admissions/admission-form"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="ml-3 flex-shrink-0 px-3 py-1 rounded-md text-sm font-bold transition-colors"
