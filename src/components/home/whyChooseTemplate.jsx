@@ -15,7 +15,7 @@ const COLORS = {
 const WhyChooseTemplate = () => {
   return (
     <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      {/* Background elements */}
+      Background elements
       <div 
         className="absolute inset-0 bg-gradient-to-br from-blue-50 to-gray-50 opacity-95"
         style={{ backgroundColor: `${COLORS.primary}08` }} // 8% opacity

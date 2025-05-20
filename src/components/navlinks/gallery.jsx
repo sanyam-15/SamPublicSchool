@@ -112,12 +112,13 @@ export default function Gallery() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.3, delay: index * 0.02 }}
             >
-              <img
-                src={src}
-                alt={`Gallery ${index + 1}`}
-                className="w-full h-full object-cover aspect-square"
-                loading="lazy"
-              />
+         <img
+  src={src}
+  alt={`Gallery ${index + 1}`}
+  className="w-full h-full object-cover aspect-square"
+  style={{ zIndex: 90 }}
+  loading="lazy"
+/>
               <div className="absolute inset-0 bg-gradient-to-t from-navy-900/40 to-transparent opacity-0 hover:opacity-100 transition-opacity flex items-end p-4">
                 <p className="text-white font-medium">Event {index + 1}</p>
               </div>
@@ -169,41 +170,38 @@ export default function Gallery() {
         </motion.div>
 
         {/* Modal for Enlarged Image */}
-        <AnimatePresence>
-          {modalImage && (
-            <motion.div
-              className="fixed inset-0 bg-black/90 flex justify-center items-center z-50 p-4"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={closeModal}
-            >
-              <motion.div
-                className="relative max-w-5xl w-full"
-                initial={{ scale: 0.9 }}
-                animate={{ scale: 1 }}
-                exit={{ scale: 0.9 }}
-                onClick={(e) => e.stopPropagation()}
-              >
-                <button
-                  onClick={closeModal}
-                  className="absolute -top-12 right-0 text-white hover:text-gold-400 transition-colors"
-                  aria-label="Close image"
-                >
-                  <X size={32} />
-                </button>
-                <img
-                  src={modalImage}
-                  alt="Enlarged view"
-                  className="w-full max-h-[80vh] object-contain rounded-lg"
-                />
-                <div className="absolute bottom-4 left-0 right-0 text-center text-white bg-navy-900/70 py-2 rounded-lg mx-auto max-w-max px-4">
-                  School Event Photo
-                </div>
-              </motion.div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+       <AnimatePresence>
+  {modalImage && (
+    <motion.div
+      className="fixed inset-0 bg-black bg-opacity-80 z-[9999] flex items-center justify-center p-4"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      onClick={closeModal}
+    >
+      <motion.div
+        className="relative max-w-4xl w-full"
+        initial={{ scale: 0.8 }}
+        animate={{ scale: 1 }}
+        exit={{ scale: 0.8 }}
+        onClick={(e) => e.stopPropagation()} // Prevent modal close on image click
+      >
+        <img
+          src={modalImage}
+          alt="Enlarged"
+          className="w-full h-auto rounded-lg shadow-lg object-contain max-h-[90vh]"
+        />
+        <button
+          className="absolute top-2 right-2 text-white bg-black bg-opacity-50 rounded-full p-2 hover:bg-opacity-75 transition"
+          onClick={closeModal}
+        >
+          <X size={24} />
+        </button>
+      </motion.div>
+    </motion.div>
+  )}
+</AnimatePresence>
+
       </div>
     </div>
   );
