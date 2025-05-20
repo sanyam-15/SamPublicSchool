@@ -83,7 +83,7 @@ const Navbar = () => {
               className="h-14"
             />
             <div>
-              <h1 className="text-lg font-bold text-navy-900">Greenland Public School, Tundla</h1>
+              <h1 className="text-lg font-bold text-navy-900">Greenland Public School, Patna</h1>
               <p className="text-xs text-gray-600 hidden md:block">
                 Under the aegis of Greenland Public School Future City, Patna
               </p>

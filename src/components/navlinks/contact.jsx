@@ -36,7 +36,7 @@ const ContactPage = () => {
     setLoading(true);
 
     try {
-      await axios.post("http://localhost:5000/api/sendEmail", formData); // Update to your backend URL
+      await axios.post("https://greenland-server.onrender.com/api/sendEmail", formData);
       toast.success("Message sent successfully!");
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
