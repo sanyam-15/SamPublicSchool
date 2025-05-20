@@ -82,14 +82,14 @@ const SchoolIntroSection = () => {
         <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-12">
           {/* Left: Image */}
           <motion.div 
-            className="w-full lg:w-1/2 relative rounded-xl overflow-hidden shadow-2xl"
+            className="w-full lg:w-5/12 relative rounded-xl overflow-hidden shadow-2xl"
             variants={imageVariants}
           >
             <div className="aspect-w-16 aspect-h-9">
               <img
-                src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+                src="https://res.cloudinary.com/dc8x5xkaz/image/upload/v1747771449/WhatsApp_Image_2025-05-21_at_01.33.26_d9c955c4_yzn5ht.jpg"
                 alt="Students in discussion"
-                className="w-full h-full object-cover rounded-xl transform hover:scale-105 transition-transform duration-500"
+                className="w-full h-full object-cover rounded-xl transform hover:scale-105 transition-transform duration-500 max-w-[90%] mx-auto"
               />
               <div 
                 className="absolute inset-0"
@@ -102,7 +102,7 @@ const SchoolIntroSection = () => {
           
           {/* Right: Text Content */}
           <motion.div 
-            className="w-full lg:w-1/2 text-white p-8 md:p-10 rounded-xl shadow-2xl relative overflow-hidden"
+            className="w-full lg:w-7/12 text-white p-8 md:p-10 rounded-xl shadow-2xl relative overflow-hidden"
             style={{ backgroundColor: COLORS.primary }}
             variants={itemVariants}
           >
@@ -130,7 +130,7 @@ const SchoolIntroSection = () => {
                 <span className="bg-clip-text text-transparent" style={{ 
                   backgroundImage: `linear-gradient(to right, ${COLORS.lightBg}, ${COLORS.accent})`
                 }}>
-                  Manava Bharati International School
+                  Greenland Public School
                 </span>
               </motion.h1>
               
@@ -139,7 +139,7 @@ const SchoolIntroSection = () => {
                 style={{ color: `${COLORS.lightBg}CC` }}
                 variants={itemVariants}
               >
-                Manava Bharati International School is affiliated to CBSE (Affiliation No. 330864) up to Senior Secondary Level. Unique in its perspectives and approach, we practice collaboration & participation in all spheres of life. This ensures holistic development of the students.
+                Greenland Public School offers quality education up to the 8th standard, focusing on nurturing young minds through a unique approach that emphasizes collaboration and active participation in all areas of school life. Our commitment ensures the holistic development of students, fostering academic excellence, character building, and overall growth.
               </motion.p>
               
               <motion.div 

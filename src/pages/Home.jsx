@@ -99,7 +99,8 @@ const Home = () => {
       </div>
 
       {/* Main Content */}
-      <div className="pt-32 pb-20">
+     <div className="pt-0 sm:pt-20 pb-0 sm:pb-20">
+
         <AnnouncementTicker />    
         <SchoolIntroSection />
 

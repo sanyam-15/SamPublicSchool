@@ -3,10 +3,8 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Bell, ChevronRight } from 'lucide-react';
 
 const announcements = [
-  { id: 1, text: "Annual Sports Day Registration Now Open!", link: "/events/sports-day" },
-  { id: 2, text: "Parent-Teacher Meeting Scheduled for Next Week", link: "/events/ptm" },
-  { id: 3, text: "Holiday Notice: School Closed for Diwali Festival", link: "/announcements/holiday" },
-  { id: 4, text: "Science Exhibition on Environmental Conservation", link: "/events/science-expo" }
+  { id: 2, text: "Parent-Teacher Meeting Scheduled for 1st July", link: "/events/ptm" },
+  { id: 3, text: "Holiday Notice: School Closed for Summer Vaccation", link: "/announcements/holiday" }
 ];
 
 const AnnouncementTicker = () => {
@@ -31,7 +29,7 @@ const AnnouncementTicker = () => {
   };
 
   return (
-    <div className="bg-navy-700 text-gold-100 py-3 shadow-md">
+    <div className="bg-navy-700 text-gold-100 py-3 shadow-md ">
       <div className="max-w-7xl mx-auto px-4">
         <div className="flex items-center justify-between">
           {/* Left side - Bell icon */}

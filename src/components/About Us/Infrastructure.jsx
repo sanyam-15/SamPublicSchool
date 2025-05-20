@@ -7,33 +7,29 @@ function Infrastructure() {
     window.scrollTo(0, 0);
   }, []);
 
-  const facilities = [
-    {
-      image: "https://indianschool.bh/images/facilities/computer-lab/25.jpg",
-      name: "Computer Lab",
-      description: "Our school’s Computer Lab offers students a fun and engaging space to learn basic computer skills, explore educational software, and get introduced to coding and technology in a guided environment."
-    },
-    {
-      image: "https://scontent.flko10-1.fna.fbcdn.net/v/t39.30808-6/471308790_122099473196712060_1315160518816551848_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=833d8c&_nc_ohc=mD7V14CyVUEQ7kNvwH8PZAj&_nc_oc=AdlABk5mHCK8F8uz1LSP0Pa88Le5KH2I_M58ATXal4QB8DdeMjzjUvysTsFMT4Qla25nye63nXbSIifxVGiRJOie&_nc_zt=23&_nc_ht=scontent.flko10-1.fna&_nc_gid=DedwRFTkBZR-Lf1hC6Uv7w&oh=00_AfIjvCrOKiW81-iZKrZDjuXWzX9275hfzUw48UNmsBkbIw&oe=68320BDD",
-      name: "Music and Dance Room",
-      description: "Our Music Room is a lively space where students explore their creativity through music and dance. Equipped with sound systems and instruments, it hosts regular performances, celebrations, and cultural events that nurture artistic expression"
-    },
-    // {
-    //   image: "/Images/Library.jpg",
-    //   name: "Biology Lab",
-    //   description: "Explore life sciences in our well-equipped Biology Lab. Students engage in hands-on experiments and microscopic observations, fostering scientific curiosity and understanding of biological concepts."
-    // },
-    // {
-    //   image: "/Images/Library.jpg",
-    //   name: "Chemistry Lab",
-    //   description: "Discover chemical reactions in our state-of-the-art Chemistry Lab. Equipped with modern apparatus, students conduct experiments that bring theoretical concepts to life in a safe environment."
-    // },
-    // {
-    //   image: "/Images/Library.jpg",
-    //   name: "Physics Lab",
-    //   description: "Investigate fundamental principles in our advanced Physics Lab. Through practical experiments and demonstrations, students gain deeper insights into the laws governing the physical world."
-    // }
-  ];
+const facilities = [
+  {
+    name: "Computer Lab",
+    description: "Our Computer Lab is a dynamic learning hub equipped with modern desktop systems, high-speed internet, and educational software. Students of all age groups engage in activities that include learning fundamental computer operations, typing skills, coding in languages like Scratch and Python, and exploring digital tools that support their academics. Under the guidance of trained instructors, the lab cultivates technological fluency and prepares students for a digitally driven future.",
+    image: "https://indianschool.bh/images/facilities/computer-lab/25.jpg"
+  },
+  {
+    name: "Music and Dance Room",
+    description: "The Music and Dance Room at Greenland Public School is a vibrant space that encourages students to express their creativity through rhythm, melody, and movement. Outfitted with a variety of musical instruments such as keyboards, tablas, harmoniums, and drums, as well as ample space for dance rehearsals, this facility is where cultural expression flourishes. Students regularly practice and perform for school events, building confidence, coordination, and an appreciation for the performing arts.",
+    image: "https://media.istockphoto.com/id/1218725110/photo/odissi-dancer-performing.jpg?s=612x612&w=0&k=20&c=MRrjaBXxv-y20w62cGvFr9D5ux9BM7w0RCjGdCP1OQk="
+  },
+  {
+    name: "Library",
+    description: "Our school library is a sanctuary for curious minds, offering a rich collection of fiction, non-fiction, academic reference materials, and periodicals for all age groups. Designed to promote a culture of reading and independent learning, the library includes quiet reading zones, interactive corners for storytelling sessions, and digital resources for research. It serves as a vital space for nurturing imagination, critical thinking, and lifelong learning habits among students.",
+    image: "/Images/Library.jpg"
+  },
+  {
+    name: "Art and Craft",
+    description: "The Art and Craft room at Greenland Public School is a creative haven where students explore various artistic mediums, including painting, drawing, sculpture, and handicrafts. Guided by skilled instructors, children learn to express their imagination, improve fine motor skills, and develop an appreciation for aesthetics and cultural heritage. This space hosts workshops, exhibitions, and craft competitions that encourage innovation and self-expression.",
+    image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+  }
+];
+
 
   return (
     <div className="bg-gray-50 dark:bg-navy-900">

@@ -3,6 +3,8 @@ import { Button } from "../components/ui/button";
 import { ChevronLeft, ChevronRight, X } from "lucide-react";
 import HeroBanner from "../components/home/HeroBanner";
 import HeroSection from "../components/About Us/HeroSection";
+import { motion } from "framer-motion";
+
 
 const videos = [
  "https://res.cloudinary.com/dc8x5xkaz/video/upload/v1747760852/AQNpIMeB_pG0v2YzDotGr-RfU6KtgV85gc_tECO4FuM0HeWipoXnQd_myZEOtfrJcV-Qb41WWMudl7W2eKbHWHYibsJiHwdhnw0wZgQiskFxMW1aSy-48ehPBccUPsTzGkZBxoqK5A_myxesv.mp4",
@@ -91,40 +93,57 @@ export default function VideoGallery() {
         </div>
 
         {/* Pagination Controls */}
-        <div className="flex items-center space-x-2 mt-6 gap-2">
-          <button
-          className="rounded-full bg-blue-900 text-white p-2"
-            onClick={handlePrev}
-            disabled={currentPage === 1}
-            size="sm"
-            variant="outline"
-          >
-            <ChevronLeft />
-          </button>
-          {[...Array(totalPages)].map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentPage(index + 1)}
-              size="sm"
-              className={`px-3 py-1 ${
-                currentPage === index + 1
-                  ? "bg-blue-600 text-white rounded-full"
-                  : "bg-gray-200 text-gray-800 hover:bg-gray-300 rounded-full"
-              }`}
-            >
-              {index + 1}
-            </button>
-          ))}
-          <button
-          className="rounded-full bg-blue-900 text-white p-2"
-            onClick={handleNext}
-            disabled={currentPage === totalPages}
-            size="sm"
-            variant="outline"
-          >
-            <ChevronRight />
-          </button>
-        </div>
+{/* Pagination Controls */}
+<motion.div 
+  className="flex items-center gap-4 mt-8"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.3 }}
+>
+  <button
+    className={`p-2 rounded-full ${
+      currentPage === 1 
+        ? 'bg-gray-300 dark:bg-navy-700 text-gray-500' 
+        : 'bg-navy-700 text-gold-400 hover:bg-navy-800'
+    }`}
+    onClick={handlePrev}
+    disabled={currentPage === 1}
+    aria-label="Previous page"
+  >
+    <ChevronLeft size={20} />
+  </button>
+  
+  <div className="flex gap-2">
+    {[...Array(totalPages)].map((_, index) => (
+      <button
+        key={index}
+        onClick={() => setCurrentPage(index + 1)}
+        className={`w-10 h-10 flex items-center justify-center rounded-full ${
+          currentPage === index + 1
+            ? "bg-gold-600 text-white font-bold"
+            : "bg-gray-200 dark:bg-navy-700 text-gray-800 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-navy-600"
+        }`}
+        aria-label={`Go to page ${index + 1}`}
+      >
+        {index + 1}
+      </button>
+    ))}
+  </div>
+  
+  <button
+    className={`p-2 rounded-full ${
+      currentPage === totalPages 
+        ? 'bg-gray-300 dark:bg-navy-700 text-gray-500' 
+        : 'bg-navy-700 text-gold-400 hover:bg-navy-800'
+    }`}
+    onClick={handleNext}
+    disabled={currentPage === totalPages}
+    aria-label="Next page"
+  >
+    <ChevronRight size={20} />
+  </button>
+</motion.div>
+
 
         {/* Modal for Enlarged Video */}
         {modalVideo && (

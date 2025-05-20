@@ -14,8 +14,7 @@ const Announcement = () => {
   const announcements = [
     "Admissions Open for Academic Session 2025-26",
     "Limited Seats Available - Apply Now!",
-    "Scholarship Tests on 15th November 2024",
-    "Early Bird Discount Available Until 30th September",
+    "Early Bird Discount Available Until 25th june",
   ];
 
   const containerRef = useRef(null);

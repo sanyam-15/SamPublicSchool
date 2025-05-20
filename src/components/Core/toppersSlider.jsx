@@ -38,7 +38,7 @@ const toppers = [
     percentage: "92.6%", 
     image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=80",
     class: "VIIIth",
-    achievement: "Literary Award Winner" 
+    achievement: "Academic Excellence Award" 
   },
 ];
 
