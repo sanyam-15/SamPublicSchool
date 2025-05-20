@@ -16,8 +16,8 @@ const COLORS = {
 
 const stats = [
   { icon: <FaBook className="text-white" size={40} />, value: 30, suffix: "+", label: "Clubs & Activities" },
-  { icon: <FaUserGraduate className="text-white" size={40} />, value: 450, suffix: "+", label: "Happy Students" },
-  { icon: <FaChalkboardTeacher className="text-white" size={40} />, value: 20, suffix: "+", label: "Qualified Staff" },
+  { icon: <FaUserGraduate className="text-white" size={40} />, value: 300, suffix: "+", label: "Happy Students" },
+  { icon: <FaChalkboardTeacher className="text-white" size={40} />, value: 25, suffix: "+", label: "Qualified Staff" },
   { icon: <FaTrophy className="text-white" size={40} />, value: 10, suffix: "", label: "Win Awards" }
 ];
 

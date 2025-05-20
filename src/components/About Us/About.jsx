@@ -12,7 +12,7 @@ export default function AboutDPS() {
     <div className="relative bg-gray-50 dark:bg-navy-900">
       {/* Hero Section */}
       <HeroSection 
-        moto={"About Sam Public School"} 
+        moto={"About Greenland Public School"} 
         description={"Excellence in education, shaping leaders for a better future."} 
         section={"About Us"} 
       />
@@ -34,8 +34,7 @@ export default function AboutDPS() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          Established in 1949, Sam Public School has been a pioneer in academic excellence and holistic development. 
-          With a legacy of nurturing bright minds, we ensure a progressive and innovative learning environment.
+         Since its inception, our school has been committed to nurturing curious minds and shaping future-ready individuals. Over the years, we have created a dynamic environment where students, teachers, and staff engage in enriching experiences such as educational excursions, annual fairs, sports, and cultural celebrations. These experiences form the backbone of our educational philosophy—learning beyond textbooks.
         </motion.p>
         
         <motion.p 
@@ -45,7 +44,7 @@ export default function AboutDPS() {
           transition={{ duration: 0.6, delay: 0.4 }}
         >
           Our commitment to quality education, state-of-the-art infrastructure, and a student-centric approach makes 
-          Sam Public School a beacon of learning and growth.
+          Greenland Public School a beacon of learning and growth.
         </motion.p>
         
         {/* Key Features */}
@@ -124,7 +123,7 @@ export default function AboutDPS() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 1.4 }}
         >
-          Sam Public School envisions nurturing responsible global citizens with academic excellence and strong ethical values. 
+          Greenland Public School envisions nurturing responsible global citizens with academic excellence and strong ethical values. 
           We aim to empower students to become innovative thinkers and compassionate leaders.
         </motion.p>
         

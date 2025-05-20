@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import HeroSection from "../About Us/HeroSection";
+import HeroSection from "./HeroSection";
 
-function Syllabus() {
+function Transport() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -9,10 +9,13 @@ function Syllabus() {
   return (
     <div>
       <HeroSection
-        moto={"Syllabus"}
-        description={"Best curriculum ever"}
-        section={"Rules and Regulations"}
+        moto={"Our Transport Facilities"}
+        description={
+          "Safe and reliable transport services ensuring timely commute for our students."
+        }
+        section={"About Us"}
       />
+
       <div className="h-[30vw] flex justify-center items-center mb-[50px]">
         <p className="text-[#0A1A3A] text-3xl font-bold">Comming Soon !</p>
       </div>
@@ -20,4 +23,4 @@ function Syllabus() {
   );
 }
 
-export default Syllabus;
+export default Transport;

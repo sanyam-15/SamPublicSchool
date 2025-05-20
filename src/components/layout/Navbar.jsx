@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
+import SchoolLogo from "/Images/Greenland_Logo-removebg.png"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -19,7 +20,7 @@ const Navbar = () => {
     { name: "Home", path: "/" },
     { 
       name: "About Us", path: "/about", dropdown: [
-        { name: "About Sam", path: "/about/dps-patna" },
+        { name: "About Greenland", path: "/about/dps-patna" },
         { name: "Infrastructure", path: "/about/infrastructure" },
         { name: "Faculty", path: "/about/faculty" },
         { name: "Principal Message", path: "/about/principal-message" },
@@ -77,14 +78,14 @@ const Navbar = () => {
           {/* Logo & Heading */}
           <div className="flex items-center space-x-2">
             <img
-              src="https://w7.pngwing.com/pngs/382/222/png-transparent-delhi-public-school-faridabad-modern-delhi-public-school-delhi-public-school-society-national-secondary-school-others-thumbnail.png"
+              src={SchoolLogo}
               alt="School Logo"
-              className="h-12"
+              className="h-14"
             />
             <div>
-              <h1 className="text-lg font-bold text-navy-900">Sam Public School, Tundla</h1>
+              <h1 className="text-lg font-bold text-navy-900">Greenland Public School, Tundla</h1>
               <p className="text-xs text-gray-600 hidden md:block">
-                Under the aegis of Delhi Public School Society, New Delhi
+                Under the aegis of Greenland Public School Future City, Patna
               </p>
               <p className="text-xs text-gray-600 hidden md:block">
                 Affiliated to Central Board of Secondary Education, New Delhi
@@ -96,15 +97,17 @@ const Navbar = () => {
           <div className="hidden md:flex items-center space-x-6">
             <div className="text-sm text-gray-800">
               <p className="flex items-center gap-1">
-                <span className="text-gold-600">📞</span> +91 7088744411
+                <span className="text-gold-600">📞</span> +91 8789628764
               </p>
               <p className="flex items-center gap-1">
-                <span className="text-gold-600">📧</span> enquiry@sampublicschool.com
+                <span className="text-gold-600">📧</span> greenlandpublicschool09@gmail.com
               </p>
             </div>
-            <button className="text-white px-4 py-2 rounded-md hover:bg-gold-700 transition-colors bg-gold-600 shadow-md">
+            <Link to={"admissions/procedure"}>
+              <button className="text-white px-4 py-2 rounded-md hover:bg-gold-700 transition-colors bg-gold-600 shadow-md">
               ONLINE REGISTRATION
-            </button>
+              </button>
+            </Link>
           </div>
 
           {/* Mobile Menu Button */}
@@ -120,7 +123,7 @@ const Navbar = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav className={`w-full z-50 transition-all duration-300 ${isScrolled ? "fixed top-0 left-0 bg-white shadow-lg" : "relative bg-navy-900"}`}>
+      <nav className={`w-full z-50 transition-all duration-300 ${isScrolled ? "fixed top-0 left-0 bg-white shadow-lg" : "relative bg-navy-900"}`} style={{zIndex: "60"}}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="hidden md:flex justify-center h-16 items-center space-x-8">
             {navLinks.map((link) =>

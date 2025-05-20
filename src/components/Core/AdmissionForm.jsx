@@ -13,7 +13,7 @@ const AdmissionPage = () => {
       {/* Hero Section */}
       <HeroSection 
         moto={"Admissions Open for 2025-26"} 
-        description={"Begin your journey with Sam Public School"} 
+        description={"Begin your journey with Greenland Public School"} 
         section={"Admissions"} 
       />
 

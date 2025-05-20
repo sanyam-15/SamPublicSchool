@@ -11,7 +11,7 @@ const Admission = () => {
     <div className="bg-gray-50 dark:bg-navy-900 text-gray-900 dark:text-gray-100">
       {/* Hero Section */}
       <HeroSection 
-        moto={"Apply to Sam Public School"} 
+        moto={"Apply to Greenland Public School"} 
         description={"Begin your educational journey with us"} 
         section={"Admissions"} 
       />
@@ -32,7 +32,7 @@ const Admission = () => {
           animate={{ opacity: 1 }}
           transition={{ duration: 1 }}
         >
-          At Sam Public School, we offer a streamlined application process focused on identifying
+          At Greenland Public School, we offer a streamlined application process focused on identifying
           and nurturing young talent through our dedicated programs and mentorship.
         </motion.p>
 
@@ -41,11 +41,11 @@ const Admission = () => {
           {[
             { 
               title: "Academic Programs", 
-              description: "Comprehensive curriculum from KG to 12th grade with special focus on STEM" 
+              description: "Comprehensive curriculum from KG to 8th grade with special focus on STEM" 
             },
             { 
               title: "Extracurricular", 
-              description: "Sports, arts, and clubs for holistic development" 
+              description: "Sports, Arts, and Dance for holistic development" 
             },
             { 
               title: "Faculty Excellence", 
@@ -53,7 +53,7 @@ const Admission = () => {
             },
             { 
               title: "Facilities", 
-              description: "State-of-the-art labs, library, and sports infrastructure" 
+              description: "Computer labs, music & dance room, and sports infrastructure" 
             },
           ].map((item, index) => (
             <motion.div

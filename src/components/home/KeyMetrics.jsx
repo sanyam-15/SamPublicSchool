@@ -6,13 +6,13 @@ const KeyMetrics = () => {
   const metrics = [
     {
       icon: Users,
-      value: "1200+",
+      value: "300+",
       label: "Students",
       description: "Active learners"
     },
     {
       icon: BookOpen,
-      value: "15:1",
+      value: "12:1",
       label: "Student-Teacher Ratio",
       description: "Personalized attention"
     },

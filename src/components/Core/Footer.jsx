@@ -1,7 +1,7 @@
 import { FaFacebook, FaSkype, FaInstagram } from "react-icons/fa";
 import { IoLogoLinkedin } from "react-icons/io5";
 import { FaXTwitter } from "react-icons/fa6";
-import schoolLogo from "/Images/School Logo.png";
+import schoolLogo from "/Images/Greenland_Logo-removebg.png";
 import "./Footer.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
@@ -72,17 +72,17 @@ const Footer = () => {
                 alt="Logo"
                 className="w-20 h-20 mb-2 md:mb-0 md:mr-2"
               />
-              <span>Sam Public School</span>
+              <span>Greenland Public School</span>
             </h2>
-            <p className="mt-4">Box 35300</p>
-            <p>1810 Campus Way NE</p>
-            <p>Bothell, WA 98011-8246</p>
-            <p className="mt-4 font-semibold text-gold-400">+1-2534-4456-345</p>
+            <p className="mt-4 font-bold text-lg">Future city</p>
+            <p>Kaliganj, Bihta-Lai Rd, Kujawan, Patna</p>
+            <p>Bihar 801103</p>
+            <p className="mt-4 font-semibold text-gold-400">+91-8789628764</p>
             <a
               className="text-gold-500 hover:text-gold-300 transition-colors"
-              href="mailto:info@sampublicschool.com"
+              href="mailto:greenlandpublicschool09@gmail.com"
             >
-              info@sampublicschool.com
+              greenlandpublicschool09@gmail.com
             </a>
             
             {/* Visitor Counter */}
@@ -146,7 +146,7 @@ const Footer = () => {
               Contact Us
             </h3>
             <div className="mt-4 space-y-2 text-center md:text-left">
-              <h2 className="text-gold-300">+91 9023079999</h2>
+              <h2 className="text-gold-300">+91 8789628764</h2>
               <h2 className="text-gold-300">admissions@sam.com</h2>
               <h2 className="text-gold-300">www.sampchool.com</h2>
               <Link to={"/contact"}>
@@ -162,10 +162,10 @@ const Footer = () => {
         <div className="mb-[50px] w-[80vw] flex flex-col justify-between items-center m-auto md:flex-row">
           <p className="text-center md:text-left">
             &copy; Copyright All Rights Reserved {new Date().getFullYear()} |
-            Developed and maintained <a href="/developer-info" className="text-gold-400 hover:text-gold-300">Developer 401</a>
+            Developed and maintained by <a href="/developer-info" className="text-gold-400 hover:text-gold-300">Developer 401</a>
           </p>
           <div className="flex space-x-4 text-xl mt-4 md:mt-0">
-            <Link to="https://www.facebook.com/">
+            <Link to="https://www.facebook.com/share/16PQTGThSe/">
               <FaFacebook
                 className="cursor-pointer hover:text-gold-400 transition-colors"
                 color={socialMediaIconColor}
@@ -177,24 +177,24 @@ const Footer = () => {
                 color={socialMediaIconColor}
               />
             </Link>
-            <Link to="https://www.skype.com/">
+            {/* <Link to="https://www.skype.com/">
               <FaSkype 
                 className="cursor-pointer hover:text-gold-400 transition-colors" 
                 color={socialMediaIconColor} 
               />
-            </Link>
+            </Link> */}
             <Link to="https://twitter.com/">
               <FaXTwitter
                 className="cursor-pointer hover:text-gold-400 transition-colors"
                 color={socialMediaIconColor}
               />
             </Link>
-            <Link to="https://www.instagram.com/">
+            {/* <Link to="https://www.instagram.com/">
               <FaInstagram
                 className="cursor-pointer hover:text-gold-400 transition-colors"
                 color={socialMediaIconColor}
               />
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>

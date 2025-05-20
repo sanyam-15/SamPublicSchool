@@ -7,10 +7,11 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
+import VirtualSchool from "/Images/VirtualImage.jpg"
 
 const images = [
   {
-    url: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1800&q=80',
+    url: {VirtualSchool},
     alt: 'Students learning in classroom'
   },
   {
@@ -86,7 +87,7 @@ const HeroBanner = () => {
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight"
           >
-            <span className="text-gold-400">Sam</span> Public <span className="text-navy-300">School</span>
+            <span className="text-gold-400">Greenland</span> Public <span className="text-navy-300">School</span>
           </motion.h1>
           
           <motion.p

@@ -27,7 +27,7 @@ const ContactPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gold-400">Contact Sam Public School</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-gold-400">Contact Greenland Public School</h1>
           <p className="text-xl text-gold-100 max-w-2xl mx-auto">
             We're here to answer your questions and welcome your feedback
           </p>
@@ -40,18 +40,18 @@ const ContactPage = () => {
           {[
             { icon: <FaPhone className="text-3xl mx-auto mb-4 text-gold-500" />, 
               title: "Phone", 
-              content: "+91 98765 43210",
+              content: "+91 8789628764",
               sub: "Mon-Fri, 8:30AM-4:30PM" 
             },
             { icon: <FaEnvelope className="text-3xl mx-auto mb-4 text-gold-500" />, 
               title: "Email", 
-              content: "info@sampublicschool.edu",
+              content: "greenlandpublicschool09@gmail.com",
               sub: "Response within 24 hours" 
             },
             { icon: <FaMapMarkerAlt className="text-3xl mx-auto mb-4 text-gold-500" />, 
               title: "Location", 
-              content: "123 Education Lane, Knowledge City",
-              sub: "Pincode: 110001" 
+              content: "Future city, Kaliganj, Bihta-Lai Road, Patna, Bihar",
+              sub: "Pincode: 801103" 
             },
             { icon: <FaClock className="text-3xl mx-auto mb-4 text-gold-500" />, 
               title: "Office Hours", 
@@ -133,7 +133,7 @@ const ContactPage = () => {
               <h3 className="text-2xl font-semibold mb-4 text-navy-800 dark:text-gold-300">Visit Our Campus</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-4">
                 We welcome prospective families to tour our campus and see our facilities firsthand. 
-                Schedule a visit to experience the Sam Public School difference.
+                Schedule a visit to experience the Greenland Public School difference.
               </p>
               <div className="bg-navy-100 dark:bg-navy-700 p-4 rounded-lg">
                 <h4 className="font-medium text-navy-900 dark:text-gold-200 mb-2">Tour Hours:</h4>
@@ -145,8 +145,8 @@ const ContactPage = () => {
             <div>
               <h3 className="text-2xl font-semibold mb-4 text-navy-800 dark:text-gold-300">Connect With Us</h3>
               <div className="flex space-x-4">
-                <a href="#" className="text-navy-700 dark:text-gold-400 hover:text-gold-600 text-2xl">
-                  <FaFacebook />
+                <a href="https://www.facebook.com/share/16PQTGThSe/" className="text-navy-700 dark:text-gold-400 hover:text-gold-600 text-2xl">
+                  <FaFacebook  />
                 </a>
                 <a href="#" className="text-navy-700 dark:text-gold-400 hover:text-gold-600 text-2xl">
                   <FaTwitter />
@@ -163,12 +163,14 @@ const ContactPage = () => {
       {/* Google Map */}
       <section className="h-96 w-full">
         <iframe
-          title="Sam Public School Location"
+          title="Greenland Public School Location"
           className="w-full h-full"
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.789636057864!2d77.2098653150821!3d28.61390098242866!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce2a99b6f9fa7%3A0x83a25e55f0af1c82!2sIndia%20Gate!5e0!3m2!1sen!2sin!4v1628684416784!5m2!1sen!2sin"
-          allowFullScreen
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3600.233212007665!2d84.8298159!3d25.5306075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398d57fe7d4e85b7%3A0x4c9255342b140d2e!2sFuture%20City!5e0!3m2!1sen!2sin!4v1747734029791!5m2!1sen!2sin" 
+          allowFullScreen=""
           loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
         ></iframe>
+          
       </section>
     </div>
   );

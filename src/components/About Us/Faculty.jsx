@@ -8,7 +8,7 @@ function Faculty() {
   }, []);
   return (
     <div className="bg-gray-50 dark:bg-navy-900">
-      <HeroSection moto={"Our Teachers"} section={"About Us"} />
+      <HeroSection moto={"Our Teachers"} description={"Dedicated teachers guiding students with care and expertise."} section={"About Us"} />
       <InfrastructureComponent
         image={"/Images/Library.jpg"}
         name={"Dr.Himadri Nayak"}
