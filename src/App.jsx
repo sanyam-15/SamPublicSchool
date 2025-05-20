@@ -23,20 +23,30 @@ import SchoolProspectus from "./components/About Us/schoolProspectus.jsx";
 import VideoGallery from "./pages/videoGAllery.jsx";
 import ComingSoon from "./pages/ComingSoonPage.jsx";
 import Principal from "./components/About Us/Principal.jsx";
+import FixedButton from "./components/Developer/Button.jsx";
+import Academic from "./components/Achievements/Academic.jsx";
+import Sports from "./components/Achievements/Sports.jsx";
+import Class8thTopper from "./components/Achievements/Class8thTopper.jsx";
+import Syllabus from "./components/RulesAndRegulations/Syllabus.jsx";
+import Transport from "./components/About Us/Transport.jsx";
+import Examination from "./components/RulesAndRegulations/ExaminationAndPromotions.jsx";
+import VirtualTour from "./components/layout/VirtualTour.jsx";
 
 function AppContent() {
   const location = useLocation().pathname;
 
-  if (location === "/rules/syllabus" || location === "/rules/examination-promotion" || location === "/about/transport") {
-    return <ComingSoon />;
-  }
+  // if (location === "/rules/examination-promotion") {
+  //   return <ComingSoon />;
+  // }
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Navbar />
+      <FixedButton  />
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/virtual-tour" element={<VirtualTour />} />
           <Route path="/academics" element={<div>Academics Page</div>} />
           <Route path="/admissions/procedure" element={<Admission />} />
           <Route path="/events" element={<div>Events Page</div>} />
@@ -45,6 +55,7 @@ function AppContent() {
           <Route path="/online-fee" element={<NotFoundPage />} />
           <Route path="/about/faculty" element={<Faculty />} />
           <Route path="/about/infrastructure" element={<Infrastructure />} />
+          <Route path="/about/transport" element={<Transport />} />
           <Route path="/about/dps-patna" element={<About />} />
           <Route path="/rules/fee-rules" element={<RulesFeeRules />} />
           <Route path="/developer-info" element={<DeveloperInfo />} />
@@ -55,6 +66,11 @@ function AppContent() {
           <Route path="/about/principal-message" element={<Principal />} />
           <Route path="/gallery/videos" element={<VideoGallery />} />
           <Route path="/rules/guidelines-for-students" element={<StudentGuidelines />} />
+          <Route path="/rules/examination-promotion" element={<Examination />} />
+          <Route path="/achievements/academics" element={<Academic />} />
+          <Route path="/achievements/sports" element={<Sports />} />
+          <Route path="/achievements/class-8th-toppers" element={<Class8thTopper />} />
+          <Route path="/rules/syllabus" element={<Syllabus />} />
           <Route path="/not-found" element={<NotFoundPage />} />
         </Routes>
       </div>

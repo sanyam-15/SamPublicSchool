@@ -34,7 +34,7 @@ export default function AboutDPS() {
           animate={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-         Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa unde iste deserunt alias dolores accusantium corporis error tempora, at inventore nemo voluptate accusamus, quisquam expedita quam vitae molestiae dignissimos. Maxime!
+         Since its inception, our school has been committed to nurturing curious minds and shaping future-ready individuals. Over the years, we have created a dynamic environment where students, teachers, and staff engage in enriching experiences such as educational excursions, annual fairs, sports, and cultural celebrations. These experiences form the backbone of our educational philosophy—learning beyond textbooks.
         </motion.p>
         
         <motion.p 

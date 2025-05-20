@@ -53,7 +53,7 @@ const Announcement = () => {
               className="flex space-x-8 whitespace-nowrap"
               initial={{ x: "100%" }}
               animate={{ x: `-${width}px` }}
-              transition={{ repeat: Infinity, duration: 15, ease: "linear" }}
+              transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
               style={{ display: "flex" }}
             >
               {[...announcements, ...announcements].map((announcement, index) => (

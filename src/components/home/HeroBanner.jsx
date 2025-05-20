@@ -7,10 +7,11 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 import { FaArrowRight, FaArrowLeft } from 'react-icons/fa';
+import VirtualSchool from "/Images/VirtualImage.jpg"
 
 const images = [
   {
-    url: 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1800&q=80',
+    url: {VirtualSchool},
     alt: 'Students learning in classroom'
   },
   {

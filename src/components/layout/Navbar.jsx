@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
+import SchoolLogo from "/Images/Greenland_Logo-removebg.png"
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -77,14 +78,14 @@ const Navbar = () => {
           {/* Logo & Heading */}
           <div className="flex items-center space-x-2">
             <img
-              src="https://w7.pngwing.com/pngs/382/222/png-transparent-delhi-public-school-faridabad-modern-delhi-public-school-delhi-public-school-society-national-secondary-school-others-thumbnail.png"
+              src={SchoolLogo}
               alt="School Logo"
-              className="h-12"
+              className="h-14"
             />
             <div>
               <h1 className="text-lg font-bold text-navy-900">Greenland Public School, Tundla</h1>
               <p className="text-xs text-gray-600 hidden md:block">
-                Under the aegis of Greenland Public School Society, Patna
+                Under the aegis of Greenland Public School Future City, Patna
               </p>
               <p className="text-xs text-gray-600 hidden md:block">
                 Affiliated to Central Board of Secondary Education, New Delhi
@@ -122,7 +123,7 @@ const Navbar = () => {
       </div>
 
       {/* Main Navigation */}
-      <nav className={`w-full z-50 transition-all duration-300 ${isScrolled ? "fixed top-0 left-0 bg-white shadow-lg" : "relative bg-navy-900"}`}>
+      <nav className={`w-full z-50 transition-all duration-300 ${isScrolled ? "fixed top-0 left-0 bg-white shadow-lg" : "relative bg-navy-900"}`} style={{zIndex: "60"}}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="hidden md:flex justify-center h-16 items-center space-x-8">
             {navLinks.map((link) =>
