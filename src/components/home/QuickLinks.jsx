@@ -9,28 +9,28 @@ const QuickLinks = () => {
       icon: FileText,
       title: "Admission Info",
       description: "Application process and requirements",
-      link: "/admissions",
+      link: "/admissions/procedure",
       color: "from-navy-600 to-navy-500"
     },
     {
       icon: BookOpen,
       title: "Academics",
       description: "Curriculum and syllabus details",
-      link: "/academics",
+      link: "/not-found",
       color: "from-navy-700 to-navy-600"
     },
     {
       icon: Calendar,
       title: "Exam Dates",
       description: "Upcoming examination schedule",
-      link: "/academics/exam-schedule",
+      link: "/not-found",
       color: "from-gold-600 to-gold-500"
     },
     {
       icon: Medal,
       title: "Results",
       description: "View examination results",
-      link: "/academics/results",
+      link: "/not-found",
       color: "from-gold-700 to-gold-600"
     },
     {
@@ -44,21 +44,21 @@ const QuickLinks = () => {
       icon: Award,
       title: "Achievements",
       description: "Student accomplishments",
-      link: "/achievements",
+      link: "achievements/academics",
       color: "from-gold-500 to-gold-400"
     },
     {
       icon: Download,
       title: "Downloads",
       description: "Forms and documents",
-      link: "/resources/downloads",
+      link: "/not-found",
       color: "from-navy-500 to-navy-400"
     },
     {
       icon: ClipboardList,
       title: "Events",
       description: "Upcoming school events",
-      link: "/events",
+      link: "/gallery/images",
       color: "from-gold-800 to-gold-700"
     }
   ];
@@ -138,7 +138,7 @@ const QuickLinks = () => {
           className="mt-12 text-center"
         >
           <Link
-            to="/resources"
+            to="/not-found"
             className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-gradient-to-r from-navy-600 to-navy-800 hover:from-navy-700 hover:to-navy-900 transition-colors duration-300"
           >
             View All Resources

@@ -12,7 +12,7 @@ const SchoolProspectus = () => {
       {/* Hero Section */}
       <HeroSection 
         moto={"Explore Our Vision"} 
-        description={"Sam Public School - Prospectus 2025-26"} 
+        description={"Greenland Public School - Prospectus 2025-26"} 
         section={"About Us"} 
       />
 
@@ -46,15 +46,15 @@ const SchoolProspectus = () => {
               <div className="w-3 h-3 rounded-full bg-green-500"></div>
             </div>
             <p className="text-white dark:text-gold-200 text-sm ml-4">
-              Sam_Public_School_Prospectus_2025-26.pdf
+              Greenland_Public_School_Prospectus_2025-26.pdf
             </p>
           </div>
           <iframe
-            src="/FullStackDeveloperInternTask.pdf"
+            src="/greenland-prospectus.pdf"
             width="100%"
             height="600px"
             className="border-0"
-            title="School Prospectus 2025-26"
+            title="Greenland Public School Prospectus 2025-26"
           />
         </div>
       </motion.div>
@@ -67,8 +67,8 @@ const SchoolProspectus = () => {
         transition={{ delay: 0.4 }}
       >
         <a
-          href="/FullStackDeveloperInternTask.pdf"
-          download="Sam_Public_School_Prospectus_2025-26.pdf"
+          href="/greenland-prospectus.pdf"
+          download="Greenland_Public_School_Prospectus_2025-26.pdf"
           className="px-6 py-3 bg-gold-600 hover:bg-gold-700 text-white font-medium rounded-lg shadow-md transition-colors duration-300 flex items-center"
         >
           <svg

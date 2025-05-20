@@ -147,7 +147,7 @@ const Admission = () => {
             transition={{ delay: 0.8 }}
           >
             <a
-              href="/apply-now"
+              href="/admissions/admission-form"
               className="inline-block px-8 py-3 bg-gold-600 hover:bg-gold-700 text-white font-medium rounded-lg shadow-md transition-colors"
             >
               Begin Your Application
