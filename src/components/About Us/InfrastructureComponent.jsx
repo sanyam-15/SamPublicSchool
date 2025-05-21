@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-function InfrastructureComponent({ image, name, description, employeeId }) {
+function InfrastructureComponent({ image, name, description, subjectTaught }) {
   return (
     <div className="w-full flex justify-center py-6 px-4 md:px-8 lg:px-12">
       <motion.div
@@ -26,9 +26,9 @@ function InfrastructureComponent({ image, name, description, employeeId }) {
           transition={{ duration: 0.8 }}
         >
           <h1 className="text-xl font-bold leading-8 mb-2 text-navy-900 dark:text-gold-400">{name}</h1>
-          {employeeId && <h1 className="font-bold mb-4 text-navy-700 dark:text-gold-300">Employee ID: {employeeId}</h1>}
+          {subjectTaught && <h1 className="font-bold mb-4 text-navy-700 dark:text-gold-300">Subject Taught :  {subjectTaught}</h1>}
           <p className="text-gray-700 dark:text-gray-300">{description}</p>
-          {!employeeId && (
+          {!subjectTaught && (
             <div className="mt-4">
               <div className="h-[1px] bg-navy-200 dark:bg-navy-600 mb-4"></div>
               <Link className="mt-4 text-gold-600 dark:text-gold-400 hover:text-gold-700 dark:hover:text-gold-300">View More</Link>
