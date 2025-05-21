@@ -14,7 +14,7 @@ const images = [
     alt: 'Students learning in classroom'
   },
   {
-    url: 'https://png.pngtree.com/thumb_back/fw800/background/20240522/pngtree-a-middle-school-or-junior-high-school-student-wipes-the-blackboard-image_15676502.jpg',
+    url: 'https://png.pngtree.com/thumb_back/fh260/background/20240522/pngtree-a-middle-school-or-junior-high-school-student-wipes-the-blackboard-image_15676502.jpg',
     alt: 'School building exterior'
   },
   {
