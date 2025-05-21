@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 
 const developers = [
+
   {
     name: "Abhay Keshri",
     role: "Full Stack Developer",
@@ -12,11 +13,11 @@ const developers = [
   },
   {
     name: "Sanyam Jain",
-    role: "UI/UX Designer & Frontend Developer",
+    role: "Full Stack Developer",
     image: "https://media.licdn.com/dms/image/v2/D5603AQH7tnRDtRTtCw/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1727691608794?e=1748476800&v=beta&t=LuDOqwZebQfp0L_RSCU2XNLejrvDMxiLY7WqFlnCS0I",
-    bio: "Creative UI/UX designer with expertise in modern web technologies and visual storytelling.",
-    linkedin: "https://linkedin.com/in/sanyamjain",
-    github: "https://github.com/sanyamjain",
+    bio: "Passionate MERN stack developer with expertise in front-end and back-end technologies.",
+    linkedin: "https://www.linkedin.com/in/sanyam-jain-b03807290/",
+    github: "https://github.com/sanyam-15",
   },
 ];
 

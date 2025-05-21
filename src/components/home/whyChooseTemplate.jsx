@@ -15,10 +15,10 @@ const COLORS = {
 const WhyChooseTemplate = () => {
   return (
     <section className="relative py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
-      Background elements
+      {/* Background elements */}
       <div 
         className="absolute inset-0 bg-gradient-to-br from-blue-50 to-gray-50 opacity-95"
-        style={{ backgroundColor: `${COLORS.primary}08` }} // 8% opacity
+        style={{ backgroundColor: `${COLORS.primary}08` }}
       ></div>
       <div 
         className="absolute top-0 right-0 w-40 h-40 rounded-full filter blur-3xl"
@@ -28,7 +28,7 @@ const WhyChooseTemplate = () => {
         className="absolute bottom-0 left-0 w-40 h-40 rounded-full filter blur-3xl"
         style={{ backgroundColor: COLORS.accent, opacity: 0.1 }}
       ></div>
-      
+
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -46,7 +46,7 @@ const WhyChooseTemplate = () => {
               backgroundSize: "300px"
             }}
           ></div>
-          
+
           <div className="flex flex-col lg:flex-row">
             {/* Text Section */}
             <motion.div
@@ -57,34 +57,26 @@ const WhyChooseTemplate = () => {
               className="lg:w-1/2 p-8 md:p-10 lg:p-12 relative z-10"
             >
               <motion.h2
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-3xl md:text-4xl font-extrabold mb-6"
                 style={{ color: COLORS.lightBg }}
               >
                 Why Choose <span style={{ color: COLORS.accent }}>Greenland Public School?</span>
               </motion.h2>
-              
+
               <motion.p
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.3 }}
                 className="text-lg mb-8 leading-relaxed"
                 style={{ color: `${COLORS.lightBg}CC` }}
               >
-                Greenland Public School is renowned for its commitment to excellence in education, blending rich traditions with modern advancements. Our world-class facilities and holistic approach ensure students excel academically and personally.
+                Greenland Public School is a humble educational institution that values discipline, sincerity, and personal growth. We focus on building a strong academic foundation while nurturing moral values and personal development in every student.
               </motion.p>
-              
+
               <ul className="space-y-4">
                 {[
-                  "28+ Years of Excellence in delivering top-quality education",
-                  "A library of 15,000+ books to foster a culture of reading",
-                  "State-of-the-art sports complex spanning over 8,000 sq. ft",
-                  "100% Result Guarantee - Achieving academic success year after year",
-                  "Recognized as one of the top CBSE schools in the region"
+                  "Over 8 years of consistent service in foundational education",
+                  "Dedicated teachers with personal attention to each student",
+                  "Emphasis on discipline, values, and character building",
+                  "Affordable and accessible education for local families",
+                  "Active participation in cultural and community programs"
                 ].map((item, index) => (
                   <motion.li
                     key={index}
@@ -121,11 +113,11 @@ const WhyChooseTemplate = () => {
                     color: COLORS.primary
                   }}
                 >
-                  Learn More About Us
+                  Get in Touch
                 </motion.button>
               </motion.div>
             </motion.div>
-            
+
             {/* Image Section */}
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
@@ -136,8 +128,8 @@ const WhyChooseTemplate = () => {
             >
               <div className="relative w-full h-full min-h-[300px] lg:min-h-[400px] rounded-xl overflow-hidden shadow-xl">
                 <img
-                  src="https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                  alt="Manava Bharati School Campus"
+                  src="https://res.cloudinary.com/dc8x5xkaz/image/upload/v1747772296/WhatsApp_Image_2025-05-21_at_01.40.22_867973cc_db6pdn.jpg"
+                  alt="Greenland Public School Campus"
                   className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-500"
                 />
                 <div 
@@ -146,7 +138,7 @@ const WhyChooseTemplate = () => {
                     background: `linear-gradient(to top, ${COLORS.primary}80, transparent)`
                   }}
                 ></div>
-                
+
                 {/* Desktop CTA */}
                 <motion.div
                   initial={{ opacity: 0 }}
@@ -158,14 +150,14 @@ const WhyChooseTemplate = () => {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    onClick={() => (window.location.href = "/not-found")}
+                    onClick={() => (window.location.href = "/contact")}
                     className="w-full font-semibold py-3 px-6 rounded-lg shadow-md transition-all"
                     style={{ 
                       backgroundColor: COLORS.accent,
                       color: COLORS.primary
                     }}
                   >
-                    Schedule a Campus Tour
+                    Contact the School
                   </motion.button>
                 </motion.div>
               </div>

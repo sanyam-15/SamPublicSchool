@@ -6,7 +6,7 @@ function HeroSection({ moto, description, section, image }) {
       <div
         className="relative h-80 w-full bg-cover bg-center"
         style={{
-          backgroundImage: "url('https://picsum.photos/id/10/1600/600')",
+          backgroundImage: "url('https://png.pngtree.com/background/20210709/original/pngtree-cartoon-education-training-cram-school-picture-image_917042.jpg')",
         }}
       >
         <div className="absolute inset-0 bg-navy-900 bg-opacity-80 flex flex-col items-center justify-center text-center px-4">

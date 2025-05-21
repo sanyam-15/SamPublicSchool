@@ -8,7 +8,6 @@ const AdmissionPage = () => {
   }, []);
 
   return (
-
     <div className="bg-gray-50 dark:bg-navy-900">
       {/* Hero Section */}
       <HeroSection 
@@ -32,7 +31,6 @@ const AdmissionPage = () => {
         </p>
       </motion.div>
 
-
       {/* PDF Viewer Section */}
       <motion.div
         className="flex justify-center items-center py-12 px-4"
@@ -48,11 +46,11 @@ const AdmissionPage = () => {
               <div className="w-3 h-3 rounded-full bg-green-500"></div>
             </div>
             <p className="text-white dark:text-gold-200 text-sm ml-4">
-              Sam_Public_School_Admission_Form_2025-26.pdf
+              Greenland_Public_School_Admission_Form_2025-26.pdf
             </p>
           </div>
           <iframe
-            src="/FullStackDeveloperInternTask.pdf"
+            src="/Sample-Fillable-PDF.pdf"
             width="100%"
             height="600px"
             className="border-0"
@@ -60,7 +58,6 @@ const AdmissionPage = () => {
           />
         </div>
       </motion.div>
-
 
       {/* Download Button Section */}
       <motion.div
@@ -70,8 +67,8 @@ const AdmissionPage = () => {
         transition={{ delay: 0.4 }}
       >
         <a
-          href="/FullStackDeveloperInternTask.pdf"
-          download="Sam_Public_School_Admission_Form_2025-26.pdf"
+          href="/Sample-Fillable-PDF.pdf"
+          download="Greenland_Public_School_Admission_Form_2025-26.pdf"
           className="px-8 py-3 bg-gold-600 hover:bg-gold-700 text-white font-medium rounded-lg shadow-md transition-colors duration-300 flex items-center mb-4"
         >
           <svg

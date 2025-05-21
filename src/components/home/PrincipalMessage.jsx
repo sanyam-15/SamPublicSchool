@@ -57,7 +57,7 @@ const PrincipalMessage = () => {
           >
             <div className="relative rounded-xl overflow-hidden shadow-xl md:shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1573496799652-408c2ac9fe98?auto=format&fit=crop&w=800&q=80"
+                src="https://www.yearbooklife.com/wp-content/uploads/2015/02/Principal.jpg"
                 alt="School Principal"
                 className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
               />
@@ -108,7 +108,7 @@ const PrincipalMessage = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4 }}
                   className="bg-white p-4 md:p-0 rounded-lg md:rounded-none md:bg-transparent"
-                  style={{ boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)' }}
+                  // style={{ boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)' }}
                 >
                   <p className="text-base md:text-lg leading-relaxed">
                     <span 
@@ -127,7 +127,7 @@ const PrincipalMessage = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.2 }}
                   className="bg-white p-4 md:p-0 rounded-lg md:rounded-none md:bg-transparent"
-                  style={{ boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)' }}
+                  // style={{ boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)' }}
                 >
                   <p 
                     className="text-base md:text-lg leading-relaxed"
@@ -143,7 +143,7 @@ const PrincipalMessage = () => {
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: 0.4 }}
                   className="bg-white p-4 md:p-0 rounded-lg md:rounded-none md:bg-transparent"
-                  style={{ boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)' }}
+                  // style={{ boxShadow: '0 4px 6px -1px rgba(0,0,0,0.1)' }}
                 >
                   <p 
                     className="text-base md:text-lg leading-relaxed"

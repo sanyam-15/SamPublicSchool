@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
-import { FaMusic, FaPaintBrush, FaSwimmer, FaBookOpen } from "react-icons/fa";
+import { FaMusic, FaPaintBrush, FaSwimmer,FaLaptopCode, FaBookOpen } from "react-icons/fa";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -21,29 +21,30 @@ const COLORS = {
 const facilities = [
   {
     title: "Music and Dance",
-    description: "Our school nurtures creativity through music and dance, helping students bond while offering a refreshing break from academics.",
-    image: "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+    description: "At Greenland Public School, our Music and Dance programs inspire students to express themselves creatively, building confidence, rhythm, and teamwork in a joyful environment.",
+    image: "https://media.istockphoto.com/id/1218725110/photo/odissi-dancer-performing.jpg?s=612x612&w=0&k=20&c=MRrjaBXxv-y20w62cGvFr9D5ux9BM7w0RCjGdCP1OQk=",
     icon: <FaMusic className="text-3xl" />
   },
   {
     title: "Art & Craft",
-    description: "Millennium World Schools Art and Craft program connects creativity and innovation at an early stage of children's development.",
+    description: "Our Art & Craft classes at Greenland nurture imagination and fine motor skills, giving students the freedom to explore their creativity through colors, shapes, and textures.",
     image: "https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     icon: <FaPaintBrush className="text-3xl" />
   },
   {
-    title: "Swimming Pool",
-    description: "From learning to float to mastering the butterfly, our school's pool teaches life lessons with every ripple.",
-    image: "https://images.unsplash.com/photo-1552674605-db6ffd4facb5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
-    icon: <FaSwimmer className="text-3xl" />
+    title: "Computer Lab",
+    description: "Greenland Public School’s advanced Computer Lab empowers students with essential digital skills, from basic computing to coding and problem-solving in a technology-driven world.",
+    image: "https://img.freepik.com/premium-photo/computer-lab_11208-892.jpg?semt=ais_hybrid&w=740",
+    icon: <FaLaptopCode className="text-3xl" />
   },
   {
     title: "Library",
-    description: "Our well-stocked library encourages students to develop a love for reading and research, fostering knowledge and creativity.",
+    description: "Our Library is a peaceful haven filled with knowledge and imagination, encouraging Greenland students to develop strong reading habits and a thirst for learning.",
     image: "https://images.unsplash.com/photo-1589998059171-988d887df646?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
     icon: <FaBookOpen className="text-3xl" />
-  },
+  }
 ];
+
 
 const FacilitiesSection = () => {
   return (
@@ -140,7 +141,7 @@ const FacilitiesSection = () => {
                       {facility.description}
                     </p>
                     <Link
-                      to="/facilities"
+                      to="/about/infrastructure"
                       className="inline-flex items-center font-semibold transition-colors"
                       style={{ color: COLORS.accent }}
                     >

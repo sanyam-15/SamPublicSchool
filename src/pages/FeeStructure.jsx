@@ -112,7 +112,7 @@ const FeeStructurePage = () => {
       </div>
 
       {/* PDF Viewer Section */}
-      <motion.div
+      {/* <motion.div
         className="flex flex-col items-center py-6 md:py-12 px-4"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
@@ -125,7 +125,7 @@ const FeeStructurePage = () => {
           className="shadow-lg rounded-xl border"
           title="Fee Structure Document"
         />
-      </motion.div>
+      </motion.div> */}
     </div>
   );
 };

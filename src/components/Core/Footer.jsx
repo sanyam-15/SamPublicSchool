@@ -16,22 +16,16 @@ const Footer = () => {
   // Function to fetch and update visitor count
   const updateVisitorCount = async () => {
     try {
-      // In a real app, you would call your backend API here
-      // For demo purposes, we'll use localStorage and simulate an API call
       const storedCount = localStorage.getItem('visitorCount');
       let currentCount = storedCount ? parseInt(storedCount) : 0;
-      
-      // Increment count for new visit
+
       if (!sessionStorage.getItem('hasVisited')) {
         currentCount += 1;
         localStorage.setItem('visitorCount', currentCount.toString());
         sessionStorage.setItem('hasVisited', 'true');
       }
 
-      // Simulate API delay
       await new Promise(resolve => setTimeout(resolve, 500));
-      
-      // Start counting animation
       setIsCounting(true);
       animateCounter(currentCount);
     } catch (error) {
@@ -39,11 +33,10 @@ const Footer = () => {
     }
   };
 
-  // Animate the counter
   const animateCounter = (target) => {
     const duration = 2; // seconds
     const start = 0;
-    const increment = target / (duration * 60); // 60fps
+    const increment = target / (duration * 60);
 
     let current = start;
     const counter = setInterval(() => {
@@ -54,7 +47,7 @@ const Footer = () => {
         setIsCounting(false);
       }
       setVisitorCount(Math.floor(current));
-    }, 1000 / 60); // 60fps
+    }, 1000 / 60);
   };
 
   useEffect(() => {
@@ -84,7 +77,7 @@ const Footer = () => {
             >
               greenlandpublicschool09@gmail.com
             </a>
-            
+
             {/* Visitor Counter */}
             <div className="mt-4 flex items-center justify-center md:justify-start">
               <div className="bg-navy-800 rounded-lg p-2 shadow-inner">
@@ -109,7 +102,7 @@ const Footer = () => {
                 </motion.div>
               </div>
             </div>
-            
+
             <hr className="border-gold-500 my-4 w-full" />
           </div>
 
@@ -118,12 +111,12 @@ const Footer = () => {
               Our Campus
             </h3>
             <ul className="mt-4 space-y-2 text-center md:text-left">
-              <li className="footerHoverEffect hover:text-gold-300">Academic</li>
-              <li className="footerHoverEffect hover:text-gold-300">Planning & Administration</li>
-              <li className="footerHoverEffect hover:text-gold-300">Campus Safety</li>
-              <li className="footerHoverEffect hover:text-gold-300">Office of the Chancellor</li>
-              <li className="footerHoverEffect hover:text-gold-300">Facility Services</li>
-              <li className="footerHoverEffect hover:text-gold-300">Human Resources</li>
+              <li className="footerHoverEffect hover:text-gold-300">Academic Departments</li>
+              <li className="footerHoverEffect hover:text-gold-300">Administration Office</li>
+              <li className="footerHoverEffect hover:text-gold-300">Sports Facilities</li>
+              <li className="footerHoverEffect hover:text-gold-300">Library & Resource Center</li>
+              <li className="footerHoverEffect hover:text-gold-300">Science & Computer Labs</li>
+              <li className="footerHoverEffect hover:text-gold-300">Counseling & Support</li>
             </ul>
           </div>
 
@@ -132,12 +125,12 @@ const Footer = () => {
               Campus Life
             </h3>
             <ul className="mt-4 space-y-2 text-center md:text-left">
-              <li className="footerHoverEffect hover:text-gold-300">Accessibility</li>
-              <li className="footerHoverEffect hover:text-gold-300">Financial Aid</li>
-              <li className="footerHoverEffect hover:text-gold-300">Food Services</li>
-              <li className="footerHoverEffect hover:text-gold-300">Housing</li>
-              <li className="footerHoverEffect hover:text-gold-300">Information Technologies</li>
-              <li className="footerHoverEffect hover:text-gold-300">Student Life</li>
+              <li className="footerHoverEffect hover:text-gold-300">Clubs and Societies</li>
+              <li className="footerHoverEffect hover:text-gold-300">Events and Celebrations</li>
+              <li className="footerHoverEffect hover:text-gold-300">Student Leadership</li>
+              <li className="footerHoverEffect hover:text-gold-300">Sports & Physical Education</li>
+              <li className="footerHoverEffect hover:text-gold-300">Health & Wellness Programs</li>
+              <li className="footerHoverEffect hover:text-gold-300">Community Engagement</li>
             </ul>
           </div>
 
@@ -147,8 +140,7 @@ const Footer = () => {
             </h3>
             <div className="mt-4 space-y-2 text-center md:text-left">
               <h2 className="text-gold-300">+91 8789628764</h2>
-              <h2 className="text-gold-300">admissions@sam.com</h2>
-              <h2 className="text-gold-300">www.sampchool.com</h2>
+              <h2 className="text-gold-300">greenlandpublicschool09@gmail.com</h2>
               <Link to={"/contact"}>
                 <button className="mt-4 px-4 py-2 rounded-md text-white bg-gradient-to-r from-gold-600 to-gold-700 hover:from-gold-700 hover:to-gold-800 transition-colors">
                   Quick Enquiry

@@ -18,26 +18,39 @@ const COLORS = {
 
 const images = [
   {
-    url: "https://images.unsplash.com/photo-1588072432836-e10032774350?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    title: "Science Fair Exhibition"
+    url: "https://res.cloudinary.com/dc8x5xkaz/image/upload/v1747689720/471599952_122099435396712060_7793245270742167525_n_sggwxh.jpg",
+    title: "Cultural Fest"
   },
   {
-    url: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    title: "Annual Sports Day"
+    url: "https://res.cloudinary.com/dc8x5xkaz/image/upload/v1747689691/471308252_122099473436712060_7097893539320047613_n_fpv0hd.jpg",
+    title: "Christmas Celebration"
   },
   {
-    url: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    title: "Art & Craft Workshop"
+    url: "https://res.cloudinary.com/dc8x5xkaz/image/upload/v1747689660/471588899_122099473502712060_1766291771834279622_n_ppnqbp.jpg",
+    title: "Art Showcase"
   },
   {
-    url: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    title: "Library Reading Session"
+    url: "https://res.cloudinary.com/dc8x5xkaz/image/upload/v1747689642/474777543_122111648600712060_4650863415183239415_n_ce8tjp.jpg",
+    title: "Independence Day"
   },
   {
-    url: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    title: "Music Recital"
+    url: "https://res.cloudinary.com/dc8x5xkaz/image/upload/v1747689623/475283427_122111648726712060_4480290508250943286_n_kanotb.jpg",
+    title: "Photography Contest"
+  },
+  {
+    url: "https://res.cloudinary.com/dc8x5xkaz/image/upload/v1747689602/475225415_122111648912712060_5657657883529169935_n_rdjwq9.jpg",
+    title: "Republic Day"
+  },
+  {
+    url: "https://res.cloudinary.com/dc8x5xkaz/image/upload/v1747689567/475585404_122113306712712060_5194260667004850455_n_mq14av.jpg",
+    title: "Sarswati Puja"
+  },
+  {
+    url: "https://res.cloudinary.com/dc8x5xkaz/image/upload/v1747689545/475088358_122113310210712060_7318877393122282283_n_lpvuhp.jpg",
+    title: "Award Ceremony"
   },
 ];
+
 
 const PhotoGallery = () => {
   return (

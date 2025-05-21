@@ -105,11 +105,8 @@ const Navbar = () => {
       <div className="bg-navy-900 text-gold-100 py-2 px-4 hidden md:block">
         <div className="flex flex-wrap justify-between items-center max-w-7xl mx-auto">
           <p className="text-sm">
-            <span className="font-semibold">Affiliation Number:</span> 2133064 &
-            School No.: 61225
-          </p>
-          <p className="text-sm">
-            Affiliated to Central Board of Secondary Education, New Delhi
+
+            <span className="font-semibold">Affiliation Number:</span> ###### & School No.: *****
           </p>
         </div>
       </div>
