@@ -42,7 +42,7 @@ function AppContent() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <Navbar />
-      <FixedButton  />
+      {/* <FixedButton  /> */}
       <div>
         <Routes>
           <Route path="/" element={<Home />} />
